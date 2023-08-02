@@ -1,1 +1,21 @@
-# https://youtu.be/llbtoQTt4qw?list=PL-51WBLyFTg38qZ0KHkJj-paDQAAu9HiP&t=1144
+Video
+# https://youtu.be/llbtoQTt4qw?list=PL-51WBLyFTg38qZ0KHkJj-paDQAAu9HiP&t=1706
+
+
+Command sequence:
+    1  pip3 install django
+    2  django-admin startproject
+    3  django-admin startproject todo_list
+    4  python3 manage.py startapp base
+    5  python3 m
+    6  python3
+    7  ls
+    8  cd todo_list/
+    9  ls
+   10  python3 manage.py startapp base
+   11  python manage.py runserver
+   12  git add .
+   13  git commit -m "Initial Commit: Creates project, appliation base, connections applicationa and project urls. "
+   14  git push
+   15  python manage.py migrate
+   16  pip3 freeze --local > requirements.txtpip3 freeze --local > requirements.txt
