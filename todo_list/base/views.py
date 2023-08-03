@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
 from .models import Task
 
 
@@ -15,4 +16,5 @@ class TaskDetail(DetailView):
     template_name = 'base/task.html'
 
 
-
+class TaskCreate(CreateView):
+    model = Task
