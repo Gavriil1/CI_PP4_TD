@@ -1,10 +1,8 @@
 Video
-# https://youtu.be/llbtoQTt4qw?list=PL-51WBLyFTg38qZ0KHkJj-paDQAAu9HiP&t=5938
-
+# https://youtu.be/llbtoQTt4qw?list=PL-51WBLyFTg38qZ0KHkJj-paDQAAu9HiP&t=6809
 
 Command sequence:
     1  pip3 install django
-    2  django-admin startproject
     3  django-admin startproject todo_list
     4  python3 manage.py startapp base
     5  python3 m
