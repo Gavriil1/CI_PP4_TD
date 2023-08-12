@@ -12,7 +12,6 @@
     {% else %}
     <a href="{% url 'login' %}">Login</a>
     {% endif %}
-    <a class="delete-link" href="{% url 'task-delete' task.id %}">Delete</a>
 </div>
 
 
@@ -33,11 +32,14 @@
                 <div class="task-title">
                     <div class="task-complete-con"></div>
                     <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i>
+                    <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
                 </div>
+                
             {% else %}
                 <div class="task-title">
                     <div class="task-incomplete-con"></div>
                     <a href="{% url 'task-update' task.id %}">{{task}}</a>
+                    <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
                 </div>
             {% endif %}
         </div>
@@ -47,7 +49,7 @@
 
 </div>
 
-<table>
+<!-- <table>
     <tr>
         <th>Item</th>
         <th></th>
@@ -56,12 +58,12 @@
     {% for task in tasks %}
     <tr>
         <td>{{task.title}}</td>
-        <!-- <td><a href="{% url 'task' task.id %}">View</a></td> -->
+        <td><a href="{% url 'task' task.id %}">View</a></td>
         <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
         <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
     </tr>
     {% empty %}
     <h3>No items in list</h3>
-    {% endfor %}
+    {% endfor %} -->
 </table>
 {% endblock content %}
