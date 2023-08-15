@@ -1,6 +1,6 @@
 Video
 # https://youtu.be/llbtoQTt4qw?list=PL-51WBLyFTg38qZ0KHkJj-paDQAAu9HiP&t=7371
-
+ddddd
 Command sequence:
     1  pip3 install django
     3  django-admin startproject todo_list
