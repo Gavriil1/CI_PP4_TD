@@ -1,1 +1,1 @@
-web: gunicorn django_todo.wsgi:applicationgit a
+web: gunicorn todo_list.wsgi:applicationgit
