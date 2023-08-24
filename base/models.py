@@ -25,10 +25,18 @@ from django.contrib.auth.models import User
 
 class Task(models.Model):
     FREQUENCY_CHOICES = [
-        ('D', 'Daily_Goal'),
-        ('W', 'Weekly_Goal'),
-        ('M', 'Monthly_Goal'),
-        ('Y', 'Yearly_Goal'),
+        ('D', 'Daily Goal'),
+        ('W', 'Weekly Goal'),
+        ('M', 'Monthly Goal'),
+        ('Y', 'Yearly Goal'),
+    ]
+    
+    Important_Choice = [
+        ('A', 'A Urgent'),
+        ('B', 'B Important'),
+        ('C', 'C OK'),
+        ('D', 'D Delegate'),
+        ('E', 'E Eliminate'),
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
@@ -37,6 +45,7 @@ class Task(models.Model):
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     frequency = models.CharField(max_length=10, choices=FREQUENCY_CHOICES, default='Daily')
+    importance = models.CharField(max_length=10, choices=Important_Choice, default='A_Urgent')
     # due = models.DateField(default='2100-01-01')
     due = models.DateField(default=timezone.now().date())
     
