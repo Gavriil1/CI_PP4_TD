@@ -39,6 +39,22 @@ class RegisterPage(FormView):
         return super(RegisterPage, self).get(*args, **kwargs)
 
 
+# class TaskList(LoginRequiredMixin, ListView):
+#     model = Task
+#     context_object_name = 'tasks'
+
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['tasks'] = context['tasks'].filter(user=self.request.user)
+#         context['count'] = context['tasks'].filter(complete=False).count()
+
+#         search_input = self.request.GET.get('search-area') or ''
+#         if search_input:
+#             context['tasks'] = context['tasks'].filter(title__icontains=search_input)
+
+#         context['search_input'] = search_input
+
+#         return context
 class TaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
@@ -51,6 +67,14 @@ class TaskList(LoginRequiredMixin, ListView):
         search_input = self.request.GET.get('search-area') or ''
         if search_input:
             context['tasks'] = context['tasks'].filter(title__icontains=search_input)
+
+        # Filter by selected importance
+        selected_importance = self.request.GET.get('importance', '')
+        if selected_importance:
+            context['tasks'] = context['tasks'].filter(importance=selected_importance)
+            context['selected_importance'] = selected_importance
+        else:
+            context['selected_importance'] = ''
 
         context['search_input'] = search_input
 

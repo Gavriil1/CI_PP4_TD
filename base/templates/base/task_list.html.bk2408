@@ -22,21 +22,7 @@
     <a id="add-link" href="{% url 'task-create' %}">&#x2b;</a>
 </div>
 
-<!-- i added this part to be able to filter tasks by their importance -->
-<div id="filter-wrapper" style="margin-top: 20px;">
-    <form method="GET">
-        <label for="importance-filter">Filter by Importance:</label>
-        <select id="importance-filter" name="importance">
-            <option value="" {% if selected_importance == "" %}selected{% endif %}>All</option>
-            <option value="A" {% if selected_importance == "A" %}selected{% endif %}>A Urgent</option>
-            <option value="B" {% if selected_importance == "B" %}selected{% endif %}>B Important</option>
-            <option value="C" {% if selected_importance == "C" %}selected{% endif %}>C OK</option>
-            <option value="D" {% if selected_importance == "D" %}selected{% endif %}>D Delegate</option>
-            <option value="E" {% if selected_importance == "E" %}selected{% endif %}>E Eliminate</option>
-        </select>
-        <input class="button" type="submit" value="Apply Filter">
-    </form>
-</div>
+
 
 
 
@@ -57,34 +43,6 @@
                     <div class="task-incomplete-icon "></div>
                     <a href="{% url 'task-update' task.id %}">{{task}}</a>
                     <p>Due: {{task.due}}</p>
-                </div>
-                <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
-            {% endif %}
-        </div>
-    {% empty %}
-    <h3>No items in list</h3>
-    {% endfor %}
-
-</div>
-
-<p>here we will have yearly goals only</p>
-
-    {% for task in tasks %}
-
-            {% if task.frequency == 'Daily Goal' %}
-                <div class="task-title">
-                    <div class="task-complete-icon"></div>
-                    <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i> 
-                    <p>Due: {{task.due}} </p>
-                     <p>Importance: {{task.importance}}</p>
-                </div>
-                    <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
-            {% else %}
-                <div class="task-title">
-                    <div class="task-incomplete-icon "></div>
-                    <a href="{% url 'task-update' task.id %}"><p>no</p>{{task}}</a>
-                    <!-- <p>Due: {{task.due}}</p> -->
-                    <p>No Tasks</p>
                 </div>
                 <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
             {% endif %}
