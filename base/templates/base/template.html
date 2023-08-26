@@ -68,76 +68,117 @@
 
 
 <p>Number of entries with frequency "freq_count_d": {{ freq_count_d }}</p>
-<p>Number of entries with frequency "freq_count_d": {{ freq_count_w }}</p>
-<p>Number of entries with frequency "freq_count_d": {{ freq_count_m }}</p>
-<p>Number of entries with frequency "freq_count_d": {{ freq_count_y }}</p>
+<p>Number of entries with frequency "freq_count_w": {{ freq_count_w }}</p>
+<p>Number of entries with frequency "freq_count_m": {{ freq_count_m }}</p>
+<p>Number of entries with frequency "freq_count_y": {{ freq_count_y }}</p>
 
-<p>these are dayly goals</p>
-<p>urgent</p>
+
+
+{% if freq_count_m > 0 %}
+<p> Dayly Goals</p>
 <table border="1">
   <tr>
     <th>importance</th>
     <th>title</th>
-    <th>description</th>
     <th>complete</th>
-    <th>created</th>
     <th>frequency</th>
-    
+    <th>due</th>
+  </tr>
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "Daily" %}
+    <tr>
+      <td>{{ x.importance }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.due }}</td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% endif %}
+
+<br>
+<br>
+
+
+{% if freq_count_m > 0 %}
+<p> Weekly Goals</p>
+<table border="1">
+  <tr>
+    <th>importance</th>
+    <th>title</th>
+    <th>complete</th>
+    <th>frequency</th>
+    <th>due</th>
+  </tr>
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "Weekly" %}
+    <tr>
+      <td>{{ x.importance }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.due }}</td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% endif %}
+
+<br>
+<br>
+
+{% if freq_count_m > 0 %}
+<p> Weekly Goals</p>
+<table border="1">
+  <tr>
+    <th>importance</th>
+    <th>title</th>
+    <th>complete</th>
+    <th>frequency</th>
     <th>due</th>
   </tr>
   {% for x in mymembers|dictsort:"importance" %}
     {% if x.frequency == "Monthly" %}
     <tr>
       <td>{{ x.importance }}</td>
-      <td>{{ x.title }}</td>
-      <td>{{ x.description }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
       <td>{{ x.complete }}</td>
-      <td>{{ x.created }}</td>
       <td>{{ x.frequency }}</td>
       <td>{{ x.due }}</td>
     </tr>
     {% endif %}
   {% endfor %}
 </table>
+{% endif %}
 
+<br>
+<br>
 
-<p>these are dayly goals</p>
-<p>urgent</p>
+{% if freq_count_m > 0 %}
+<p> Weekly Goals</p>
 <table border="1">
   <tr>
     <th>importance</th>
     <th>title</th>
-    <th>description</th>
     <th>complete</th>
-    <th>created</th>
     <th>frequency</th>
-    
     <th>due</th>
   </tr>
   {% for x in mymembers|dictsort:"importance" %}
-    {% if x.frequency == "dayly" %}
+    {% if x.frequency == "Yearly" %}
     <tr>
       <td>{{ x.importance }}</td>
-      <td>{{ x.title }}</td>
-      <td>{{ x.description }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
       <td>{{ x.complete }}</td>
-      <td>{{ x.created }}</td>
       <td>{{ x.frequency }}</td>
       <td>{{ x.due }}</td>
     </tr>
     {% endif %}
   {% endfor %}
 </table>
+{% endif %}
 
-
-
-
-
-
-
-
-
-
-
-
-
+<br>
+<br>
