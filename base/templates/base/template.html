@@ -66,27 +66,34 @@
   <button type="submit">Apply Filter</button>
 </form> -->
 
+
+<p>Number of entries with frequency "freq_count_d": {{ freq_count_d }}</p>
+<p>Number of entries with frequency "freq_count_d": {{ freq_count_w }}</p>
+<p>Number of entries with frequency "freq_count_d": {{ freq_count_m }}</p>
+<p>Number of entries with frequency "freq_count_d": {{ freq_count_y }}</p>
+
 <p>these are dayly goals</p>
 <p>urgent</p>
 <table border="1">
   <tr>
+    <th>importance</th>
     <th>title</th>
     <th>description</th>
     <th>complete</th>
     <th>created</th>
     <th>frequency</th>
-    <th>importance</th>
+    
     <th>due</th>
   </tr>
-  {% for x in mymembers | dictsort:"importance" %}
-  {% if x.frequency == "Weekly" %}
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "Monthly" %}
     <tr>
+      <td>{{ x.importance }}</td>
       <td>{{ x.title }}</td>
       <td>{{ x.description }}</td>
       <td>{{ x.complete }}</td>
       <td>{{ x.created }}</td>
       <td>{{ x.frequency }}</td>
-      <td>{{ x.importance }}</td>
       <td>{{ x.due }}</td>
     </tr>
     {% endif %}
@@ -94,77 +101,43 @@
 </table>
 
 
-<p>these are weekly goals</p>
-
+<p>these are dayly goals</p>
+<p>urgent</p>
 <table border="1">
   <tr>
+    <th>importance</th>
     <th>title</th>
     <th>description</th>
     <th>complete</th>
     <th>created</th>
     <th>frequency</th>
-    <th>importance</th>
+    
     <th>due</th>
   </tr>
-  {% for x in mymembers %}
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "dayly" %}
     <tr>
+      <td>{{ x.importance }}</td>
       <td>{{ x.title }}</td>
       <td>{{ x.description }}</td>
       <td>{{ x.complete }}</td>
       <td>{{ x.created }}</td>
       <td>{{ x.frequency }}</td>
-      <td>{{ x.importance }}</td>
       <td>{{ x.due }}</td>
     </tr>
+    {% endif %}
   {% endfor %}
 </table>
 
-<p>montlhy</p>
 
-<table border="1">
-  <tr>
-    <th>title</th>
-    <th>description</th>
-    <th>complete</th>
-    <th>created</th>
-    <th>frequency</th>
-    <th>importance</th>
-    <th>due</th>
-  </tr>
-  {% for x in mymembers %}
-    <tr>
-      <td>{{ x.title }}</td>
-      <td>{{ x.description }}</td>
-      <td>{{ x.complete }}</td>
-      <td>{{ x.created }}</td>
-      <td>{{ x.frequency }}</td>
-      <td>{{ x.importance }}</td>
-      <td>{{ x.due }}</td>
-    </tr>
-  {% endfor %}
-</table>
 
-<p>yearly</p>
 
-<table border="1">
-  <tr>
-    <th>title</th>
-    <th>description</th>
-    <th>complete</th>
-    <th>created</th>
-    <th>frequency</th>
-    <th>importance</th>
-    <th>due</th>
-  </tr>
-  {% for x in mymembers %}
-    <tr>
-      <td>{{ x.title }}</td>
-      <td>{{ x.description }}</td>
-      <td>{{ x.complete }}</td>
-      <td>{{ x.created }}</td>
-      <td>{{ x.frequency }}</td>
-      <td>{{ x.importance }}</td>
-      <td>{{ x.due }}</td>
-    </tr>
-  {% endfor %}
-</table>
+
+
+
+
+
+
+
+
+

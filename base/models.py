@@ -32,11 +32,11 @@ class Task(models.Model):
     ]
     
     Important_Choice = [
-        ('Urgent', 'Urgent'),
-        ('Important', 'Important'),
-        ('OK', 'OK'),
-        ('Delegate', 'Delegate'),
-        ('Eliminate', 'Eliminate'),
+        ('A', 'A'),
+        ('B', 'B'),
+        ('C', 'C'),
+        ('D', 'D'),
+        ('E', 'E'),
     ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
