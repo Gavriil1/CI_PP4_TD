@@ -1,0 +1,55 @@
+<!-- <!DOCTYPE html>
+<html>
+<body>
+
+{% for x in fruits %}
+  <h1>{{ x }}</h1>
+{% endfor %}
+
+<p>In views.py you can see what the fruits variable looks like.</p>
+
+</body>
+</html> -->
+
+<!-- <table border='1'>
+  <tr>
+    <th>ID</th>
+    <th>Firstname</th>
+    <th>Lastname</th>
+  </tr>
+  {% for x in mymembers %}
+  {% if x.frequency == "D" %}
+    <tr>
+      <td>{{ x.id }}</td>
+      <td>{{ x.title }}</td>
+      <td>{{ x.frequency }}</td>
+    </tr>
+  {% endif %}
+{% endfor %}
+</table> -->
+
+
+<table border='1'>
+  <tr>
+    <th>title</th>
+    <th>description</th>
+    <th>complete</th>
+    <th>created</th>
+    <th>frequency</th>
+    <th>importance</th>
+    <th>due</th>
+  </tr>
+  {% for x in mymembers %}
+
+    <tr>
+      <td>{{ x.title }}</td>
+      <td>{{ x.description }}</td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.created }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.importance }}</td>
+      <td>{{ x.due }}</td>
+    </tr>
+
+{% endfor %}
+</table>

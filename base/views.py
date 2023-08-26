@@ -1,4 +1,8 @@
 from django.shortcuts import render, redirect
+from django.template import loader
+from django.http import HttpResponse
+from django.urls import path
+from . import views
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
@@ -109,3 +113,18 @@ class DeleteView(LoginRequiredMixin, DeleteView):
     model = Task
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
+
+
+# def testing(request):
+#   template = loader.get_template('base/template.html')
+#   context = {
+#     'fruits': ['Apple', 'Banana', 'Cherry'],   
+#   }
+#   return HttpResponse(template.render(context, request))
+def testing(request):
+  mydata = Task.objects.all()
+  template = loader.get_template('base/template.html')
+  context = {
+    'mymembers': mydata,
+  }
+  return HttpResponse(template.render(context, request))
