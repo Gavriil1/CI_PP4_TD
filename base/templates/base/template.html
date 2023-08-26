@@ -55,16 +55,46 @@
 </table> -->
 
 
-<form id="importance-filter-form">
+<!-- <form id="importance-filter-form">
   <label for="importance">Filter by Importance:</label>
   <select id="importance" name="importance">
     <option value="">All</option>
-    <option value="C">Low</option>
-    <option value="B">Medium</option>
-    <option value="A">High</option>
+    <option value="Weekly">Low</option>
+    <option value="Weekly">Medium</option>
+    <option value="Weekly">High</option>
   </select>
   <button type="submit">Apply Filter</button>
-</form>
+</form> -->
+
+<p>these are dayly goals</p>
+<p>urgent</p>
+<table border="1">
+  <tr>
+    <th>title</th>
+    <th>description</th>
+    <th>complete</th>
+    <th>created</th>
+    <th>frequency</th>
+    <th>importance</th>
+    <th>due</th>
+  </tr>
+  {% for x in mymembers | dictsort:"importance" %}
+  {% if x.frequency == "Weekly" %}
+    <tr>
+      <td>{{ x.title }}</td>
+      <td>{{ x.description }}</td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.created }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.importance }}</td>
+      <td>{{ x.due }}</td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+
+
+<p>these are weekly goals</p>
 
 <table border="1">
   <tr>
@@ -89,14 +119,52 @@
   {% endfor %}
 </table>
 
-<script>
-  document.getElementById('importance-filter-form').addEventListener('submit', function(event) {
-    event.preventDefault();
-    
-    const selectedImportance = document.getElementById('importance').value;
-    // You can use JavaScript to filter the table rows based on the selected importance.
-    // For example, you can hide/show rows based on the selected importance.
-    // Here, I'm just printing the selected importance to the console.
-    console.log('Selected Importance:', selectedImportance);
-  });
-</script>
+<p>montlhy</p>
+
+<table border="1">
+  <tr>
+    <th>title</th>
+    <th>description</th>
+    <th>complete</th>
+    <th>created</th>
+    <th>frequency</th>
+    <th>importance</th>
+    <th>due</th>
+  </tr>
+  {% for x in mymembers %}
+    <tr>
+      <td>{{ x.title }}</td>
+      <td>{{ x.description }}</td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.created }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.importance }}</td>
+      <td>{{ x.due }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<p>yearly</p>
+
+<table border="1">
+  <tr>
+    <th>title</th>
+    <th>description</th>
+    <th>complete</th>
+    <th>created</th>
+    <th>frequency</th>
+    <th>importance</th>
+    <th>due</th>
+  </tr>
+  {% for x in mymembers %}
+    <tr>
+      <td>{{ x.title }}</td>
+      <td>{{ x.description }}</td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.created }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.importance }}</td>
+      <td>{{ x.due }}</td>
+    </tr>
+  {% endfor %}
+</table>
