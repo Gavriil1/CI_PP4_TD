@@ -29,7 +29,7 @@
 </table> -->
 
 
-<table border='1'>
+<!-- <table border='1'>
   <tr>
     <th>title</th>
     <th>description</th>
@@ -52,4 +52,51 @@
     </tr>
 
 {% endfor %}
+</table> -->
+
+
+<form id="importance-filter-form">
+  <label for="importance">Filter by Importance:</label>
+  <select id="importance" name="importance">
+    <option value="">All</option>
+    <option value="C">Low</option>
+    <option value="B">Medium</option>
+    <option value="A">High</option>
+  </select>
+  <button type="submit">Apply Filter</button>
+</form>
+
+<table border="1">
+  <tr>
+    <th>title</th>
+    <th>description</th>
+    <th>complete</th>
+    <th>created</th>
+    <th>frequency</th>
+    <th>importance</th>
+    <th>due</th>
+  </tr>
+  {% for x in mymembers %}
+    <tr>
+      <td>{{ x.title }}</td>
+      <td>{{ x.description }}</td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.created }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.importance }}</td>
+      <td>{{ x.due }}</td>
+    </tr>
+  {% endfor %}
 </table>
+
+<script>
+  document.getElementById('importance-filter-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    
+    const selectedImportance = document.getElementById('importance').value;
+    // You can use JavaScript to filter the table rows based on the selected importance.
+    // For example, you can hide/show rows based on the selected importance.
+    // Here, I'm just printing the selected importance to the console.
+    console.log('Selected Importance:', selectedImportance);
+  });
+</script>
