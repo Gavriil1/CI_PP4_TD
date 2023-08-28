@@ -1,4 +1,6 @@
 
+<h1>Summary Page</h1>
+
 <p>Number of entries with frequency "freq_count_d": {{ freq_count_d }}</p>
 <p>Number of entries with frequency "freq_count_w": {{ freq_count_w }}</p>
 <p>Number of entries with frequency "freq_count_m": {{ freq_count_m }}</p>
@@ -15,7 +17,7 @@
 
 
 {% if freq_count_d > 0 %}
-<p> Dayly Goals</p>
+<h1> Dayly Goals</h1>
 <table border="1">
   <tr>
     <th>Importance</th>
@@ -38,6 +40,10 @@
     {% endif %}
   {% endfor %}
 </table>
+{% else %}
+  <h1> Dayly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
 {% endif %}
 
 <br>
@@ -53,6 +59,7 @@
     <th>complete</th>
     <th>frequency</th>
     <th>due</th>
+    <th>Delete</th>
   </tr>
   {% for x in mymembers|dictsort:"importance" %}
     {% if x.frequency == "Weekly" %}
@@ -62,10 +69,15 @@
       <td>{{ x.complete }}</td>
       <td>{{ x.frequency }}</td>
       <td>{{ x.due }}</td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
     </tr>
     {% endif %}
   {% endfor %}
 </table>
+{% else %}
+  <h1> Weekly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
 {% endif %}
 
 <br>
@@ -80,6 +92,7 @@
     <th>complete</th>
     <th>frequency</th>
     <th>due</th>
+    <th>Delete</th>
   </tr>
   {% for x in mymembers|dictsort:"importance" %}
     {% if x.frequency == "Monthly" %}
@@ -89,10 +102,15 @@
       <td>{{ x.complete }}</td>
       <td>{{ x.frequency }}</td>
       <td>{{ x.due }}</td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
     </tr>
     {% endif %}
   {% endfor %}
 </table>
+{% else %}
+  <h1> Weekly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
 {% endif %}
 
 <br>
@@ -107,6 +125,7 @@
     <th>complete</th>
     <th>frequency</th>
     <th>due</th>
+    <th>Delete</th>
   </tr>
   {% for x in mymembers|dictsort:"importance" %}
     {% if x.frequency == "Yearly" %}
@@ -116,10 +135,15 @@
       <td>{{ x.complete }}</td>
       <td>{{ x.frequency }}</td>
       <td>{{ x.due }}</td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
     </tr>
     {% endif %}
   {% endfor %}
 </table>
+{% else %}
+  <h1> Monthly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
 {% endif %}
 
 <br>
