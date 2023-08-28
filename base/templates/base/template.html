@@ -5,6 +5,14 @@
 <p>Number of entries with frequency "freq_count_y": {{ freq_count_y }}</p>
 
 
+<div id="search-add-wrapper">
+  <!-- <form method="GET" style="margin-top: 20px; display: flex;">
+      <input type='text' name='search-area' value="{{search_input}}">
+      <input class = "button" type="submit" value = 'Search'>
+  </form> -->
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
+</div>
+
 
 {% if freq_count_d > 0 %}
 <p> Dayly Goals</p>
@@ -36,7 +44,7 @@
 <br>
 
 
-{% if freq_count_m > 0 %}
+{% if freq_count_w > 0 %}
 <p> Weekly Goals</p>
 <table border="1">
   <tr>
@@ -64,7 +72,7 @@
 <br>
 
 {% if freq_count_m > 0 %}
-<p> Weekly Goals</p>
+<p> Monthly Goals</p>
 <table border="1">
   <tr>
     <th>importance</th>
@@ -90,8 +98,8 @@
 <br>
 <br>
 
-{% if freq_count_m > 0 %}
-<p> Weekly Goals</p>
+{% if freq_count_y > 0 %}
+<p> Yearly Goals</p>
 <table border="1">
   <tr>
     <th>importance</th>
