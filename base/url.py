@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, DeleteView, CustomLoginView, RegisterPage, testing, daily, weekly, monthly
+from .views import TaskList, TaskDetail, TaskCreate, TaskUpdate, DeleteView, CustomLoginView, RegisterPage, testing, daily, weekly, monthly, yearly
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
@@ -15,4 +15,5 @@ urlpatterns = [
     path('daily/', daily, name='daily'),
     path('weekly/', weekly, name='weekly'),
     path('monthly/', monthly, name='monthly'),
+    path('yearly/', yearly, name='yearly'),
 ]

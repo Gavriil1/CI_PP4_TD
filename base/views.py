@@ -169,3 +169,13 @@ def monthly(request):
   }
   return HttpResponse(template_monthly.render(context, request))
 
+
+def yearly(request):
+  mydata = Task.objects.all()
+  freq_count_y = Task.objects.filter(frequency="Yearly").count()
+  template_yearly = loader.get_template('base/yearly.html')
+  context = {
+    'mymembers': mydata,
+    'freq_count_y': freq_count_y,
+  }
+  return HttpResponse(template_yearly.render(context, request))
