@@ -127,7 +127,7 @@ def testing(request):
   freq_count_w = Task.objects.filter(frequency="Weekly").count()
   freq_count_m = Task.objects.filter(frequency="Monthly").count()
   freq_count_y = Task.objects.filter(frequency="Yearly").count()
-  template = loader.get_template('base/template.html')
+  template = loader.get_template('base/homepage.html')
   context = {
     'mymembers': mydata,
     'freq_count_d': freq_count_d,
@@ -136,3 +136,36 @@ def testing(request):
     'freq_count_y': freq_count_y,
   }
   return HttpResponse(template.render(context, request))
+
+
+def daily(request):
+  mydata = Task.objects.all()
+  freq_count_d = Task.objects.filter(frequency="Daily").count()
+  template_daily = loader.get_template('base/daily.html')
+  context = {
+    'mymembers': mydata,
+    'freq_count_d': freq_count_d,
+  }
+  return HttpResponse(template_daily.render(context, request))
+
+def weekly(request):
+  mydata = Task.objects.all()
+  freq_count_w = Task.objects.filter(frequency="Weekly").count()
+  template_weekly = loader.get_template('base/weekly.html')
+  context = {
+    'mymembers': mydata,
+    'freq_count_w': freq_count_w,
+  }
+  return HttpResponse(template_weekly.render(context, request))
+
+
+def weekly(request):
+  mydata = Task.objects.all()
+  freq_count_m = Task.objects.filter(frequency="Monthly").count()
+  template_weekly = loader.get_template('base/monthly.html')
+  context = {
+    'mymembers': mydata,
+    'freq_count_m': freq_count_m,
+  }
+  return HttpResponse(template_weekly.render(context, request))
+

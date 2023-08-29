@@ -1,0 +1,33 @@
+<P>Main Page</P>
+<a href="{% url 'tasks' %}">&#8592; Back</a>
+
+
+{% if freq_count_d > 0 %}
+<h1> Dayly Goals</h1>
+<table border="1">
+  <tr>
+    <th>Importance</th>
+    <th>Title</th>
+    <th>Complete</th>
+    <th>frequency</th>
+    <th>Due</th>
+    <th>Delete</th>
+  </tr>
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "Daily" %}
+    <tr>
+      <td>{{ x.importance }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.due }}</td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete}</a></td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% else %}
+  <h1> Dayly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
+{% endif %}

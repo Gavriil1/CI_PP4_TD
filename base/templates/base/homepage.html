@@ -17,7 +17,7 @@
 
 
 {% if freq_count_d > 0 %}
-<h1> Dayly Goals</h1>
+<h1><a href="{% url 'daily' %}">Dayly Goals</a></h1>
 <table border="1">
   <tr>
     <th>Importance</th>
@@ -35,7 +35,7 @@
       <td>{{ x.complete }}</td>
       <td>{{ x.frequency }}</td>
       <td>{{ x.due }}</td>
-      <td><a href="{% url 'task-delete' x.id %}">Delete}</a></td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
     </tr>
     {% endif %}
   {% endfor %}
@@ -51,7 +51,7 @@
 
 
 {% if freq_count_w > 0 %}
-<p> Weekly Goals</p>
+<h1><a href="{% url 'weekly' %}">Weekly Goals</a></h1>
 <table border="1">
   <tr>
     <th>importance</th>
