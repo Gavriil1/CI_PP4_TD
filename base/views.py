@@ -159,13 +159,13 @@ def weekly(request):
   return HttpResponse(template_weekly.render(context, request))
 
 
-def weekly(request):
+def monthly(request):
   mydata = Task.objects.all()
   freq_count_m = Task.objects.filter(frequency="Monthly").count()
-  template_weekly = loader.get_template('base/monthly.html')
+  template_monthly = loader.get_template('base/monthly.html')
   context = {
     'mymembers': mydata,
     'freq_count_m': freq_count_m,
   }
-  return HttpResponse(template_weekly.render(context, request))
+  return HttpResponse(template_monthly.render(context, request))
 
