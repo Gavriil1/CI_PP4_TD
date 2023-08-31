@@ -38,6 +38,7 @@ ALLOWED_HOSTS = ['8000-gavriil1-cipp4td-ve91anfq83l.ws-eu104.gitpod.io', 'ci-pp4
 # Application definition
 
 INSTALLED_APPS = [
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -137,3 +138,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+JAZZMIN_SETTINGS = {
+    "site_title": "ABCDE TODO",
+    "site_header": "Welcome to ABCDE Task List admin pannel",
+    "welcome_sign": "Welcome Back Admin!",
+     "copyright": "GS 2023 Code Academy.",
+
+}
