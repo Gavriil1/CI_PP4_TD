@@ -38,7 +38,7 @@ ALLOWED_HOSTS = ['8000-gavriil1-cipp4td-ve91anfq83l.ws-eu104.gitpod.io', 'ci-pp4
 # Application definition
 
 INSTALLED_APPS = [
-    # 'jazzmin',
+    'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
