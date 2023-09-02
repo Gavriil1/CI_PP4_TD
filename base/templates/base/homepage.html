@@ -1,5 +1,23 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+
+
 
 <h1>Summary Page</h1>
+
+<div class="header-bar">
+  <div>
+      <h1>Hello  {{request.user|title}} </h1>
+      <h3 style="margin:0">You have <i>{{count}}</i> incomplete task{{ count|pluralize:"s" }}</h3>
+  </div>
+  {% if request.user.is_authenticated %}
+  <!-- <p>{{request.user}}</p> -->
+  <a href="{% url 'logout' %}">Logout</a>
+  {% else %}
+  <a href="{% url 'login' %}">Login</a>
+  {% endif %}
+</div>
 
 <p>Number of entries with frequency "freq_count_d": {{ freq_count_d }}</p>
 <p>Number of entries with frequency "freq_count_w": {{ freq_count_w }}</p>
@@ -148,3 +166,5 @@
 
 <br>
 <br>
+
+{% endblock content %}
