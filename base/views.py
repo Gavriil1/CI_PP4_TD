@@ -25,6 +25,25 @@ class CustomLoginView(LoginView):
         return reverse_lazy('tasks')
 
 
+class RegisterPage2(FormView):
+    template_name = 'base/test.html'
+    form_class = UserCreationForm
+    redirect_authenticated_user = True
+    success_url = reverse_lazy('tasks')
+
+    def form_valid(self, form):
+        user = form.save()
+        if user is not None:
+            login(self.request, user)
+        return super(RegisterPage2, self).form_valid(form)
+
+    def get(self, *args, **kwargs):
+        if self.request.user.is_authenticated:
+            return redirect('tasks')
+        return super(RegisterPage2, self).get(*args, **kwargs)
+
+
+
 class RegisterPage(FormView):
     template_name = 'base/register.html'
     form_class = UserCreationForm
