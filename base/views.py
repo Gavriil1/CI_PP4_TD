@@ -25,22 +25,38 @@ class CustomLoginView(LoginView):
         return reverse_lazy('tasks')
 
 
-class RegisterPage2(FormView):
-    template_name = 'base/test.html'
-    form_class = UserCreationForm
-    redirect_authenticated_user = True
-    success_url = reverse_lazy('tasks')
+# class RegisterPage2(FormView):
+#     template_name = 'base/test.html'
+#     form_class = UserCreationForm
+#     redirect_authenticated_user = True
+#     success_url = reverse_lazy('tasks')
 
-    def form_valid(self, form):
-        user = form.save()
-        if user is not None:
-            login(self.request, user)
-        return super(RegisterPage2, self).form_valid(form)
+#     def form_valid(self, form):
+#         user = form.save()
+#         if user is not None:
+#             login(self.request, user)
+#         return super(RegisterPage2, self).form_valid(form)
 
-    def get(self, *args, **kwargs):
-        if self.request.user.is_authenticated:
-            return redirect('tasks')
-        return super(RegisterPage2, self).get(*args, **kwargs)
+#     def get(self, *args, **kwargs):
+#         if self.request.user.is_authenticated:
+#             return redirect('tasks')
+#         return super(RegisterPage2, self).get(*args, **kwargs)
+
+def testing2(request):
+  mydata = Task.objects.all()
+  freq_count_d = Task.objects.filter(frequency="Daily").count()
+  freq_count_w = Task.objects.filter(frequency="Weekly").count()
+  freq_count_m = Task.objects.filter(frequency="Monthly").count()
+  freq_count_y = Task.objects.filter(frequency="Yearly").count()
+  template = loader.get_template('base/test.html')
+  context = {
+    'mymembers': mydata,
+    'freq_count_d': freq_count_d,
+    'freq_count_w': freq_count_w,
+    'freq_count_m': freq_count_m,
+    'freq_count_y': freq_count_y,
+  }
+  return HttpResponse(template.render(context, request))
 
 
 
@@ -62,25 +78,26 @@ class RegisterPage(FormView):
         return super(RegisterPage, self).get(*args, **kwargs)
 
 
-# class TaskList(LoginRequiredMixin, ListView):
-#     model = Task
-#     context_object_name = 'tasks'
-
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['tasks'] = context['tasks'].filter(user=self.request.user)
-#         context['count'] = context['tasks'].filter(complete=False).count()
-
-#         search_input = self.request.GET.get('search-area') or ''
-#         if search_input:
-#             context['tasks'] = context['tasks'].filter(title__icontains=search_input)
-
-#         context['search_input'] = search_input
-
-#         return context
 class TaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tasks'] = context['tasks'].filter(user=self.request.user)
+        context['count'] = context['tasks'].filter(complete=False).count()
+
+        search_input = self.request.GET.get('search-area') or ''
+        if search_input:
+            context['tasks'] = context['tasks'].filter(title__icontains=search_input)
+
+        context['search_input'] = search_input
+
+        return context
+class TaskList2(LoginRequiredMixin, ListView):
+    model = Task
+    template_name = 'base/test.html'
+    context_object_name = 'testing1'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
