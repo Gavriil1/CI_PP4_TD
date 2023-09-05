@@ -1,0 +1,170 @@
+{% extends 'base/main.html' %}
+{% block content %}
+
+
+
+
+<h1>Summary Page</h1>
+
+<div class="header-bar">
+  <div>
+      <h1>Hello  {{request.user|title}} </h1>
+      <h3 style="margin:0">You have <i>{{count}}</i> incomplete task{{ count|pluralize:"s" }}</h3>
+  </div>
+  {% if request.user.is_authenticated %}
+  <!-- <p>{{request.user}}</p> -->
+  <a href="{% url 'logout' %}">Logout</a>
+  {% else %}
+  <a href="{% url 'login' %}">Login</a>
+  {% endif %}
+</div>
+
+<p>Number of entries with frequency "freq_count_d": {{ freq_count_d }}</p>
+<p>Number of entries with frequency "freq_count_w": {{ freq_count_w }}</p>
+<p>Number of entries with frequency "freq_count_m": {{ freq_count_m }}</p>
+<p>Number of entries with frequency "freq_count_y": {{ freq_count_y }}</p>
+
+
+<div id="search-add-wrapper">
+  <!-- <form method="GET" style="margin-top: 20px; display: flex;">
+      <input type='text' name='search-area' value="{{search_input}}">
+      <input class = "button" type="submit" value = 'Search'>
+  </form> -->
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
+</div>
+
+
+{% if freq_count_d > 0 %}
+<h1><a href="{% url 'daily' %}">Dayly Goals</a></h1>
+<table border="1">
+  <tr>
+    <th>Importance</th>
+    <th>Title</th>
+    <th>Complete</th>
+    <th>frequency</th>
+    <th>Due</th>
+    <th>Delete</th>
+  </tr>
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "Daily" %}
+    <tr>
+      <td>{{ x.importance }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.due }}</td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% else %}
+  <h1> Dayly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
+{% endif %}
+
+<br>
+<br>
+
+
+{% if freq_count_w > 0 %}
+<h1><a href="{% url 'weekly' %}">Weekly Goals</a></h1>
+<table border="1">
+  <tr>
+    <th>importance</th>
+    <th>title</th>
+    <th>complete</th>
+    <th>frequency</th>
+    <th>due</th>
+    <th>Delete</th>
+  </tr>
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "Weekly" %}
+    <tr>
+      <td>{{ x.importance }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.due }}</td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% else %}
+  <h1> Weekly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
+{% endif %}
+
+<br>
+<br>
+
+{% if freq_count_m > 0 %}
+<h1><a href="{% url 'monthly' %}">Monthly Goals</a></h1>
+<table border="1">
+  <tr>
+    <th>importance</th>
+    <th>title</th>
+    <th>complete</th>
+    <th>frequency</th>
+    <th>due</th>
+    <th>Delete</th>
+  </tr>
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "Monthly" %}
+    <tr>
+      <td>{{ x.importance }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.due }}</td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% else %}
+  <h1> Weekly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
+{% endif %}
+
+<br>
+<br>
+
+{% if freq_count_y > 0 %}
+<h1><a href="{% url 'yearly' %}">Yearly Goals</a></h1>
+<table border="1">
+  <tr>
+    <th>importance</th>
+    <th>title</th>
+    <th>complete</th>
+    <th>frequency</th>
+    <th>due</th>
+    <th>Delete</th>
+  </tr>
+  {% for x in mymembers|dictsort:"importance" %}
+    {% if x.frequency == "Yearly" %}
+    <tr>
+      <td>{{ x.importance }}</td>
+      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+      <td>{{ x.complete }}</td>
+      <td>{{ x.frequency }}</td>
+      <td>{{ x.due }}</td>
+      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
+    </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+{% else %}
+  <h1> Monthly Goals</h1>
+  <p>There are no dayly tasks. To create task please click here</p>
+  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
+{% endif %}
+
+<br>
+<br>
+
+{% endblock content %}

@@ -121,6 +121,7 @@ body {
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
   </style>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
 <body>
   <div class="container">
@@ -130,7 +131,7 @@ body {
                 <div class="panel-heading">
                     <div class="row">
                         <div class="col-sm-12 col-xs-12">
-                            <a href="#" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New</a>
+                            <a href="{% url 'task-create' %}" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New</a>
 
                         </div>
                     </div>
@@ -162,7 +163,9 @@ body {
                                                 </ul>
                                             </td>
                                             <td>{{ x.importance }}</td>
-                                            <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+                                            <td>                 
+                                                <p><a href="{% url 'task-update' x.id %}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a>{{ x.title }}</p>  
+                                            </td>
                                             <td>{{ x.complete }}</td>
                                             <td>{{ x.frequency }}</td>
                                             <td>{{ x.due }}</td>
@@ -203,10 +206,13 @@ body {
                                                 <ul class="action-list">
                                                     <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
                                                     <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" ><i class="fas fa-times"></i></a></li>
                                                 </ul>
                                             </td>
                                             <td>{{ x.importance }}</td>
-                                            <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+                                            <td>                 
+                                                <p><a href="{% url 'task-update' x.id %}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a>{{ x.title }}</p>  
+                                            </td>
                                             <td>{{ x.complete }}</td>
                                             <td>{{ x.frequency }}</td>
                                             <td>{{ x.due }}</td>
@@ -250,7 +256,9 @@ body {
                                                 </ul>
                                             </td>
                                             <td>{{ x.importance }}</td>
-                                            <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+                                            <td>                 
+                                                <p><a href="{% url 'task-update' x.id %}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a>{{ x.title }}</p>  
+                                            </td>
                                             <td>{{ x.complete }}</td>
                                             <td>{{ x.frequency }}</td>
                                             <td>{{ x.due }}</td>
@@ -294,7 +302,9 @@ body {
                                                 </ul>
                                             </td>
                                             <td>{{ x.importance }}</td>
-                                            <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
+                                            <td>                 
+                                                <p><a href="{% url 'task-update' x.id %}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a>{{ x.title }}</p>  
+                                            </td>
                                             <td>{{ x.complete }}</td>
                                             <td>{{ x.frequency }}</td>
                                             <td>{{ x.due }}</td>
@@ -316,5 +326,6 @@ body {
         </div>
     </div>
 </div>
+<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>	  
 </body>
 </html>
