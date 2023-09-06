@@ -1,15 +1,139 @@
-{% extends 'base/main.html' %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Document</title>
 
+  <style>
 
+body {
+    background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); /* Replace 'your-image.jpg' with your image file path */
+    background-size: cover; /* Adjust the size as needed (e.g., 'cover', 'contain', '100%') */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    /* Add more CSS styles for the body element if needed */
+  }
 
+  p { 
+   color: #00FFFF; 
+  } 
 
-<h1>Summary Page</h1>
-
-<div class="header-bar">
+  h3 {
+    color: #1E90FF
+  }
+    .panel{
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+.panel .panel-heading{
+    background: #535353;
+    padding: 15px;
+    border-radius: 0;
+}
+.panel .panel-heading .btn{
+    color: #fff;
+    background-color: #000;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-heading .btn:hover{ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+.panel .panel-heading .form-horizontal .form-group{ margin: 0; }
+.panel .panel-heading .form-horizontal label{
+    color: #fff;
+    margin-right: 10px;
+}
+.panel .panel-heading .form-horizontal .form-control{
+    display: inline-block;
+    width: 80px;
+    border: none;
+    border-radius: 0;
+}
+.panel .panel-heading .form-horizontal .form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+.panel .panel-body{
+    padding: 0;
+    border-radius: 0;
+}
+.panel .panel-body .table thead tr th{
+    color: #fff;
+    background: #8D8D8D;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 12px;
+    border-bottom: none;
+}
+.panel .panel-body .table thead tr th:nth-of-type(1){ width: 120px; }
+.panel .panel-body .table thead tr th:nth-of-type(3){ width: 50%; }
+.panel .panel-body .table tbody tr td{
+    color: #555;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 13px;
+    vertical-align: middle;
+    border-color: #e7e7e7;
+}
+.panel .panel-body .table tbody tr:nth-child(odd) td{ background: #f5f5f5; }
+.panel .panel-body .table tbody .action-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.panel .panel-body .table tbody .action-list li{ display: inline-block; }
+.panel .panel-body .table tbody .action-list li a{
+    color: #fff;
+    font-size: 13px;
+    line-height: 28px;
+    height: 28px;
+    width: 33px;
+    padding: 0;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-body .table tbody .action-list li a:hover{ box-shadow: 0 0 5px #ddd; }
+.panel .panel-footer{
+    color: #fff;
+    background: #535353;
+    font-size: 16px;
+    line-height: 33px;
+    padding: 25px 15px;
+    border-radius: 0;
+}
+.pagination{ margin: 0; }
+.pagination li a{
+    color: #fff;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 2px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.pagination li a:hover,
+.pagination li a:focus,
+.pagination li.active a{
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+  </style>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
   <div>
-      <h1>Hello  {{request.user|title}} </h1>
-      <h3 style="margin:0">You have <i>{{count}}</i> incomplete task{{ count|pluralize:"s" }}</h3>
+      <p>User:  {{request.user|title}} </p>
   </div>
   {% if request.user.is_authenticated %}
   <!-- <p>{{request.user}}</p> -->
@@ -18,153 +142,244 @@
   <a href="{% url 'login' %}">Login</a>
   {% endif %}
 </div>
+  <div class="container">
+    <div class="row">
+        <div class="col-md-offset-1 col-md-10">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-sm-12 col-xs-12">
+                            <a href="{% url 'task-create' %}" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New</a>
 
-<p>Number of entries with frequency "freq_count_d": {{ freq_count_d }}</p>
-<p>Number of entries with frequency "freq_count_w": {{ freq_count_w }}</p>
-<p>Number of entries with frequency "freq_count_m": {{ freq_count_m }}</p>
-<p>Number of entries with frequency "freq_count_y": {{ freq_count_y }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    {% if freq_count_d > 0 %}
+                        <h1><a href="{% url 'daily' %}">Dayly Goals</a></h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Importance</th>
+                                <th>Title</th>
+                                <th>Complete</th>
+                                <th>frequenc</th>
+                                <th>Due</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            {% for x in mymembers %}
+                                {% if x.frequency == "Daily" %}
+                                    <tr>
+                                            <td>
+                                                <ul class="action-list">
+                                                    <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                                </ul>
+                                            </td>
+                                            <td>{{ x.importance }}</td>
+                                            <td>                 
+                                                <p><a href="{% url 'task-update' x.id %}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a>{{ x.title }}</p>  
+                                            </td>
+                                            <td>{{ x.complete }}</td>
+                                            <td>{{ x.frequency }}</td>
+                                            <td>{{ x.due }}</td>
+                                        </tr>
+                                {% endif %}
+                            {% endfor %}
+                            </table>
+                            {% else %}
+                            <h1><a href="{% url 'daily' %}">Dayly Goals</a></h1>
+                        <p>There are no dayly tasks. To create task please click "Add New"</p>
+                        {% endif %}            
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="panel-body table-responsive">
+                    {% if freq_count_w > 0 %}
+                        <h1><a href="{% url 'weekly' %}">Weekly Goals</a></h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Importance</th>
+                                <th>Title</th>
+                                <th>Complete</th>
+                                <th>frequenc</th>
+                                <th>Due</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            {% for x in mymembers %}
+                                {% if x.frequency == "Weekly" %}
+                                    <tr>
+                                            <td>
+                                                <ul class="action-list">
+                                                    <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" ><i class="fas fa-times"></i></a></li>
+                                                </ul>
+                                            </td>
+                                            <td>{{ x.importance }}</td>
+                                            <td>                 
+                                                <p><a href="{% url 'task-update' x.id %}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a>{{ x.title }}</p>  
+                                            </td>
+                                            <td>{{ x.complete }}</td>
+                                            <td>{{ x.frequency }}</td>
+                                            <td>{{ x.due }}</td>
+                                        </tr>
+                                {% endif %}
+                            {% endfor %}
+                            </table>
+                            {% else %}
+                        <h1><a href="{% url 'weekly' %}">Weekly Goals</a></h1>
+                        <p>There are no dayly tasks. To create task please click "Add New"</p>
+                        {% endif %}            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="panel-body table-responsive">
+                    {% if freq_count_m > 0 %}
+                        <h1><a href="{% url 'monthly' %}">Monthly Goals</a></h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Importance</th>
+                                <th>Title</th>
+                                <th>Complete</th>
+                                <th>frequenc</th>
+                                <th>Due</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            {% for x in mymembers %}
+                                {% if x.frequency == "Monthly" %}
+                                    <tr>
+                                            <td>
+                                                <ul class="action-list">
+                                                    <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                                </ul>
+                                            </td>
+                                            <td>{{ x.importance }}</td>
+                                            <td>                 
+                                                <p><a href="{% url 'task-update' x.id %}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a>{{ x.title }}</p>  
+                                            </td>
+                                            <td>{{ x.complete }}</td>
+                                            <td>{{ x.frequency }}</td>
+                                            <td>{{ x.due }}</td>
+                                        </tr>
+                                {% endif %}
+                            {% endfor %}
+                            </table>
+                            {% else %}
+                            <h1><a href="{% url 'monthly' %}">Monthly Goals</a></h1>
+                            <p>There are no dayly tasks. To create task please click "Add New"</p>
+                        {% endif %}            
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="panel-body table-responsive">
+                    {% if freq_count_y > 0 %}
+                        <h1><a href="{% url 'yearly' %}">Yearly Goals</a></h1>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Action</th>
+                                <th>Importance</th>
+                                <th>Title</th>
+                                <th>Complete</th>
+                                <th>frequenc</th>
+                                <th>Due</th>
+                                <th>View</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            {% for x in mymembers %}
+                                {% if x.frequency == "Yearly" %}
+                                    <tr>
+                                            <td>
+                                                <ul class="action-list">
+                                                    <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                                </ul>
+                                            </td>
+                                            <td>{{ x.importance }}</td>
+                                            <td>                 
+                                                <p><a href="{% url 'task-update' x.id %}" class="btn btn-sm btn-success"><i class="fa fa-search"></i></a>{{ x.title }}</p>  
+                                            </td>
+                                            <td>{{ x.complete }}</td>
+                                            <td>{{ x.frequency }}</td>
+                                            <td>{{ x.due }}</td>
+                                        </tr>
+                                {% endif %}
+                            {% endfor %}
+                            </table>
+                            {% else %}
+                            <h1><a href="{% url 'yearly' %}">Yearly Goals</a></h1>
+                        <p>There are no Yearly tasks. To create task please click here</p>
+                  
+                        {% endif %}            
+                        </tbody>
+                    </table>
+                </div>
 
 
-<div id="search-add-wrapper">
-  <!-- <form method="GET" style="margin-top: 20px; display: flex;">
-      <input type='text' name='search-area' value="{{search_input}}">
-      <input class = "button" type="submit" value = 'Search'>
-  </form> -->
-  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
+            </div>
+        </div>
+    </div>
 </div>
+<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>	  
 
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
 
-{% if freq_count_d > 0 %}
-<h1><a href="{% url 'daily' %}">Dayly Goals</a></h1>
-<table border="1">
-  <tr>
-    <th>Importance</th>
-    <th>Title</th>
-    <th>Complete</th>
-    <th>frequency</th>
-    <th>Due</th>
-    <th>Delete</th>
-  </tr>
-  {% for x in mymembers|dictsort:"importance" %}
-    {% if x.frequency == "Daily" %}
-    <tr>
-      <td>{{ x.importance }}</td>
-      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
-      <td>{{ x.complete }}</td>
-      <td>{{ x.frequency }}</td>
-      <td>{{ x.due }}</td>
-      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
-    </tr>
-    {% endif %}
-  {% endfor %}
-</table>
-{% else %}
-  <h1> Dayly Goals</h1>
-  <p>There are no dayly tasks. To create task please click here</p>
-  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
-{% endif %}
+  <footer class="text-center text-lg-start" style="background-color: #5c534f;">
+    <div class="container d-flex justify-content-center py-5">
+        <a href="https://www.facebook.com/" target="_blank">
+            <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+                <i class="fab fa-facebook-f"></i>
+            </button>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank">
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+            <i class="fab fa-youtube"></i>
+        </button>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+            <i class="fab fa-instagram"></i>
+        </button>
+      </a>
+      <a href="https://twitter.com/" target="_blank">
+        <button type="button" class="btn btn-primary btn-lg btn-floating mx-2" style="background-color: #54456b;">
+            <i class="fab fa-twitter"></i>
+        </button>
+      </a>
+    </div>
 
-<br>
-<br>
+    <!-- Copyright -->
+    <div class="text-center text-white p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
 
+</div>
+<!-- End of .container -->
 
-{% if freq_count_w > 0 %}
-<h1><a href="{% url 'weekly' %}">Weekly Goals</a></h1>
-<table border="1">
-  <tr>
-    <th>importance</th>
-    <th>title</th>
-    <th>complete</th>
-    <th>frequency</th>
-    <th>due</th>
-    <th>Delete</th>
-  </tr>
-  {% for x in mymembers|dictsort:"importance" %}
-    {% if x.frequency == "Weekly" %}
-    <tr>
-      <td>{{ x.importance }}</td>
-      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
-      <td>{{ x.complete }}</td>
-      <td>{{ x.frequency }}</td>
-      <td>{{ x.due }}</td>
-      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
-    </tr>
-    {% endif %}
-  {% endfor %}
-</table>
-{% else %}
-  <h1> Weekly Goals</h1>
-  <p>There are no dayly tasks. To create task please click here</p>
-  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
-{% endif %}
-
-<br>
-<br>
-
-{% if freq_count_m > 0 %}
-<h1><a href="{% url 'monthly' %}">Monthly Goals</a></h1>
-<table border="1">
-  <tr>
-    <th>importance</th>
-    <th>title</th>
-    <th>complete</th>
-    <th>frequency</th>
-    <th>due</th>
-    <th>Delete</th>
-  </tr>
-  {% for x in mymembers|dictsort:"importance" %}
-    {% if x.frequency == "Monthly" %}
-    <tr>
-      <td>{{ x.importance }}</td>
-      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
-      <td>{{ x.complete }}</td>
-      <td>{{ x.frequency }}</td>
-      <td>{{ x.due }}</td>
-      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
-    </tr>
-    {% endif %}
-  {% endfor %}
-</table>
-{% else %}
-  <h1> Weekly Goals</h1>
-  <p>There are no dayly tasks. To create task please click here</p>
-  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
-{% endif %}
-
-<br>
-<br>
-
-{% if freq_count_y > 0 %}
-<h1><a href="{% url 'yearly' %}">Yearly Goals</a></h1>
-<table border="1">
-  <tr>
-    <th>importance</th>
-    <th>title</th>
-    <th>complete</th>
-    <th>frequency</th>
-    <th>due</th>
-    <th>Delete</th>
-  </tr>
-  {% for x in mymembers|dictsort:"importance" %}
-    {% if x.frequency == "Yearly" %}
-    <tr>
-      <td>{{ x.importance }}</td>
-      <td><a href="{% url 'task-update' x.id %}">{{ x.title }}</a></td>
-      <td>{{ x.complete }}</td>
-      <td>{{ x.frequency }}</td>
-      <td>{{ x.due }}</td>
-      <td><a href="{% url 'task-delete' x.id %}">Delete</a></td>
-    </tr>
-    {% endif %}
-  {% endfor %}
-</table>
-{% else %}
-  <h1> Monthly Goals</h1>
-  <p>There are no dayly tasks. To create task please click here</p>
-  <a id="add-link" href="{% url 'task-create' %}">&#x2b;"create task"</a>
-{% endif %}
-
-<br>
-<br>
-
-{% endblock content %}
+</body>
+</html>
