@@ -14,6 +14,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
 from .models import Task
+from .forms import PostForm
 
 
 class CustomLoginView(LoginView):
@@ -57,6 +58,8 @@ def testing2(request):
     'freq_count_y': freq_count_y,
   }
   return HttpResponse(template.render(context, request))
+
+
 
 
 
@@ -130,7 +133,8 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
     # fields = ['title', 'description', 'complete']
-    fields = '__all__'
+    # fields = '__all__'
+    form_class = PostForm
     success_url = reverse_lazy('tasks')
 
     def form_valid(self, form):
@@ -140,7 +144,8 @@ class TaskCreate(LoginRequiredMixin, CreateView):
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
-    fields = '__all__'
+    form_class = PostForm
+    # fields = '__all__'
     # fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('tasks')
 

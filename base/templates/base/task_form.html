@@ -1,16 +1,29 @@
-{% extends 'base/main.html' %}
-{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header-bar">
+        <a href="{% url 'tasks' %}">&#8592; Back</a>
+        <p>this is task_form.html</p>
+    </div>
+    
+    <div class="form-group">
+        <form method="POST">
+            {%csrf_token%}
+            {{form.as_p}}
+            <input class="button" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
 
-<div class="header-bar">
-    <a href="{% url 'tasks' %}">&#8592; Back</a>
-    <p>this is task_form.html</p>
-</div>
 
-<div class="card-body">
-    <form method="POST" action = "">
-        {%csrf_token%}
-        {{form.as_p}}
-        <input class="button" type="submit" value="Submit">
-    </form>
-</div>
-{% endblock content %}
+
+
+
+
