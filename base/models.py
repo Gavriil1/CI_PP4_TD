@@ -34,7 +34,7 @@ class Task(models.Model):
     complete = models.BooleanField(default=False)
     created = models.DateTimeField(auto_now_add=True)
     frequency = models.CharField(max_length=10, choices=FREQUENCY_CHOICES, default='Daily')
-    importance = models.CharField(max_length=10, choices=Important_Choice, default='Urgent')
+    importance = models.CharField(max_length=10, choices=Important_Choice, default='A')
     completed = models.CharField(max_length=10, choices=COMPLETED_CHOICE, default='InComplete')
     # due = models.DateField(default='2100-01-01')
     due = models.DateField(default=timezone.now().date())
