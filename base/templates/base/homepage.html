@@ -7,13 +7,21 @@
   <title>Document</title>
 
   <style>
-
+        html {
+            height: 100%;
+            box-sizing: border-box;
+        }
 body {
     background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); /* Replace 'your-image.jpg' with your image file path */
     background-size: cover; /* Adjust the size as needed (e.g., 'cover', 'contain', '100%') */
     background-repeat: no-repeat; /* Prevent image repetition */
     background-attachment: fixed; /* Keep the background fixed while scrolling */
     /* Add more CSS styles for the body element if needed */
+    position: relative;
+            margin: 0;
+            min-height: 100%;
+            padding-bottom: 6.74rem;
+            box-sizing: inherit;
   }
 
 
@@ -24,6 +32,7 @@ body {
     position: absolute;
     left: 0;
     right: 0;
+    bottom: 0;
     width: 100%;
 }
 
@@ -142,7 +151,7 @@ body {
   </style>
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body >
 
     <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
         <div class="container-fluid">
@@ -391,8 +400,19 @@ body {
                             <h1><a href="{% url 'yearly' %}">Yearly Goals</a></h1>
                         <p>There are no Yearly tasks. To create task please click here</p>
                   
-                        {% endif %}            
-                        </tbody>
+                        {% endif %} 
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, suscipit aspernatur necessitatibus possimus nulla fuga fugiat dolor perferendis! Iure voluptas nostrum architecto rerum reprehenderit necessitatibus mollitia impedit maxime voluptatum facere!</p>
+                        <p>Repellendus laborum aspernatur quae officiis omnis, voluptatibus vitae magni saepe at corporis, vero aliquam inventore nobis. Dolor neque impedit molestias! Atque, voluptates. Laborum tempora provident harum, similique voluptates consectetur consequatur.</p>
+                        <p>Quibusdam, distinctio eveniet iure atque porro quis quisquam repellat consequatur sapiente eius accusamus laboriosam quae rem pariatur dolore ut. Fugit adipisci voluptatem vitae et omnis unde atque eos optio delectus?</p>       
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, rerum iusto. Corrupti velit hic, iure itaque voluptatem dolores minus quia quam officia commodi dolore possimus iusto laudantium, voluptates magni laborum.</p>
+                        <p>Quos corrupti molestiae voluptatibus velit, quam consectetur, itaque optio eius quod deleniti fuga? Hic dolorum fugit aut reprehenderit possimus maxime, sequi deleniti quaerat voluptatum voluptatibus, esse qui eos omnis numquam.</p>
+                        <p>Necessitatibus mollitia, aperiam ad delectus autem deleniti cupiditate enim, odit non unde optio quasi! Inventore accusamus id consequuntur nam, facilis nobis, in ea sequi quas rem esse, eum minus voluptates.</p>
+                        <p>Cupiditate nulla nemo reiciendis qui corrupti consectetur? Id ex dolor impedit vero commodi laborum laboriosam animi praesentium itaque, earum neque corporis fugit et ad sequi? Architecto cum dolorem similique omnis.</p>
+                        <p>Provident velit autem aspernatur quisquam quos earum repellat, nemo, natus ipsam fuga placeat quam quidem quo, ipsa ab non dolorem amet nihil a atque tenetur soluta voluptas vel quae! Tempore.</p>
+                        <p>Reprehenderit maiores id atque ipsum sit, neque totam ut perspiciatis molestiae sequi velit quidem voluptatibus odit incidunt iure quo placeat in ab a blanditiis similique? Vel totam ad at perspiciatis.</p>
+                        <p>Consequatur facilis harum nostrum dolorem beatae! Perspiciatis iure beatae, libero earum deleniti possimus cumque quae dolorem numquam quod officia, sunt quibusdam repudiandae commodi consectetur blanditiis eligendi, labore id ut ea?</p>
+                        <p>Atque libero, aliquid ab necessitatibus neque consequatur modi dolor repudiandae quam quis laborum natus eaque nemo explicabo fugiat blanditiis a iste sed molestias debitis ut exercitationem culpa pariatur? Veniam, natus?</p>
+                        </tbody> -->
                     </table>
                 </div>
 
