@@ -15,11 +15,11 @@ class PostForm(forms.ModelForm):
         
         widgets = {
             'user': forms.Select(attrs={'class': 'form-control'}),
-            'frequency': forms.Select(attrs={'class': 'form-control'}),
-            'importance': forms.Select(attrs={'class': 'form-control'}),
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control'}),
-            'completed': forms.CheckboxInput(attrs={'class': 'form-control'}),
+            'frequency': forms.Select(attrs={'class': 'form-control'}),
+            'importance': forms.Select(attrs={'class': 'form-control'}),     
+            'completed': forms.Select(attrs={'class': 'form-control'}),
             'due': forms.widgets.DateInput(attrs={'type': 'date'}),
         }
 
