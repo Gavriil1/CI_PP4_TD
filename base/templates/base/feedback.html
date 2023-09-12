@@ -148,6 +148,48 @@ body {
     background-color: #000;
     box-shadow: 0 0 5px rgba(0,0,0,0.4);
 }
+
+/* feedback form */
+
+
+/*feedback button */
+/* Form code is taken from here https://www.w3schools.com/howto/howto_css_contact_form.asp */
+* {box-sizing: border-box;}
+/* should be text area */
+input[type=text], select, textarea {
+  
+  border: 3px solid #942424;
+  margin-bottom: 15px;
+  resize:  vertical;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+}
+/* button */
+
+.container {
+  
+  text-align: center;
+  font-size: 150%;
+  background-color: #c9c5c2;
+  padding: 25px;
+  text-align: center;
+  font-size: 150%;
+  width: 80%;
+  margin: auto;
+
+}
+input[type=submit] {
+  background-color: #c20d2b;
+  color: white;
+  padding: 12px 60px;
+  border-radius: 4px;
+}
+
+input[type=submit]:hover {
+  background-color: #72072a;
+}
   </style>
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
@@ -213,24 +255,22 @@ body {
 
 
 
+<br>
+<h1>1 this is very big feedback page</h1>
 
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-<h1>this is very big feedback page</h1>
-
-
-
-<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>	  
-
+<header>		
+    <h1 id="headerfeedback">Rate Spartan Invader</h1>
+</header>
+<main>
+    <div class="container">
+      <form id="contact-form">
+        <label for="subject">Review Form</label>
+        <textarea id="subject" name="message" placeholder="Leave feedback to help us make Spartan Invader better" style="height:200px"></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </div>
+	</main>
+  
 <!-- Remove the container if you want to extend the Footer to full width. -->
 <div class="container my-5">
 
@@ -297,6 +337,13 @@ body {
 
 </div>
 <!-- End of .container -->
+<!-- emailJs -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<!-- jd  file of the page -->
+<script src="assets/js/form.js"></script>
+<!-- font awesome script -->
+  <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>	  
 
 </body>
 </html>
