@@ -1,115 +1,276 @@
-{% extends 'base/main.html' %}
-{% block content %}
- 
-<div class="header-bar">
-    <div>
-        <h1>Hello  {{request.user|title}} </h1>
-        <h3 style="margin:0">You have <i>{{count}}</i> incomplete task{{ count|pluralize:"s" }}</h3>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Document</title>
+
+  <style>
+        html {
+            height: 100%;
+            box-sizing: border-box;
+        }
+body {
+    background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); /* Replace 'your-image.jpg' with your image file path */
+    background-size: cover; /* Adjust the size as needed (e.g., 'cover', 'contain', '100%') */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    /* Add more CSS styles for the body element if needed */
+    position: relative;
+            margin: 0;
+            min-height: 100%;
+            padding-bottom: 6.74rem;
+            box-sizing: inherit;
+  }
+
+
+  footer
+{
+    height: 150px;
+    /* background-color: black; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+  
+  /* p { 
+   color: #00FFFF; 
+  }  */
+
+  h3 {
+    color: #1E90FF
+  }
+    .panel{
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+.panel .panel-heading{
+    /* background: #535353; */
+    padding: 15px;
+    border-radius: 0;
+}
+.panel .panel-heading .btn{
+    color: #fff;
+    background-color: #888484;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-heading .btn:hover{ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+.panel .panel-heading .form-horizontal .form-group{ margin: 0; }
+.panel .panel-heading .form-horizontal label{
+    color: #fff;
+    margin-right: 10px;
+}
+.panel .panel-heading .form-horizontal .form-control{
+    display: inline-block;
+    width: 80px;
+    border: none;
+    border-radius: 0;
+}
+.panel .panel-heading .form-horizontal .form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+.panel .panel-body{
+    padding: 0;
+    border-radius: 0;
+}
+.panel .panel-body .table thead tr th{
+    color: #fff;
+    background: #8D8D8D;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 12px;
+    border-bottom: none;
+}
+.panel .panel-body .table thead tr th:nth-of-type(1){ width: 120px; }
+.panel .panel-body .table thead tr th:nth-of-type(3){ width: 50%; }
+.panel .panel-body .table tbody tr td{
+    color: #555;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 13px;
+    vertical-align: middle;
+    border-color: #e7e7e7;
+}
+.panel .panel-body .table tbody tr:nth-child(odd) td{ background: #f5f5f5; }
+.panel .panel-body .table tbody .action-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.panel .panel-body .table tbody .action-list li{ display: inline-block; }
+.panel .panel-body .table tbody .action-list li a{
+    color: #fff;
+    font-size: 13px;
+    line-height: 28px;
+    height: 28px;
+    width: 33px;
+    padding: 0;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-body .table tbody .action-list li a:hover{ box-shadow: 0 0 5px #ddd; }
+.panel .panel-footer{
+    color: #fff;
+    background: #535353;
+    font-size: 16px;
+    line-height: 33px;
+    padding: 25px 15px;
+    border-radius: 0;
+}
+.pagination{ margin: 0; }
+.pagination li a{
+    color: #fff;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 2px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.pagination li a:hover,
+.pagination li a:focus,
+.pagination li.active a{
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+  </style>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+</head>
+<body >
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Homepage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Manual</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Feedback</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+              <li class="nav-item active">
+              </li>
+              <li class="nav-item" >
+                <p class="nav-link">User:  {{request.user|title}}</p>
+              </li>
+              <li class="nav-item">
+                <p class="nav-link">{% if request.user.is_authenticated %}
+                    <!-- <p>{{request.user}}</p> -->
+                    <a href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                    {% endif %}</p>
+              </li>
+            </ul>
+          </div
+
+
+          </div>
+        </div>
+      </nav>
+
+<p>hi how are you all good</p>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+
+<footer class="text-center text-white " style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4 " >
+      <!-- Section: Social media -->
+      <section class="mb-4 ">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.facebook.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://twitter.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.instagram.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.linkedin.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://github.com/Gavriil1/CI_PP4_TD"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
     </div>
-    {% if request.user.is_authenticated %}
-    <!-- <p>{{request.user}}</p> -->
-    <a href="{% url 'logout' %}">Logout</a>
-    {% else %}
-    <a href="{% url 'login' %}">Login</a>
-    {% endif %}
-</div>
-
-<div id="search-add-wrapper">
-    <form method="GET" style="margin-top: 20px; display: flex;">
-        <input type='text' name='search-area' value="{{search_input}}">
-        <input class = "button" type="submit" value = 'Search'>
-    </form>
-    <a id="add-link" href="{% url 'task-create' %}">&#x2b;</a>
-</div>
-
-<!-- i added this part to be able to filter tasks by their importance -->
-<div id="filter-wrapper" style="margin-top: 20px;">
-    <form method="GET">
-        <label for="importance-filter">Filter by Importance:</label>
-        <select id="importance-filter" name="importance">
-            <option value="" {% if selected_importance == "" %}selected{% endif %}>All</option>
-            <option value="A" {% if selected_importance == "A" %}selected{% endif %}>A Urgent</option>
-            <option value="B" {% if selected_importance == "B" %}selected{% endif %}>B Important</option>
-            <option value="C" {% if selected_importance == "C" %}selected{% endif %}>C OK</option>
-            <option value="D" {% if selected_importance == "D" %}selected{% endif %}>D Delegate</option>
-            <option value="E" {% if selected_importance == "E" %}selected{% endif %}>E Eliminate</option>
-        </select>
-        <input class="button" type="submit" value="Apply Filter">
-    </form>
-</div>
-
-
-
-
-<div class="task-items-wrapper">
-    {% for task in tasks %}
-        <div class="task-wrapper">
-            {% if task.complete %}
-                <div class="task-title">
-                    <div class="task-complete-icon"></div>
-                    <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i> -->
-                    <p>Due: {{task.due}} </p>
-                     <p>Importance: {{task.importance}}</p>
-                </div>
-                    <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
-            {% else %}
-                <div class="task-title">
-                    <div class="task-incomplete-icon "></div>
-                    <a href="{% url 'task-update' task.id %}">{{task}}</a>
-                    <p>Due: {{task.due}}</p>
-                </div>
-                <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
-            {% endif %}
-        </div>
-    {% empty %}
-    <h3>No items in list</h3>
-    {% endfor %}
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">GS CD4</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
 
 </div>
+<!-- End of .container -->
 
-<p>here we will have yearly goals only</p>
-
-    {% for task in tasks %}
-
-            {% if task.frequency == 'Daily Goal' %}
-                <div class="task-title">
-                    <div class="task-complete-icon"></div>
-                    <i><s><a href="{% url 'task-update' task.id %}">{{task}}</a></s></i> 
-                    <p>Due: {{task.due}} </p>
-                     <p>Importance: {{task.importance}}</p>
-                </div>
-                    <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
-            {% else %}
-                <div class="task-title">
-                    <div class="task-incomplete-icon "></div>
-                    <a href="{% url 'task-update' task.id %}"><p>no</p>{{task}}</a>
-                    <!-- <p>Due: {{task.due}}</p> -->
-                    <p>No Tasks</p>
-                </div>
-                <a class="delete-link" href="{% url 'task-delete' task.id %}">&#215;</a>
-            {% endif %}
-        </div>
-    {% empty %}
-    <h3>No items in list</h3>
-    {% endfor %}
-
-</div>
-
-<!-- <table>
-    <tr>
-        <th>Item</th>
-        <th></th>
-        <th></th>
-    </tr>
-    {% for task in tasks %}
-    <tr>
-        <td>{{task.title}}</td>
-        <td><a href="{% url 'task' task.id %}">View</a></td>
-        <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
-        <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
-    </tr>
-    {% empty %}
-    <h3>No items in list</h3>
-    {% endfor %} -->
-</table>
-{% endblock content %}
+</body>
+</html>

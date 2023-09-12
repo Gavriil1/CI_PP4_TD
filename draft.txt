@@ -20,3 +20,13 @@ Command sequence:
    14  git push
    15  python manage.py migrate
    16  pip3 freeze --local > requirements.txtpip3 freeze --local > requirements.txt
+
+
+
+       # path('daily/', daily, name='daily'),
+    # path('weekly/', weekly, name='weekly'),
+    # path('monthly/', monthly, name='monthly'),
+    # path('yearly/', yearly, name='yearly'),
+    \
+
+    daily, weekly, monthly, yearly, 

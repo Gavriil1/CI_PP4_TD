@@ -1,99 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Footer Position</title>
-    <style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <title>Document</title>
+
+  <style>
         html {
             height: 100%;
             box-sizing: border-box;
         }
-        body{
-            position: relative;
+body {
+    background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); /* Replace 'your-image.jpg' with your image file path */
+    background-size: cover; /* Adjust the size as needed (e.g., 'cover', 'contain', '100%') */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    background-attachment: fixed; /* Keep the background fixed while scrolling */
+    /* Add more CSS styles for the body element if needed */
+    position: relative;
             margin: 0;
             min-height: 100%;
             padding-bottom: 6.74rem;
             box-sizing: inherit;
-        }
-        main{
-            width: 80%;
-            margin: 0 auto;
-            padding-top: 32px;
+  }
 
-        }
-        <h1>{
-            margin: 0;
-        }
-        p{
-            font-size: 18px;
-            text-align: justify;
-        }
 
-        footer {
-            background: greenyellow;
-            font-size: 18px;
-            padding: 35px;
-            text-align: center;
-            position:absolute;
-            right: 0;
-            left: 0;
-            bottom:0;
-        }
+  footer
+{
+    height: 150px;
+    /* background-color: black; */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+}
 
-    </style>
+  
+  /* p { 
+   color: #00FFFF; 
+  }  */
+
+  h3 {
+    color: #1E90FF
+  }
+    .panel{
+    font-family: 'Raleway', sans-serif;
+    padding: 0;
+    border: none;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+.panel .panel-heading{
+    /* background: #535353; */
+    padding: 15px;
+    border-radius: 0;
+}
+.panel .panel-heading .btn{
+    color: #fff;
+    background-color: #888484;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-heading .btn:hover{ box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+.panel .panel-heading .form-horizontal .form-group{ margin: 0; }
+.panel .panel-heading .form-horizontal label{
+    color: #fff;
+    margin-right: 10px;
+}
+.panel .panel-heading .form-horizontal .form-control{
+    display: inline-block;
+    width: 80px;
+    border: none;
+    border-radius: 0;
+}
+.panel .panel-heading .form-horizontal .form-control:focus{
+    box-shadow: none;
+    border: none;
+}
+.panel .panel-body{
+    padding: 0;
+    border-radius: 0;
+}
+.panel .panel-body .table thead tr th{
+    color: #fff;
+    background: #8D8D8D;
+    font-size: 17px;
+    font-weight: 700;
+    padding: 12px;
+    border-bottom: none;
+}
+.panel .panel-body .table thead tr th:nth-of-type(1){ width: 120px; }
+.panel .panel-body .table thead tr th:nth-of-type(3){ width: 50%; }
+.panel .panel-body .table tbody tr td{
+    color: #555;
+    background: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 13px;
+    vertical-align: middle;
+    border-color: #e7e7e7;
+}
+.panel .panel-body .table tbody tr:nth-child(odd) td{ background: #f5f5f5; }
+.panel .panel-body .table tbody .action-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.panel .panel-body .table tbody .action-list li{ display: inline-block; }
+.panel .panel-body .table tbody .action-list li a{
+    color: #fff;
+    font-size: 13px;
+    line-height: 28px;
+    height: 28px;
+    width: 33px;
+    padding: 0;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.panel .panel-body .table tbody .action-list li a:hover{ box-shadow: 0 0 5px #ddd; }
+.panel .panel-footer{
+    color: #fff;
+    background: #535353;
+    font-size: 16px;
+    line-height: 33px;
+    padding: 25px 15px;
+    border-radius: 0;
+}
+.pagination{ margin: 0; }
+.pagination li a{
+    color: #fff;
+    background-color: rgba(0,0,0,0.3);
+    font-size: 15px;
+    font-weight: 700;
+    margin: 0 2px;
+    border: none;
+    border-radius: 0;
+    transition: all 0.3s ease 0s;
+}
+.pagination li a:hover,
+.pagination li a:focus,
+.pagination li.active a{
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0 0 5px rgba(0,0,0,0.4);
+}
+  </style>
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
-<body>
-    <main>
-        <h1>Sample Website</h1>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam, optio corporis. In fuga et, qui minus tenetur voluptas commodi sed! Enim dolore aperiam soluta! A quaerat voluptatem quam itaque animi!</p>
-        <p>Quia nihil delectus molestias. Veniam eos ipsa eveniet saepe? Dignissimos iusto, nisi accusantium enim sed amet ut. At, odio minima! Laboriosam magni, veritatis molestiae tempora minus ratione? Maxime, rerum veniam.</p>
-        <p>Magni non nobis maxime laborum, minus soluta at culpa harum officia earum iure quas voluptas eius in explicabo, iusto id rerum minima quisquam fugit ab veritatis cumque quis? Consequuntur, illo.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dicta sed, alias, quos sint blanditiis est distinctio architecto, laudantium eos quas tenetur explicabo repellendus quisquam? Voluptas odit officiis velit eaque.</p>
-        <!-- <p>Tenetur, eius quo. Quisquam veritatis nesciunt cum laboriosam? Dolor sint ab amet quae nesciunt! Nihil, perferendis eos impedit pariatur facere est temporibus! Quae vel provident quos ab, necessitatibus cum distinctio.</p>
-        <p>Quisquam nesciunt, repudiandae impedit inventore suscipit odio dicta ipsum earum maiores ex culpa omnis consequuntur alias fugit mollitia tenetur eligendi neque ratione veniam voluptatum, eaque ullam! Harum dicta ratione voluptatibus?</p>
-        <p>Quia facere, velit fugit a qui ipsum aperiam architecto sequi vel autem, voluptatibus eius! Iusto aperiam dolores corporis a? Rerum culpa voluptatibus tempora voluptates eius. Optio hic maxime doloremque dolorem?</p>
-        <p>Natus porro praesentium recusandae, nostrum excepturi quaerat corrupti, illum ducimus facere fugiat placeat deleniti corporis mollitia iusto eaque? Quaerat atque cumque sunt tempore dolorem enim expedita animi nobis aperiam quos.</p>
-        <p>Delectus, molestias velit repudiandae ea aspernatur incidunt nisi natus veritatis at laboriosam eveniet illo iure blanditiis impedit nobis non repellendus molestiae necessitatibus ducimus debitis consequuntur beatae. Fugit accusantium minus cumque?</p>
-        <p>Quo doloremque illo aut expedita quos consectetur officiis, eveniet aperiam optio libero dolorum itaque pariatur recusandae eos repellendus possimus? Deserunt harum blanditiis dolorum quisquam rem cupiditate eos ullam quae quia!</p>
-        <p>Delectus, illum expedita. Dolorum cumque tenetur, beatae alias sint eius fuga eos sunt necessitatibus doloribus sit quidem numquam adipisci omnis voluptates ipsa! Hic sed iusto illo laborum harum eveniet dolore.</p>
-        <p>Possimus recusandae a autem repellat quis facilis odio animi, illo nihil adipisci necessitatibus quos molestiae aliquam inventore velit dignissimos, assumenda vitae quae doloremque. Unde consequuntur sapiente minus, mollitia expedita harum?</p>
-        <p>Totam esse similique veniam quod maiores libero a obcaecati expedita impedit fugiat eos ex, ut voluptate nemo minima asperiores pariatur quis. Quibusdam ducimus cupiditate optio minus. Quia delectus fugit facilis?</p>
-        <p>Sint minima magnam quam aliquid eius neque amet eaque repudiandae architecto ad veritatis eos illum ab eum, incidunt delectus? Eum rem maxime exercitationem laborum, fugit vel odit ipsam repudiandae non.</p>
-        <p>Repellat nam dignissimos eveniet voluptatum perferendis asperiores, consequatur atque temporibus saepe nostrum maxime alias provident eius veritatis? Pariatur sed, quasi exercitationem esse voluptatum iusto maxime architecto earum distinctio, sit non.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio eos, excepturi neque magnam architecto, dolor nesciunt quae exercitationem autem atque ea, eum mollitia aliquam? Quaerat doloribus ut dolor ab esse!</p>
-        <p>Nulla voluptates accusamus culpa minus ad laboriosam perspiciatis, commodi odit temporibus corrupti in labore eaque doloremque sit rem illo harum explicabo unde aliquam ipsum? Odio officiis enim sit sunt eligendi.</p>
-        <p>Delectus, laborum inventore corrupti cumque consequatur pariatur repellat beatae perferendis quae? Esse nobis distinctio, eaque exercitationem eius impedit error sint nihil, voluptatibus quam odit facere, natus beatae tempore nemo. Vitae?</p>
-        <p>Nemo obcaecati, maxime quae nam consectetur quam fugiat laborum iusto beatae quibusdam nihil, quasi sed vel corrupti accusamus eligendi enim totam nulla, possimus fugit! Natus ea asperiores perferendis reprehenderit repudiandae.</p>
-        <p>Dolor, porro corrupti! Illum modi sequi consequatur cumque enim eligendi laboriosam obcaecati adipisci accusamus sint doloribus, dicta similique dignissimos quidem minima esse suscipit eos! Commodi sunt dolor a aliquam obcaecati.</p>
-        <p>Magnam quos necessitatibus excepturi iste velit adipisci a ipsam voluptates, illum enim illo ad esse, asperiores eligendi consectetur. Obcaecati, sunt? Consequuntur soluta necessitatibus ad laboriosam veritatis nam repellat omnis libero.</p>
-        <p>Fugiat aliquid ducimus nesciunt quidem quae consectetur, nihil doloribus, error facilis tempore sint reprehenderit similique hic molestiae provident ratione ab quisquam natus? Unde porro voluptatibus aut deserunt dolor. Reiciendis, ab.</p>
-        <p>Ullam quia cum, saepe officia asperiores, voluptatem tenetur ea molestiae quis fugiat reprehenderit, ipsa distinctio esse consectetur adipisci libero! Voluptate excepturi dolorum voluptatibus accusamus nisi magni natus dignissimos alias eveniet.</p>
-        <p>Voluptatum maiores assumenda fugit fugiat ullam quibusdam, esse magni, modi distinctio neque accusamus adipisci commodi at alias! Eaque, ratione expedita enim nobis quam iusto, recusandae vero ab esse odit facere.</p>
-        <p>Mollitia exercitationem odio, minima nemo rem nesciunt dolor deserunt facere in, vero numquam quos labore beatae animi voluptas quas iusto esse similique aperiam cum ad debitis! Natus minus quasi nihil!</p>
-        <p>Atque blanditiis quaerat minus? Corporis hic veritatis repudiandae explicabo iure commodi dignissimos. Expedita magnam cum aperiam, veniam animi explicabo pariatur officiis! Odit id quis totam, dolorem pariatur iste excepturi sed.</p>
-        <p>Voluptate fugit a dolore sit aut, laborum, error omnis ducimus iste voluptatem ratione similique id nihil odit consequatur consequuntur incidunt libero vel esse molestiae quam sapiente? At, architecto quaerat. Fugit.</p>
-        <p>Ex beatae quas temporibus ipsam ea amet debitis odio tenetur quis mollitia velit laboriosam praesentium quasi incidunt, voluptas dolor et magni nihil labore. Quidem iste ad culpa vitae ut ipsum.</p>
-        <p>Odit asperiores laboriosam eius, perspiciatis omnis quaerat quasi obcaecati dolores ea voluptatum ipsam sint incidunt beatae nam voluptates ipsum molestias ad, ab excepturi. Et expedita eaque non officia commodi qui.</p>
-        <p>Culpa doloremque perferendis amet tempora quidem iure hic facilis quos, et fugiat ratione numquam non provident voluptas architecto mollitia saepe dolor ad exercitationem accusamus id, asperiores officia sunt dolores? Aut.</p>
-        <p>Dolore vitae, eligendi possimus reiciendis atque iure tenetur. Natus vel earum fuga quos quis possimus? Iste laudantium sint libero, quam corporis provident tenetur hic inventore accusantium sit vero pariatur adipisci!</p>
-        <p>Autem voluptates amet quo laborum iusto numquam saepe? Sint ea fugit at sit obcaecati. In vitae vel explicabo sunt officiis magni, nobis necessitatibus optio delectus ullam natus asperiores voluptatum quos.</p>
-        <p>Vero deleniti provident at expedita illo qui mollitia eum, alias consectetur, culpa commodi repudiandae cum. Reiciendis debitis aperiam voluptas expedita inventore nemo ipsum nostrum consequatur tenetur et, quam, commodi quisquam.</p>
-        <p>Cumque enim quibusdam beatae cupiditate corporis facere, laborum omnis aliquam nam sequi accusamus unde eligendi, sunt quo. Provident perferendis at dolorem molestiae, voluptatibus magni dolores. Autem, blanditiis. Ex, aut atque.</p>
-        <p>Veniam non suscipit laudantium sit alias pariatur tempore mollitia vel, molestiae, fuga inventore est minima rem dignissimos labore rerum modi libero quas quaerat expedita. Esse sit dicta voluptatum modi possimus.</p>
-        <p>Veritatis eius numquam vel veniam sunt saepe voluptate nemo commodi consequatur quibusdam! Expedita id assumenda harum dolores autem unde cumque ullam doloribus dolorem, qui adipisci commodi deleniti beatae, laudantium mollitia!</p>
-        <p>Odio delectus nemo provident? Recusandae aperiam eos quisquam, et blanditiis quis dolorem sequi dolore eligendi, nisi, voluptates illum iste magnam temporibus labore aliquam ullam quae quod in? Beatae, et dolores.</p>
-        <p>Quae minima quos sunt a maiores! Omnis possimus nulla ratione dolorem similique quis? Pariatur molestiae, placeat quidem libero est natus dolores non? Ratione, totam quam dolorum sit perspiciatis libero voluptatem.</p>
-        <p>Eum eius dolore provident exercitationem quod illo cupiditate perspiciatis ipsam cumque, dicta tenetur quibusdam repellendus nam, consequatur sint voluptate et odit enim. Eos odit pariatur quas reprehenderit quibusdam eum laborum?</p>
-        <p>Sapiente cum illo labore fuga aut adipisci, architecto omnis error facere inventore repellat reiciendis culpa molestias sit quae totam amet similique ipsum laborum corporis nesciunt optio officiis accusantium! Beatae, non!</p>
-        <p>Vitae error vero, a, consequatur placeat totam repudiandae assumenda eos sapiente delectus ipsum architecto officiis quasi harum deserunt? Beatae assumenda vero nam voluptate tempore praesentium corporis adipisci enim, quam non.</p>
-        <p>Reiciendis incidunt omnis, voluptas aperiam voluptates id numquam atque inventore, nesciunt tempore rerum molestiae et est perspiciatis. Animi optio facere dolore placeat, perferendis minus cum voluptatibus. Soluta non culpa nemo!</p>
-        <p>Incidunt nihil repellendus officiis odit laudantium mollitia vitae quaerat reiciendis! Obcaecati ipsum possimus omnis fuga alias numquam ipsam ratione illo corrupti sunt error sit fugit expedita, corporis debitis, animi molestiae.</p>
-        <p>Praesentium velit illum fuga esse tempore quam quisquam neque laborum architecto ipsa! Eos sapiente perferendis consequatur alias iure, reiciendis fuga autem sit enim blanditiis error illum officia at ut sequi!</p>
-        <p>Velit, sapiente nostrum vero nemo enim totam reiciendis perferendis rem, saepe, eveniet neque iure voluptatibus nesciunt id! Doloremque facilis nam aut, similique molestias illo cum, error, nisi dolorum facere possimus?</p> -->
-        <footer>
-            Copyright &copy; <script>document.write(new Date().getFullYear())</script>
-        </footer>
-    </main>
+<body >
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarExample01"
+            aria-controls="navbarExample01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Homepage</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Manual</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Feedback</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse" id="navbarExample01">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
+              <li class="nav-item active">
+              </li>
+              <li class="nav-item" >
+                <p class="nav-link">User:  {{request.user|title}}</p>
+              </li>
+              <li class="nav-item">
+                <p class="nav-link">{% if request.user.is_authenticated %}
+                    <!-- <p>{{request.user}}</p> -->
+                    <a href="{% url 'logout' %}">Logout</a>
+                    {% else %}
+                    <a href="{% url 'login' %}">Login</a>
+                    {% endif %}</p>
+              </li>
+            </ul>
+          </div
+
+
+          </div>
+        </div>
+      </nav>
+
+      <h1>The ABCDE Method</h1>
+
+      <p>The ABCDE Method represents a potent technique for prioritizing tasks, suitable for daily use. This method's simplicity and effectiveness can elevate your efficiency and effectiveness in your chosen field. Think of the ABCDE list as a turbocharged to-do list when it comes to mastering prioritization.</p>
+      <p>The true strength of this technique lies in its straightforward, action-oriented approach.</p>
+      <h2>How it Functions</h2>
+      <p>Here's a breakdown of how it operates: Begin by compiling a list of all the tasks you need to complete for the day. Put your thoughts on paper. Once you have your comprehensive task list, initiate the ABCDE method.</p>
+      <h3>“A” Tasks - The Highest Priority</h3>
+      <p>An "A" task is something of utmost importance, a task you absolutely must complete.</p>
+      <p>These tasks carry significant consequences if left unattended, such as neglecting a crucial client meeting or failing to finish a report your boss requires for an upcoming board meeting.</p>
+      <p>Consider these tasks as the "frogs" in your life. If you have multiple "A" tasks, prioritize them by labeling them as A-1, A-2, A-3, and so on. Your A-1 task is the most crucial one.</p>
+      <h3>“B” Tasks - Minor Consequences</h3>
+      <p>A "B" task is something you should do, but it has relatively minor consequences.</p>
+      <p>These tasks are the "tadpoles" in your work life. Someone might be inconvenienced or unhappy if you don't complete them, but they aren't as critical as "A" tasks. Examples include returning an unimportant phone call or reviewing your email.</p>
+      <p>The rule here is clear: never tackle a "B" task when an "A" task remains unfinished. Avoid getting distracted by tadpoles when there's a substantial frog waiting to be addressed.</p>
+      <h3>“C” Tasks - No Consequences</h3>
+      <p>A "C" task is something that would be nice to do, but it carries no significant consequences, whether you complete it or not.</p>
+      <p>"C" tasks involve activities like chatting with a friend, having coffee or lunch with a colleague, or attending to personal matters during work hours. These activities have no impact on your work life.</p>
+      <p>As a guideline, never engage in a "C" task when there are "B" or "A" tasks pending.</p>
+      <h3>“D” - Delegate</h3>
+      <p>A "D" activity is something you can delegate to someone else.</p>
+      <p>The golden rule is to delegate everything you can to others. This frees up your time for "A" tasks, which significantly influence your career's trajectory.</p>
+      <h3>“E” - Eliminate</h3>
+      <p>An "E" activity is something you should eliminate entirely.</p>
+      <p>To gain control of your time, stop doing things that are no longer necessary.</p>
+      <p>The key to making the ABCDE Method work is disciplining yourself to start immediately on your "A-1" task. Stay focused on it until completion. Use your willpower to kickstart this crucial task, the most important one on your list.</p>
+      <p>Devour the whole frog and don't halt until it's entirely done.</p>
+      <h2>Invest Your Time Wisely</h2>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_4kYeyVLG_Y?si=RJP_aWN1y4at_GS3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      <p>Your ability to analyze your task list and identify your "A-1" task is the foundation for higher achievements. It also boosts self-esteem, self-respect, and personal pride.</p>
+      <p>Once you develop the habit of concentrating on your "A-1" task, you'll outperform your peers.</p>
+      <p>Set a personal rule: never engage in tasks not on your list. If a new task or project arises, add it to your list and establish its priority before diving in.</p>
+      <p>If you react to constant time demands, you'll lose control of your day, spending most of your time on low-value or valueless activities.</p>
+      <h2>Implementing the ABCDE Method</h2>
+      <p>Review your task list now and assign an A, B, C, D, or E to each task or activity. Select your A-1 task or project and commence it immediately. Stay committed to this task until completion. It will become one of your most effective time-management tools.</p>
+      <p>Practice the ABCDE Method daily for the next month on every work or project list before you begin your tasks. By then, you'll have ingrained the habit of prioritizing and working on your most important tasks. Your future success is assured!</p>
+      <h2>Share Your Experience</h2>
+      <p>How has using the ABCDE technique impacted your time management? Please share your thoughts in the comments, and I'll follow up with you.</p>
+      <p>Access my potent priority-setting technique and learn how to evaluate your tasks more effectively by downloading my ABCDE Method Checklist Tool.</p>
+<!-- Remove the container if you want to extend the Footer to full width. -->
+<div class="container my-5">
+
+<footer class="text-center text-white " style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="container pt-4 " >
+      <!-- Section: Social media -->
+      <section class="mb-4 ">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.facebook.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://twitter.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.instagram.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.linkedin.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://github.com/Gavriil1/CI_PP4_TD"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://mdbootstrap.com/">GS CD4</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</div>
+<!-- End of .container -->
+<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>	  
 </body>
 </html>
