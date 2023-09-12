@@ -30,3 +30,5 @@ Command sequence:
     \
 
     daily, weekly, monthly, yearly, 
+
+        # path('', testing, name='tasks'),
