@@ -12,7 +12,7 @@
             box-sizing: border-box;
         }
 body {
-    background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); /* Replace 'your-image.jpg' with your image file path */
+    background-image: url('https://getwallpapers.com/wallpaper/full/8/4/c/570886.jpg'); /* Replace 'your-image.jpg' with your image file path */
     background-size: cover; /* Adjust the size as needed (e.g., 'cover', 'contain', '100%') */
     background-repeat: no-repeat; /* Prevent image repetition */
     background-attachment: fixed; /* Keep the background fixed while scrolling */
@@ -37,12 +37,12 @@ body {
 }
 
   
-  /* p { 
-   color: #00FFFF; 
-  }  */
+  p { 
+   color: #fafcfc; 
+  } 
 
-  h3 {
-    color: #1E90FF
+  h1 {
+    color: #f2f4f7
   }
     .panel{
     font-family: 'Raleway', sans-serif;
@@ -153,54 +153,31 @@ body {
 </head>
 <body >
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
-        <div class="container-fluid">
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-mdb-toggle="collapse"
-            data-mdb-target="#navbarExample01"
-            aria-controls="navbarExample01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <i class="fas fa-bars"></i>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarExample01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'homepage' %}">Homepage</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'manual' %}">Manual</a>
-              </li>
+  <nav class="navbar navbar-expand-sm bg-white navbar-light">
+    <!-- Brand -->
+    <a class="navbar-brand" href="{% url 'homepage' %}">ABCDE-TODO</a>
   
-            </ul>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarExample01">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ml-auto">
-              <li class="nav-item active">
-              </li>
-              <li class="nav-item" >
-                <p class="nav-link">User:  {{request.user|title}}</p>
-              </li>
-              <li class="nav-item">
-                <p class="nav-link">{% if request.user.is_authenticated %}
-                    <!-- <p>{{request.user}}</p> -->
-                    <a href="{% url 'logout' %}">Logout</a>
-                    {% else %}
-                    <a href="{% url 'login' %}">Login</a>
-                    {% endif %}</p>
-              </li>
-            </ul>
-          </div
-
-
-          </div>
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'homepage' %}">Homepage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'manual' %}">Manual</a>
+      </li>
+  
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          {{request.user}}
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
         </div>
-    </nav>
+      </li>
+    </ul>
+  </nav>
+  
       
       <div>
       <h1>The ABCDE Method</h1>
