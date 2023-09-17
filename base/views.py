@@ -16,7 +16,7 @@ from django.contrib.auth import login
 from .models import Task
 from .forms import PostForm
 
-
+# Login and Register Page
 class CustomLoginView(LoginView):
     template_name = 'base/login.html'
     fields = '__all__'
@@ -24,76 +24,6 @@ class CustomLoginView(LoginView):
 
     def get_success_url(self):
         return reverse_lazy('homepage')
-
-
-# class RegisterPage2(FormView):
-#     template_name = 'base/test.html'
-#     form_class = UserCreationForm
-#     redirect_authenticated_user = True
-#     success_url = reverse_lazy('tasks')
-
-#     def form_valid(self, form):
-#         user = form.save()
-#         if user is not None:
-#             login(self.request, user)
-#         return super(RegisterPage2, self).form_valid(form)
-
-#     def get(self, *args, **kwargs):
-#         if self.request.user.is_authenticated:
-#             return redirect('tasks')
-#         return super(RegisterPage2, self).get(*args, **kwargs)
-
-# def testing2(request):
-#   mydata = Task.objects.all()
-#   freq_count_d = Task.objects.filter(frequency="Daily").count()
-#   freq_count_w = Task.objects.filter(frequency="Weekly").count()
-#   freq_count_m = Task.objects.filter(frequency="Monthly").count()
-#   freq_count_y = Task.objects.filter(frequency="Yearly").count()
-#   template = loader.get_template('base/test.html')
-#   context = {
-#     'mymembers': mydata,
-#     'freq_count_d': freq_count_d,
-#     'freq_count_w': freq_count_w,
-#     'freq_count_m': freq_count_m,
-#     'freq_count_y': freq_count_y,
-#   }
-#   return HttpResponse(template.render(context, request))
-
-def testing2(request):
-  mydata = Task.objects.all()
-  template = loader.get_template('base/test.html')
-  context = {
-    'mymembers': mydata,
-  }
-  return HttpResponse(template.render(context, request))
-
-
-def manual(request):
-  mydata = Task.objects.all()
-  template = loader.get_template('base/manual.html')
-  context = {
-    'mymembers': mydata,
-  }
-  return HttpResponse(template.render(context, request))
-
-
-def feedback(request):
-  mydata = Task.objects.all()
-  template = loader.get_template('base/feedback.html')
-  context = {
-    'mymembers': mydata,
-  }
-  return HttpResponse(template.render(context, request))
-
-
-def feedback(request):
-  mydata = Task.objects.all()
-  template = loader.get_template('base/feedback.html')
-  context = {
-    'mymembers': mydata,
-  }
-  return HttpResponse(template.render(context, request))
-
 
 
 class RegisterPage(FormView):
@@ -114,48 +44,7 @@ class RegisterPage(FormView):
         return super(RegisterPage, self).get(*args, **kwargs)
 
 
-class TaskList(LoginRequiredMixin, ListView):
-    model = Task
-    context_object_name = 'tasks'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['tasks'] = context['tasks'].filter(user=self.request.user)
-        context['count'] = context['tasks'].filter(complete=False).count()
-
-        search_input = self.request.GET.get('search-area') or ''
-        if search_input:
-            context['tasks'] = context['tasks'].filter(title__icontains=search_input)
-
-        context['search_input'] = search_input
-
-        return context
-class TaskList2(LoginRequiredMixin, ListView):
-    model = Task
-    template_name = 'base/test.html'
-    context_object_name = 'testing1'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['tasks'] = context['tasks'].filter(user=self.request.user)
-        context['count'] = context['tasks'].filter(complete=False).count()
-
-        search_input = self.request.GET.get('search-area') or ''
-        if search_input:
-            context['tasks'] = context['tasks'].filter(title__icontains=search_input)
-
-        # Filter by selected importance
-        selected_importance = self.request.GET.get('importance', '')
-        if selected_importance:
-            context['tasks'] = context['tasks'].filter(importance=selected_importance)
-            context['selected_importance'] = selected_importance
-        else:
-            context['selected_importance'] = ''
-
-        context['search_input'] = search_input
-
-        return context
-
+# Tasks DetailView,CreateView, Task Update, Delete View
 
 class TaskDetail(LoginRequiredMixin, DetailView):
     model = Task
@@ -188,30 +77,7 @@ class DeleteView(LoginRequiredMixin, DeleteView):
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
 
-
-# def testing(request):
-#   template = loader.get_template('base/template.html')
-#   context = {
-#     'fruits': ['Apple', 'Banana', 'Cherry'],   
-#   }
-#   return HttpResponse(template.render(context, request))
-# def testing(request):
-#   mydata = Task.objects.all()
-#   freq_count_d = Task.objects.filter(frequency="Daily").count()
-#   freq_count_w = Task.objects.filter(frequency="Weekly").count()
-#   freq_count_m = Task.objects.filter(frequency="Monthly").count()
-#   freq_count_y = Task.objects.filter(frequency="Yearly").count()
-#   template = loader.get_template('base/homepage.html')
-#   context = {
-#     'mymembers': mydata,
-#     'freq_count_d': freq_count_d,
-#     'freq_count_w': freq_count_w,
-#     'freq_count_m': freq_count_m,
-#     'freq_count_y': freq_count_y,
-#   }
-#   return HttpResponse(template.render(context, request))
-
-
+# Pages : Homepage, Manual Page
 def homepage(request):
   mydata = Task.objects.all()
   freq_count_d = Task.objects.filter(frequency="Daily").count()
@@ -229,6 +95,28 @@ def homepage(request):
   return HttpResponse(template.render(context, request))
 
 
+def manual(request):
+  mydata = Task.objects.all()
+  template = loader.get_template('base/manual.html')
+  context = {
+    'mymembers': mydata,
+  }
+  return HttpResponse(template.render(context, request))
 
-  
+
+class TaskList(LoginRequiredMixin, ListView):
+    model = Task
+    context_object_name = 'tasks'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['tasks'] = context['tasks'].filter(user=self.request.user)
+        context['count'] = context['tasks'].filter(complete=False).count()
+
+        search_input = self.request.GET.get('search-area') or ''
+        if search_input:
+            context['tasks'] = context['tasks'].filter(title__icontains=search_input)
+
+        context['search_input'] = search_input
+        return context
 
