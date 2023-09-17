@@ -10,6 +10,7 @@ from django.urls import reverse_lazy
 
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
@@ -23,7 +24,7 @@ class CustomLoginView(LoginView):
     redirect_authenticated_user = True
 
     def get_success_url(self):
-        return reverse_lazy('homepage')
+        return reverse_lazy('tasks')
 
 
 class RegisterPage(FormView):
@@ -78,6 +79,7 @@ class DeleteView(LoginRequiredMixin, DeleteView):
     success_url = reverse_lazy('tasks')
 
 # Pages : Homepage, Manual Page
+@login_required
 def homepage(request):
   mydata = Task.objects.all()
   freq_count_d = Task.objects.filter(frequency="Daily").count()
