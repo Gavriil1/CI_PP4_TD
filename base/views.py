@@ -96,7 +96,7 @@ def homepage(request):
   }
   return HttpResponse(template.render(context, request))
 
-
+@login_required
 def manual(request):
   mydata = Task.objects.all()
   template = loader.get_template('base/manual.html')
