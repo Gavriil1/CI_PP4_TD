@@ -55,9 +55,18 @@ box-shadow: 0 0 0 0 !important;
 
 #id_username {
   height: 35px;
-  width: 100%;
+  width: 105%;
   border-style: none;
   margin-top:-5px;
+  margin-left:-10px;
+}
+
+#id_password {
+  height: 35px;
+  width: 105%;
+  border-style: none;
+  margin-top:-5px;
+  margin-left:-10px;
 }
 
 .remember{
@@ -122,7 +131,9 @@ margin-left: 4px;
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
 						<!-- <input type="password" class="form-control" placeholder="password"> -->
+            <div class="form-control">
                         {{ form.password }}
+            </div>
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
