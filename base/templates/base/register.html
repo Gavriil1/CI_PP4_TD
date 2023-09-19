@@ -119,7 +119,7 @@ margin-left: 4px;
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3 class="text-white text-center">Sign In</h3>
+				<h3 class="text-white text-center">Register</h3>
 			</div>
 			<div class="card-body">
 				<form method="POST">
@@ -162,33 +162,12 @@ margin-left: 4px;
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-                    <p>Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
-				</div>
-				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your password?</a>
+                    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
-
-<div class="card-body">
-    <form method="POST">
-        {% csrf_token %}
-        <label>{{form.username.label}}</label>
-        {{form.username}}
-
-        <label>{{form.password1.label}}</label>
-        {{form.password1}}
-        <label>{{form.password2.label}}</label>
-        {{form.password2}}
-        <input style="margin: top 10px; ;" class= "button" type="submit" value="Register">
-    </form>
-    <p>Already have an account <a href="{% url 'login' %}">Login</a></p>
-</div>
-
-
 
 <footer class="text-center text-white fixed-bottom" style="background-color: #f1f1f1;">
     <!-- Grid container -->
