@@ -200,7 +200,7 @@
             <div class="panel">
                 <div class="panel-heading">
                     <div class="row">
-                        <div>
+                        <div class="col-sm-12 col-xs-12 ">
                             <a href="{% url 'task-create' %}" class="btn btn-sm btn-primary pull-left"><i class="fa fa-plus-circle"></i> Add New</a>
 
                         </div>
