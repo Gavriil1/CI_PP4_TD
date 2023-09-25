@@ -20,6 +20,34 @@ class TestUrls(SimpleTestCase):
         print(resolve(url))
         self.assertEquals(resolve(url).func.view_class, CustomLoginView)
 
+    def test_list_url_is_resolved_register(self):
+        url = reverse('register')
+        print(resolve(url))
+        self.assertEquals(resolve(url).func.view_class, RegisterPage)
+
+    def test_list_url_is_resolved_taskdetail(self):
+        task_id = 1  # for the test to work I need to use the valid id
+        url = reverse('task', kwargs={'pk': task_id})
+        print(resolve(url))
+        self.assertEquals(resolve(url).func.view_class, TaskDetail)
+
+    def test_list_url_is_resolved_task_create(self):
+        url = reverse('task-create')
+        print(resolve(url))
+        self.assertEquals(resolve(url).func.view_class, TaskCreate)
+
+    def test_list_url_is_resolved_task_update(self):
+        task_id = 1  # for the test to work I need to use the valid id
+        url = reverse('task-update', kwargs={'pk': task_id})
+        print(resolve(url))
+        self.assertEquals(resolve(url).func.view_class, TaskUpdate)
+
+    def test_list_url_is_resolved_task_delete(self):
+        task_id = 1  # for the test to work I need to use the valid id
+        url = reverse('task-delete', kwargs={'pk': task_id})
+        print(resolve(url))
+        self.assertEquals(resolve(url).func.view_class, DeleteView)
+
 
     
 

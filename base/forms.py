@@ -24,12 +24,3 @@ class PostForm(forms.ModelForm):
         }
 
 
-    # user
-    # title 
-    # description 
-    # complete 
-    # created
-    # frequency
-    # importance
-    # completed
-    # due
