@@ -6,7 +6,7 @@ from .models import Task
 @admin.register(Task)
 
 class AdminTaskView(admin.ModelAdmin):
-    list_display = ['title', 'description', 'importance', 'complete']
+    list_display = ['id', 'title', 'description', 'importance', 'complete']
     list_filter = ['importance', 'frequency','user']
     search_fields = ['description']
 

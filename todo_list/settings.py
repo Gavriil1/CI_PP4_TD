@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+import sys
 if os.path.isfile('env.py'):
     import env
 
@@ -38,7 +39,7 @@ ALLOWED_HOSTS = ['8000-gavriil1-cipp4td-ve91anfq83l.ws-eu104.gitpod.io', 'ci-pp4
 # Application definition
 
 INSTALLED_APPS = [
-    'jazzmin',
+    # 'jazzmin',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -93,7 +94,14 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
-
+# this is code which tutor asked me to add after the database statement
+if 'test' in sys.argv:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+    }
 
 
 # Password validation
