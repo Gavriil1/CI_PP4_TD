@@ -5,7 +5,25 @@ import json
 
 from django.contrib.auth.models import User  # Add this import
 
-class TestViews(TestCase):
+class NonAuthViews(TestCase):
+
+    # testing login view
+    def test_project_list_GET_login(self):
+        client = Client()
+        response = client.get(reverse('login'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'base/login.html')
+
+    # register page
+    def test_project_list_GET_register(self):
+        client = Client()
+        response = client.get(reverse('register'))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'base/register.html')
+
+
+
+class AuthViews(TestCase):
 
     def setUp(self):
         # Create a test user and log them in
@@ -19,11 +37,6 @@ class TestViews(TestCase):
         response = self.client.get(reverse('tasks'))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'base/homepage.html')
-
-    def test_project_list_GET_manual(self):
-        response = self.client.get(reverse('manual'))
-        self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'base/manual.html')
 
     def test_project_list_GET_manual(self):
         response = self.client.get(reverse('manual'))
