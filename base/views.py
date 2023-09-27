@@ -26,7 +26,7 @@ class CustomLoginView(LoginView):
     def get_success_url(self):
         return reverse_lazy('tasks')
 
-
+# Register view page
 class RegisterPage(FormView):
     template_name = 'base/register.html'
     form_class = UserCreationForm
