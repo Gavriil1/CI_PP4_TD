@@ -33,7 +33,7 @@ SECRET_KEY = "SECRET_KEY"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-gavriil1-cipp4td-ve91anfq83l.ws-eu104.gitpod.io', 'ci-pp4-td-014f88cd1918.herokuapp.com']
+ALLOWED_HOSTS = ['8000-gavriil1-cipp4td-ve91anfq83l.ws-eu104.gitpod.io', 'ci-pp4-td-014f88cd1918.herokuapp.com', '8000-gavriil1-cipp4td-ve91anfq83l.ws-eu105.gitpod.io']
 
 
 # Application definition

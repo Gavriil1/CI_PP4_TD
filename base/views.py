@@ -81,7 +81,7 @@ class DeleteView(LoginRequiredMixin, DeleteView):
 # Pages : Homepage, Manual Page
 @login_required
 def homepage(request):
-  mydata = Task.objects.all()
+  mydata = Task.objects.filter(user=request.user)
   freq_count_d = Task.objects.filter(frequency="Daily").count()
   freq_count_w = Task.objects.filter(frequency="Weekly").count()
   freq_count_m = Task.objects.filter(frequency="Monthly").count()
