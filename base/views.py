@@ -106,19 +106,22 @@ def manual(request):
   return HttpResponse(template.render(context, request))
 
 
-class TaskList(LoginRequiredMixin, ListView):
-    model = Task
-    context_object_name = 'tasks'
+# class TaskList(LoginRequiredMixin, ListView):
+#     model = Task
+#     context_object_name = 'tasks'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['tasks'] = context['tasks'].filter(user=self.request.user)
-        context['count'] = context['tasks'].filter(complete=False).count()
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['tasks'] = context['tasks'].filter(user=self.request.user)
+#         context['count'] = context['tasks'].filter(complete=False).count()
 
-        search_input = self.request.GET.get('search-area') or ''
-        if search_input:
-            context['tasks'] = context['tasks'].filter(title__icontains=search_input)
+#         search_input = self.request.GET.get('search-area') or ''
+#         if search_input:
+#             context['tasks'] = context['tasks'].filter(title__icontains=search_input)
 
-        context['search_input'] = search_input
-        return context
+#         context['search_input'] = search_input
+#         return context
 
+# 404 page for django
+def custom_404(request, exception):
+    return render(request, '/workspace/CI_PP4_TD/base/templates/base/404.html', status=404)
