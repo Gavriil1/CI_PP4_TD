@@ -1,0 +1,74 @@
+/* login page */
+ 
+
+        @import url('https://fonts.googleapis.com/css?family=Numans');
+
+        .login_html,.login_body{
+        background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        font-family: 'Numans', sans-serif;
+        }
+        
+        .login-container{
+        height: 70%;
+        align-content: center;
+        }
+        
+        .card{
+        height: 370px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 600px;
+        background-color: rgba(0,0,0,0.5) !important;
+        }
+        
+        .input-group-prepend span{
+        width: 45px;
+        background-color: #FFC312;
+        color: black;
+        border:0 !important;
+        }
+        
+        input:focus{
+        outline: 0 0 0 0  !important;
+        box-shadow: 0 0 0 0 !important;
+        
+        }
+        
+        #id_username {
+          height: 35px;
+          width: 105%;
+          border-style: none;
+          margin-top:-5px;
+          margin-left:-10px;
+        }
+        
+        #id_password {
+          height: 35px;
+          width: 105%;
+          border-style: none;
+          margin-top:-5px;
+          margin-left:-10px;
+        }
+        
+        
+        .login_btn{
+        color: black;
+        background-color: #FFC312;
+        width: 100px;
+        }
+        
+        .login_btn:hover{
+        color: black;
+        background-color: white;
+        }
+        
+        .links{
+        color: white;
+        }
+        
+        .links a{
+        margin-left: 4px;
+        }

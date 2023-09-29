@@ -125,3 +125,21 @@ def manual(request):
 # 404 page for django
 def custom_404(request, exception):
     return render(request, '/workspace/CI_PP4_TD/base/templates/base/404.html', status=404)
+
+
+
+def test(request):
+  mydata = Task.objects.filter(user=request.user)
+  freq_count_d = Task.objects.filter(frequency="Daily").count()
+  freq_count_w = Task.objects.filter(frequency="Weekly").count()
+  freq_count_m = Task.objects.filter(frequency="Monthly").count()
+  freq_count_y = Task.objects.filter(frequency="Yearly").count()
+  template = loader.get_template('base/test.html')
+  context = {
+    'mymembers': mydata,
+    'freq_count_d': freq_count_d,
+    'freq_count_w': freq_count_w,
+    'freq_count_m': freq_count_m,
+    'freq_count_y': freq_count_y,
+  }
+  return HttpResponse(template.render(context, request))

@@ -1,6 +1,5 @@
-{% load static %}
 <!DOCTYPE html>
-<html class="register-html">
+<html class="login_html">
 <head>
 	<title>Login Page</title>
    <!--Made with love by Mutiullah Samim -->
@@ -13,14 +12,15 @@
 	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  
 	<!--Custom styles-->
-  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<link rel="stylesheet" type="text/css" href="styles.css">
     <style>
         /* Made with love by Mutiullah Samim*/
 
- @import url('https://fonts.googleapis.com/css?family=Numans');
-/*
-.register-html,.register-body{
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+.login_html,.login_body{
 background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
 background-size: cover;
 background-repeat: no-repeat;
@@ -28,7 +28,7 @@ height: 100%;
 font-family: 'Numans', sans-serif;
 }
 
-.register-container{
+.login_container{
 height: 70%;
 align-content: center;
 }
@@ -62,15 +62,7 @@ box-shadow: 0 0 0 0 !important;
   margin-left:-10px;
 }
 
-#id_password1 {
-  height: 35px;
-  width: 105%;
-  border-style: none;
-  margin-top:-5px;
-  margin-left:-10px;
-}
-
-#id_password2 {
+#id_password {
   height: 35px;
   width: 105%;
   border-style: none;
@@ -96,20 +88,20 @@ color: white;
 
 .links a{
 margin-left: 4px;
-} */
+}
     </style>
 </head>
-<body class="register-body">
+<body class="login_body">
 
   <br><br>
 	<h1 class="text-white text-center">Welcome to ABCDE ToDo List</h1>
 
-<div class="register-container">
+<div class="login_container">
 
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3 class="text-white text-center">Register</h3>
+				<h3 class="text-white text-center">Sign In</h3>
 			</div>
 			<div class="card-body">
 				<form method="POST">
@@ -119,7 +111,7 @@ margin-left: 4px;
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</div>
 						<!-- <input type="text" class="form-control" placeholder="username">  -->\
-                        <div class="form-control">
+            <div class="form-control">
                         {{ form.username }}
                       </div>
 						
@@ -129,21 +121,10 @@ margin-left: 4px;
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
 						<!-- <input type="password" class="form-control" placeholder="password"> -->
-                        <div class="form-control">
-                        {{form.password1}}
-                        </div>
-                    </div>
-
-                    <div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
-						<!-- <input type="password" class="form-control" placeholder="password"> -->
-                        <div class="form-control">
-                        {{form.password2}}
-                        </div>
-                    </div>
-                            
+            <div class="form-control">
+                        {{ form.password }}
+            </div>
+					</div>
 					<div class="form-group">
 						<input type="submit" value="Login" class="btn btn-lg btn-block float-right login_btn">
 					</div>
@@ -152,7 +133,10 @@ margin-left: 4px;
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-                    <p>Already have an account? <a href="{% url 'login' %}">Login</a></p>
+                    <p>Don't have an account? <a href="{% url 'register' %}">Sign Up</a></p>
+				</div>
+				<div class="d-flex justify-content-center">
+					<a href="#">Forgot your password?</a>
 				</div>
 			</div>
 		</div>
@@ -161,7 +145,7 @@ margin-left: 4px;
 
 <footer class="text-center text-white fixed-bottom" style="background-color: #f1f1f1;">
     <!-- Grid container -->
-    <div class="register-container pt-4 " >
+    <div class="login_container pt-4 " style="background-color: #f1f1f1;" >
       <!-- Section: Social media -->
       <section class="mb-4 ">
         <!-- Facebook -->
