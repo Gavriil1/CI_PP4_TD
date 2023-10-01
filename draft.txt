@@ -36,3 +36,7 @@ Command sequence:
 
 Testing  View.
 
+
+
+task.html
+<h1> Task: {{ task }}</h1>
