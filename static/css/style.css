@@ -1,7 +1,7 @@
-/* login page */
+/* login Register page */
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-.login_html,.login_body{
+.main_html,.main_body{
 background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
 background-size: cover;
 background-repeat: no-repeat;
@@ -9,7 +9,7 @@ height: 100%;
 font-family: 'Numans', sans-serif;
 } 
 
-.login-container{
+.main_container{
 height: 70%;
 align-content: center;
 }
@@ -51,6 +51,21 @@ box-shadow: 0 0 0 0 !important;
   margin-left:-10px;
 }
 
+#id_password1 {
+  height: 35px;
+  width: 105%;
+  border-style: none;
+  margin-top:-5px;
+  margin-left:-10px;
+}
+
+#id_password2 {
+  height: 35px;
+  width: 105%;
+  border-style: none;
+  margin-top:-5px;
+  margin-left:-10px;
+}
 
 .login_btn{
 color: black;
@@ -80,85 +95,30 @@ margin-left: 4px;
     font-family: 'Numans', sans-serif;
     }
     
-    .register-container{
-    height: 70%;
-    align-content: center;
-    }
+
+
     
-    .card{
-    height: 370px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 600px;
-    background-color: rgba(0,0,0,0.5) !important;
-    }
+
     
-    .input-group-prepend span{
-    width: 45px;
-    background-color: #FFC312;
-    color: black;
-    border:0 !important;
-    }
-    
-    input:focus{
-    outline: 0 0 0 0  !important;
-    box-shadow: 0 0 0 0 !important;
-    
-    }
-    
-    #id_username {
-      height: 35px;
-      width: 105%;
-      border-style: none;
-      margin-top:-5px;
-      margin-left:-10px;
-    }
-    
-    #id_password1 {
-      height: 35px;
-      width: 105%;
-      border-style: none;
-      margin-top:-5px;
-      margin-left:-10px;
-    }
-    
-    #id_password2 {
-      height: 35px;
-      width: 105%;
-      border-style: none;
-      margin-top:-5px;
-      margin-left:-10px;
-    }
+
+
     
     
-    .login_btn{
-    color: black;
-    background-color: #FFC312;
-    width: 100px;
-    }
+   
     
-    .login_btn:hover{
-    color: black;
-    background-color: white;
-    }
-    
-    .links{
-    color: white;
-    }
-    
-    .links a{
-    margin-left: 4px;
-    }
+
+  
+  
 
 
 
   /* task_form.html */
 
-  html {
+   /* html {
     height:100%;
     box-sizing: border-box;      
 }
-body{
+.body{
     background-color: #FAFAFA;
     font-family: 'Nunito', sans-serif;
     background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); 
@@ -225,15 +185,15 @@ p {color: #FAFAFA;}
     color: black;
     background-color: white;
 }
+ */
 
-
- .card-body {
+ /* .card-body {
     margin-top:-40px;
     padding: 60px;
- }
+ } */
  
  /* manual */
- .html-manual {
+ /* .html-manual {
   height: 100%;
   box-sizing: initial;
 }
@@ -247,7 +207,7 @@ p {color: #FAFAFA;}
   min-height: 90%;
   padding-bottom: 6.74rem;
   box-sizing: inherit;         
-}
+} */ */
 /* 
 .footer-manual
 {
@@ -262,7 +222,7 @@ p {color: #FAFAFA;}
 
 /* homepage */
 
-.html-homepage {
+/* .html-homepage {
   height: 100%;
   box-sizing: border-box;
 }
@@ -297,12 +257,12 @@ padding: 0;
 border: none;
 box-shadow: 0 0 10px rgba(0,0,0,0.08);
 }
-.panel .panel-heading{
+.panel .panel-heading{ */
 /* background: #535353; */
-padding: 15px;
+/* padding: 15px;
 border-radius: 0;
-}
-.panel .panel-heading .btn{
+} */
+/* .panel .panel-heading .btn{
 color: #fff;
 background-color: #888484;
 font-size: 14px;
@@ -389,4 +349,59 @@ border-radius: 0;
 transition: all 0.3s ease 0s;
 }
 .pagination li a:hover,
-.pagination li a:focus,
+.pagination li a:focus, */
+
+/* 404 page */
+/* @import url('https://fonts.googleapis.com/css?family=Numans');
+
+.htmlfof, .bodyfo{
+background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+}
+
+.footer-homepage
+            {
+                height: 150px;
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 100%;
+            }
+        .bodyfof {
+  margin: 0;
+  background-color: #9cc3d5;
+  text-align: center;
+  color: white;
+  user-select: none;
+  
+}
+.containerfof{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #2e022193;
+  padding-top: 150px
+}
+.h2fof{
+  font-size: 150px;
+  margin: 0;
+  text-shadow: 15px 5px 2px black;
+}
+.h3fof{
+  font-size: 40px;
+  margin: 20px;
+}
+.pfof{
+  font-size: 18px;
+  margin: 5px;
+}
+
+.pfof:last-of-type{
+  margin-bottom: 65px;
+}
+ */

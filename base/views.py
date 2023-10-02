@@ -127,7 +127,6 @@ def custom_404(request, exception):
     return render(request, '/workspace/CI_PP4_TD/base/templates/base/404.html', status=404)
 
 
-
 def test(request):
   mydata = Task.objects.filter(user=request.user)
   freq_count_d = Task.objects.filter(frequency="Daily").count()
