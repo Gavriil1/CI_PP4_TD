@@ -32,7 +32,7 @@ SECRET_KEY = "SECRET_KEY"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -165,6 +165,5 @@ JAZZMIN_SETTINGS = {
     "site_title": "ABCDE TODO",
     "site_header": "Welcome to ABCDE Task List admin pannel",
     "welcome_sign": "Welcome Back Admin!",
-     "copyright": "GS 2023 Code Academy.",
-
+    "copyright": "GS 2023 Code Academy.",
 }
