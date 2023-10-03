@@ -338,6 +338,49 @@ transition: all 0.3s ease 0s;
 .pagination li a:hover,
 .pagination li a:focus,
 
+/* manual page */
+.html-manual {
+  height: 100%;
+  box-sizing: border-box;
+}
+.body-manual {    /* background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');  */
+  background-size: cover; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
+  position: relative;
+  margin: 0;
+  min-height: 100%;
+  padding-bottom: 6.74rem;
+  box-sizing: inherit;
+}
+
+
+
+.footer-manual
+  {
+      height: 150px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+  }
+  main{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 32px;
+  }
+  .h1_manual {
+    margin: 0;
+  }
+  .h3_manual {
+    margin: 0;
+  }
+  .p-manual{
+    font-size: 18px;
+    text-align: justify;
+  }
+
 
 /* 404 page */
 

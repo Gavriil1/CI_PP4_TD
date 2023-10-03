@@ -1,7 +1,6 @@
-
 {% load static %}
 <!DOCTYPE html>
-<html class="html-manual"    lang="en">
+<html lang="en" class=".html-manual">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,16 +8,44 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- <link rel="stylesheet" href="{% static 'css/style.css' %}"> -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
   <title>Document</title>
-
-
+  <!-- <link rel="stylesheet"  href="{% static 'css/style.css' %}"> -->
   <style>
+    html{
+      height: 100%;
+      box-sizing: border-box;
 
+    }
+    body {
+      position: relative;
+      margin: 0;
+      min-height: 100%;
+      padding-bottom: 6.74rem;
+      box-sizing: inherit;
+    }
+    main{
+      width: 80%;
+      margin: 0 auto;
+      padding-top: 32px;
+    }
+    <h1> {
+      margin: 0;
+    }
+    P{
+      font-size: 18px;
+      text-align: justify;
+    }
 
+    footer{
+     
+      text-align: center;
+      position:absolute;
+      right:0;
+      left:0;
+      bottom:0;
+    }
 
-  </style>
+</style>
   
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 </head>
@@ -49,35 +76,20 @@
         </ul>
       </nav>
       
-<!-- <h6 style="text-center text-white">How to use ABCDE method</h6> -->
-<main>
-  <h1 class="h1_manual text-dark">How Does the ABCDE Method Function?</h1>
-  <br>
-<p class="p-manual text-dark" >The ABCDE method serves as a potent technique for setting priorities, a practice regularly employed by managers and team members. Thanks to its simplicity and effectiveness, you have the potential to boost your efficiency within your professional domain. Below, you will find an explanation of what falls under each letter:</p>
+      <main>
+        <h3>ABCDE TODO List  </h3>
+        <iframe width="1500" height="600" src="https://www.youtube.com/embed/FKOMTZ7PPLg?si=ayGTUUi8RRzltsm5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </main>
+<!-- 
+      <div style="margin: 1em;">
+        <h2 class="text-center text-white">Manual for ABCDE ToDo List</h1>
+        <div class="embed-responsive embed-responsive-16by9">
+        <p>hi</p>
+        </div>        
+        
+      </div> -->
 
-<h3>A-Tasks: Highest Priority</h3>
-<p class="p-manual text-dark">These tasks hold utmost importance and require immediate attention. Neglecting them could result in severe consequences. Examples include handling payments with impending deadlines or ensuring timely parcel deliveries.</p>
-
-<h3 class="h3_manual text-dark">B-Tasks: Recommended Tasks</h3>
-<p class="p-manual text-dark">Tasks in this category require attention but not necessarily at this very moment. They can be incorporated into your weekly or daily planning. For instance, scheduling a meeting with a colleague to discuss work-related matters.</p>
-
-<h3 class="h3_manual">C-Tasks: Consequence-Free Tasks</h3>
-<p class="p-manual text-dark">No urgency surrounds tasks in this category. You undertake these tasks because they bring you satisfaction. It's essential to strike a balance between your professional and personal life rather than solely focusing on work. During your leisure time, consider enjoying meals with friends or arranging gatherings with family.</p>
-
-<h3 class="h3_manual">D-Tasks: Delegatable Tasks</h3>
-<p class="p-manual text-dark">On occasion, you will come across tasks that can be assigned to someone else. Delegating these tasks allows you to concentrate on more critical matters and effectively manage your priorities.</p>
-
-<h3 class="h3_manual">E-Tasks: Elimination</h3>
-<p class="p-manual text-dark">Tasks in this category are typically irrelevant and not worth your time. Removing them is a straightforward decision. For instance, you can reduce your daily trips to the supermarket to twice a week.</p>
-
-</main>
-
-<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>	  
-
-<!-- Remove the container if you want to extend the Footer to full width. -->
-<div class="container my-5">
-
-<footer class="text-center text-white fixed-bottom" style="background-color: #f1f1f1;">
+<footer class="text-center text-white" style="background-color: #f1f1f1;">
     <!-- Grid container -->
     <div class="container pt-4 " >
       <!-- Section: Social media -->
@@ -140,6 +152,6 @@
 
 </div>
 <!-- End of .container -->
-
+<script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>	 
 </body>
 </html>
