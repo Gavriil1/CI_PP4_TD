@@ -19,7 +19,7 @@ from .forms import PostForm
 
 # Login and Register Page
 class CustomLoginView(LoginView):
-    template_name = 'base/login.html'
+    template_name = '/workspace/CI_PP4_TD/templates/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
 
@@ -28,7 +28,7 @@ class CustomLoginView(LoginView):
 
 # Register view page
 class RegisterPage(FormView):
-    template_name = 'base/register.html'
+    template_name = '/workspace/CI_PP4_TD/templates/register.html'
     form_class = UserCreationForm
     redirect_authenticated_user = True
     success_url = reverse_lazy('tasks')
@@ -55,6 +55,7 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
+    template_name = '/workspace/CI_PP4_TD/templates/task_form.html'
     # fields = ['title', 'description', 'complete']
     # fields = '__all__'
     form_class = PostForm
@@ -68,6 +69,7 @@ class TaskCreate(LoginRequiredMixin, CreateView):
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     form_class = PostForm
+    template_name = '/workspace/CI_PP4_TD/templates/task_form.html'
     # fields = '__all__'
     # fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('tasks')
@@ -75,6 +77,7 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
 
 class DeleteView(LoginRequiredMixin, DeleteView):
     model = Task
+    template_name = '/workspace/CI_PP4_TD/templates/task_confirm_delete.html'
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
 
@@ -86,7 +89,7 @@ def homepage(request):
   freq_count_w = Task.objects.filter(frequency="Weekly").count()
   freq_count_m = Task.objects.filter(frequency="Monthly").count()
   freq_count_y = Task.objects.filter(frequency="Yearly").count()
-  template = loader.get_template('base/homepage.html')
+  template = loader.get_template('/workspace/CI_PP4_TD/templates/homepage.html')
   context = {
     'mymembers': mydata,
     'freq_count_d': freq_count_d,
@@ -99,7 +102,7 @@ def homepage(request):
 @login_required
 def manual(request):
   mydata = Task.objects.all()
-  template = loader.get_template('base/manual.html')
+  template = loader.get_template('/workspace/CI_PP4_TD/templates/manual.html')
   context = {
     'mymembers': mydata,
   }
@@ -124,7 +127,7 @@ def manual(request):
 
 # 404 page for django
 def custom_404(request, exception):
-    return render(request, '/workspace/CI_PP4_TD/base/templates/base/404.html', status=404)
+    return render(request, '/workspace/CI_PP4_TD/templates/404.html', status=404)
 
 
 def test(request):
@@ -133,7 +136,7 @@ def test(request):
   freq_count_w = Task.objects.filter(frequency="Weekly").count()
   freq_count_m = Task.objects.filter(frequency="Monthly").count()
   freq_count_y = Task.objects.filter(frequency="Yearly").count()
-  template = loader.get_template('base/test.html')
+  template = loader.get_template('/workspace/CI_PP4_TD/templates/test.html')
   context = {
     'mymembers': mydata,
     'freq_count_d': freq_count_d,
