@@ -85,11 +85,10 @@ class DeleteView(LoginRequiredMixin, DeleteView):
 @login_required
 def homepage(request):
   mydata = Task.objects.filter(user=request.user)
-  freq_count_d = Task.objects.filter(user=request.user, frequency="Daily").count()
-  # freq_count_d = Task.objects.filter(frequency="Daily").count()
-  freq_count_w = Task.objects.filter(user=request.user, frequency="Weekly").count()
-  freq_count_m = Task.objects.filter(user=request.user, frequency="Monthly").count()
-  freq_count_y = Task.objects.filter(user=request.user, frequency="Yearly").count()
+  freq_count_d = Task.objects.filter(frequency="Daily").count()
+  freq_count_w = Task.objects.filter(frequency="Weekly").count()
+  freq_count_m = Task.objects.filter(frequency="Monthly").count()
+  freq_count_y = Task.objects.filter(frequency="Yearly").count()
   template = loader.get_template('/workspace/CI_PP4_TD/templates/homepage.html')
   context = {
     'mymembers': mydata,
@@ -110,23 +109,7 @@ def manual(request):
   return HttpResponse(template.render(context, request))
 
 
-# class TaskList(LoginRequiredMixin, ListView):
-#     model = Task
-#     context_object_name = 'tasks'
 
-#     def get_context_data(self, **kwargs):
-#         context = super().get_context_data(**kwargs)
-#         context['tasks'] = context['tasks'].filter(user=self.request.user)
-#         context['count'] = context['tasks'].filter(complete=False).count()
-
-#         search_input = self.request.GET.get('search-area') or ''
-#         if search_input:
-#             context['tasks'] = context['tasks'].filter(title__icontains=search_input)
-
-#         context['search_input'] = search_input
-#         return context
-
-# 404 page for django
 def custom_404(request, exception):
     return render(request, '/workspace/CI_PP4_TD/templates/404.html', status=404)
 
