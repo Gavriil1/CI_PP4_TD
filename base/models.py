@@ -45,3 +45,12 @@ class Task(models.Model):
     
     class Meta:
         ordering = ['complete']
+
+
+class ContactF(models.Model):
+    name = models.CharField(max_length=200)
+    email=models.EmailField()
+    title = models.CharField(max_length=200)
+    description = models.TextField(null=True, blank=True)
+    def __str__(self):
+        return self.name

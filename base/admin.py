@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Task
+from .models import Task, ContactF
 # Register your models here.
 
 # admin.site.register(Task)
@@ -10,7 +10,7 @@ class AdminTaskView(admin.ModelAdmin):
     list_filter = ['importance', 'frequency','user']
     search_fields = ['description']
 
-
+admin.site.register(ContactF)
 
 
 

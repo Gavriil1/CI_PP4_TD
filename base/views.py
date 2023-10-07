@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
-from .models import Task
+from .models import Task, ContactF
 from .forms import PostForm
 
 # Login and Register Page
@@ -114,18 +114,34 @@ def custom_404(request, exception):
     return render(request, '/workspace/CI_PP4_TD/templates/404.html', status=404)
 
 
+# def test(request):
+#   mydata = Task.objects.filter(user=request.user)
+#   freq_count_d = Task.objects.filter(frequency="Daily").count()
+#   freq_count_w = Task.objects.filter(frequency="Weekly").count()
+#   freq_count_m = Task.objects.filter(frequency="Monthly").count()
+#   freq_count_y = Task.objects.filter(frequency="Yearly").count()
+#   template = loader.get_template('/workspace/CI_PP4_TD/templates/test.html')
+#   context = {
+#     'mymembers': mydata,
+#     'freq_count_d': freq_count_d,
+#     'freq_count_w': freq_count_w,
+#     'freq_count_m': freq_count_m,
+#     'freq_count_y': freq_count_y,
+#   }
+#   return HttpResponse(template.render(context, request))
+
+
 def test(request):
-  mydata = Task.objects.filter(user=request.user)
-  freq_count_d = Task.objects.filter(frequency="Daily").count()
-  freq_count_w = Task.objects.filter(frequency="Weekly").count()
-  freq_count_m = Task.objects.filter(frequency="Monthly").count()
-  freq_count_y = Task.objects.filter(frequency="Yearly").count()
-  template = loader.get_template('/workspace/CI_PP4_TD/templates/test.html')
-  context = {
-    'mymembers': mydata,
-    'freq_count_d': freq_count_d,
-    'freq_count_w': freq_count_w,
-    'freq_count_m': freq_count_m,
-    'freq_count_y': freq_count_y,
-  }
-  return HttpResponse(template.render(context, request))
+  if request.method=="POST":
+    contact=Contact()
+    name=request.POST.get('name')
+    email=request.POST.get('email')
+    subject=request.POST.get('subject')
+    message=request.POST.get('message')
+    ContactF.name=name
+    ContactF.email=email
+    ContactF.subject=subject
+    ContactF.message=message
+    contact.save()
+    return HttpResponse("<h1>THANKS FOR CONTACT US<h1>")
+  return render(request, '/workspace/CI_PP4_TD/templates/test.html')

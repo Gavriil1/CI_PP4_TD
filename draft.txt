@@ -3,6 +3,11 @@ Video
 
 Jazmin Library: https://django-jazzmin.readthedocs.io/
 
+contact form django: https://www.youtube.com/watch?v=lSgRWA4PMt4
+
+
+# started working on form : https://www.youtube.com/watch?v=lSgRWA4PMt4
+
 
 Command sequence:
     1  pip3 install django
