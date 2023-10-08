@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import TaskDetail, TaskCreate, TaskUpdate, DeleteView, CustomLoginView, RegisterPage,   manual, homepage, custom_404, test, custom_404 
+from .views import TaskDetail, TaskCreate, TaskUpdate, DeleteView, CustomLoginView, RegisterPage,   manual, homepage, custom_404, test, custom_404, feedback
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
@@ -14,4 +14,5 @@ urlpatterns = [
     path('task-delete/<int:pk>/', DeleteView.as_view(), name='task-delete'),
     path('test/', test, name='test'), 
     path('custom_404/', custom_404, name='custom_404'),
+    path('feedback/', feedback, name='feedback'), 
     ]

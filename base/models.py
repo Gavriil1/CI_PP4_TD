@@ -47,10 +47,10 @@ class Task(models.Model):
         ordering = ['complete']
 
 
-class ContactF(models.Model):
+class Contact(models.Model):
     name = models.CharField(max_length=200)
     email=models.EmailField()
-    title = models.CharField(max_length=200)
-    description = models.TextField(null=True, blank=True)
+    subject = models.CharField(max_length=200)
+    message = models.TextField(null=True, blank=True)
     def __str__(self):
         return self.name

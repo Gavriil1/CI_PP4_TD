@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
-from .models import Task, ContactF
+from .models import Task, Contact
 from .forms import PostForm
 
 # Login and Register Page
@@ -114,6 +114,27 @@ def custom_404(request, exception):
     return render(request, '/workspace/CI_PP4_TD/templates/404.html', status=404)
 
 
+def feedback(request):
+    if request.method == "POST":
+        contact = Contact()  # Create a new instance of the Contact model
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')  # Get the subject field
+        message = request.POST.get('message')  # Get the message field
+        
+        # Set the values for the Contact instance
+        contact.name = name
+        contact.email = email
+        contact.subject = subject  # Assign the subject value
+        contact.message = message  # Assign the message value
+        
+        contact.save()  # Save the Contact instance to the database
+        
+        # return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
+        
+    return render(request, '/workspace/CI_PP4_TD/templates/feedback.html')
+
+
 # def test(request):
 #   mydata = Task.objects.filter(user=request.user)
 #   freq_count_d = Task.objects.filter(frequency="Daily").count()
@@ -131,17 +152,42 @@ def custom_404(request, exception):
 #   return HttpResponse(template.render(context, request))
 
 
+# def test(request):
+#     if request.method == "POST":
+#         contact = Contact()  # Use a different variable name here
+#         name = request.POST.get('name')
+#         email = request.POST.get('email')
+#         subject = request.POST.get('subject')
+#         message = request.POST.get('message')
+#         contact.name = name
+#         contact.email = email
+#         contact.subject = subject
+#         contact.message = message
+#         contact.save()
+#         return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
+#     return render(request, '/workspace/CI_PP4_TD/templates/test.html')
+
 def test(request):
-  if request.method=="POST":
-    contact=Contact()
-    name=request.POST.get('name')
-    email=request.POST.get('email')
-    subject=request.POST.get('subject')
-    message=request.POST.get('message')
-    ContactF.name=name
-    ContactF.email=email
-    ContactF.subject=subject
-    ContactF.message=message
-    contact.save()
-    return HttpResponse("<h1>THANKS FOR CONTACT US<h1>")
-  return render(request, '/workspace/CI_PP4_TD/templates/test.html')
+    if request.method == "POST":
+        contact = Contact()  # Create a new instance of the Contact model
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')  # Get the subject field
+        message = request.POST.get('message')  # Get the message field
+        
+        # Set the values for the Contact instance
+        contact.name = name
+        contact.email = email
+        contact.subject = subject  # Assign the subject value
+        contact.message = message  # Assign the message value
+        
+        contact.save()  # Save the Contact instance to the database
+        # messages.success(
+        #         request, "Message has been sent")
+        return render(request, "/workspace/CI_PP4_TD/templates/feedbackreceived.html")
+        # return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
+        # return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
+    
+    return render(request, '/workspace/CI_PP4_TD/templates/test.html')
+
+
