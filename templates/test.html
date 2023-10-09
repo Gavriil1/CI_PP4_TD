@@ -1,60 +1,107 @@
-{% extends "base.html" %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 
-{% block content %}
-
-
-</head>
-<nav class="navbar navbar-expand-sm bg-white navbar-light">
-  <!-- Brand -->
-  <a class="navbar-brand" href="{% url 'tasks' %}">ABCDE-TODO</a>
-
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'tasks' %}">Homepage</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'manual' %}">Manual</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="{% url 'feedback' %}">Feedback</a>
-    </li>
-
-    <!-- Dropdown -->
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        {{request.user}}
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-      </div>
-    </li>
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+    <ul>
+      {% for product in products %}
+          <li>
+              <h2>{{ product.title }}</h2>
+              <p>{{ product.details }}</p>
+              <p>Stars: {{ product.stars }}</p>
+              <img src="{{ product.productpic }}" alt="Product Image">
+              <a href="{{ product.amazon }}" target="_blank">Amazon Link</a>
+          </li>
+      {% endfor %}
   </ul>
-</nav>
+  <section style="background-color: #eee;">
+    {% for product in products %}
+    <div class="container py-5">
+      <div class="row justify-content-center mb-3">
+        <div class="col-md-12 col-xl-10">
+          <div class="card shadow-0 border rounded-3">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                  <div class="bg-image hover-zoom ripple rounded ripple-surface">
+                    <img src="{{ product.productpic }}"
+                      class="w-100" />
+                    <a href="#!">
+                      <div class="hover-overlay">
+                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-6">
+                  <h5>{{ product.title }}</h5>
+                    <div class="text-danger mb-1 me-2">
+                      {% for _ in "x"|rjust:product.stars %}
+                          <i class="fa fa-star"></i>
+                      {% endfor %}
+                  </div>
+                  
+                    <span>310</span>
+                  </div>
+                  <div class="mt-1 mb-0 text-muted small">
+                    <span>100% cotton</span>
+                    <span class="text-primary"> • </span>
+                    <span>Light weight</span>
+                    <span class="text-primary"> • </span>
+                    <span>Best finish<br /></span>
+                  </div>
+                  <div class="mb-2 text-muted small">
+                    <span>Unique design</span>
+                    <span class="text-primary"> • </span>
+                    <span>For men</span>
+                    <span class="text-primary"> • </span>
+                    <span>Casual<br /></span>
+                  </div>
+                  <p class="text-truncate mb-4 mb-md-0">
+                    There are many variations of passages of Lorem Ipsum available, but the
+                    majority have suffered alteration in some form, by injected humour, or
+                    randomised words which don't look even slightly believable.
+                  </p>
+                </div>
+                <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                  <div class="d-flex flex-row align-items-center mb-1">
+                    <h4 class="mb-1 me-1">$13.99</h4>
+                    <span class="text-danger"><s>$20.99</s></span>
+                  </div>
+                  <h6 class="text-success">Free shipping</h6>
+                  <div class="d-flex flex-column mt-4">
+                    <button class="btn btn-primary btn-sm" type="button" onclick="window.location.href='{{ product.amazon }}'">Buy on Amazon</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </section>
 
-<body class="main_body">
+    <!-- Optional JavaScript; choose one of the two! -->
 
-  <br><br>
-	<h1 class="text-white text-center">Feedback Received</h1>
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
-<div class="main_container">
-
-	<div class="d-flex justify-content-center h-100">
-		<div class="card" style="height: 200px;width: 1000px">
-			<div class="card-header">
-				<h1 class="text-white text-center">Message Received. </h1>
-        <h1 class="text-white text-center"> We will get back to you soon!</h1>
-        <h2 class="text-white text-center">To Return home, <a href="{% url 'tasks' %}" class="booking-success-button">click</a> here</h2>
-				<!-- <p class="text-white text-center">Please help us to make our up better. Please share your feedback Please share with us your feedback.</p> -->
-			</div>
-			<div class="card-body" style="height: 400px; ">
-				<p text-white></p><br>
-                            
-       
->
-			</div>
-		</div>
-	</div>
-</div>
-
-{%endblock%}
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
