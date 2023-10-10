@@ -206,3 +206,11 @@ def test(request):
         'products': products,
     }
     return render(request, '/workspace/CI_PP4_TD/templates/test.html', context)
+
+
+def books(request):
+    products = Product.objects.all()
+    context = {
+        'products': products,
+    }
+    return render(request, '/workspace/CI_PP4_TD/templates/test.html', context)
