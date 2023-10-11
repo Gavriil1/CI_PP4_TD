@@ -15,7 +15,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
 # Create your views here.
-def feedback(request):
+def contactform(request):
     if request.method == "POST":
         contact = Contact()  # Create a new instance of the Contact model
         name = request.POST.get('name')
