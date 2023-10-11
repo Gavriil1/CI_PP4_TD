@@ -13,11 +13,13 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from .models import Contact
+
 
 # Create your views here.
-def contactform(request):
+def contact_form(request):
     if request.method == "POST":
-        contact = Contact()  # Create a new instance of the Contact model
+        contact = Contact()  
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')  # Get the subject field

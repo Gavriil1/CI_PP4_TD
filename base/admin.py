@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import Task, Contact, Product
+from .models import Task,  Product
 # Register your models here.
-
+# Contact
 # admin.site.register(Task)
 @admin.register(Task)
 
@@ -11,7 +11,7 @@ class AdminTaskView(admin.ModelAdmin):
     search_fields = ['description']
 
 
-admin.site.register(Contact)
+# admin.site.register(Contact)
 
 
 admin.site.register(Product)

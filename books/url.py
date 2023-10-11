@@ -1,7 +1,7 @@
 from django.urls import path
-from .views import contact_form
+from .views import books
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
-    path('feedback/', contact_form, name='feedback'),
+    path('bookstest/', books, name='bookstest'),
     ]

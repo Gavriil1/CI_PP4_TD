@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'base.apps.BaseConfig',
-    'contactform.apps.ContactformConfig'
+    'contactform.apps.ContactformConfig',
+    'books.apps.BooksConfig',
 ]
 
 MIDDLEWARE = [
