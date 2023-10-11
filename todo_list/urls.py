@@ -20,6 +20,9 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('base.url')),
+    path('', include('contactform.url')),
 ]
 
 handler404 = 'base.views.custom_404'
+
+
