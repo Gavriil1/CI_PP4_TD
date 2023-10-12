@@ -65,8 +65,19 @@ class TaskCreate(LoginRequiredMixin, CreateView):
 
     def form_valid(self, form):
         form.instance.user = self.request.user
+        messages.success(self.request, "Task was created successfully")
         return super(TaskCreate, self).form_valid(form)
 
+
+# class TaskUpdate(LoginRequiredMixin, UpdateView):
+#     model = Task
+#     form_class = PostForm
+#     template_name = '/workspace/CI_PP4_TD/templates/task_form.html'
+#     # fields = '__all__'
+#     # fields = ['title', 'description', 'complete']
+#     success_url = reverse_lazy('tasks')
+
+from django.contrib import messages
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
@@ -75,6 +86,10 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
     # fields = '__all__'
     # fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('tasks')
+
+    def form_valid(self, form):
+        messages.success(self.request, "Task updated successfully")
+        return super(TaskUpdate, self).form_valid(form)
 
 
 # class DeleteView(LoginRequiredMixin, DeleteView):

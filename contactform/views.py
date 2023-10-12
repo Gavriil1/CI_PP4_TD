@@ -17,6 +17,7 @@ from .models import Contact
 
 
 # Create your views here.
+@login_required
 def contact_form(request):
     if request.method == "POST":
         contact = Contact()  

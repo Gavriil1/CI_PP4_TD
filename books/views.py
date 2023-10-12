@@ -16,7 +16,7 @@ from django.contrib.auth import login
 
 from .models import Product
 
-
+@login_required
 def books(request):
     products = Product.objects.all()
     context = {
