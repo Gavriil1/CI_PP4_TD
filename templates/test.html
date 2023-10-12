@@ -1,218 +1,247 @@
-<!-- <!doctype html>
-<html lang="en">
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-
-    <title>Books</title> -->
-    {% load static %}
 <!DOCTYPE html>
-<html class="body-homepage">
+<html lang="en">
 <head>
-	<title>Login Page</title>
-  <!-- form_html -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-   <link rel="preconnect" href="https://fonts.googleapis.com"> 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- login, register, delete_page -->
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Nunito:wght@200&family=Oswald:wght@300&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
-  <!-- home page -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script> -->
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>  -->
-  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form - Alert Message</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- font Awesome CDN -->
+   <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #806bcd;
+}
+.container{
+    width: 700px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+}
+.box{
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h3{
+    font-size: 35px;
+    margin: 15px;
+}
+.name{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.name i{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+.name input{
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 40px;
+}
+.name input::placeholder{
+    color: #bbb;
+    font-weight: 500;
+}
+.email{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.email i{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+.email input{
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 40px;
+}
+.email input::placeholder{
+    color: #bbb;
+    font-weight: 500;
+}
+.message-box{
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+}
+.message-box i{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #bbb;
+}
+.message-box textarea{
+    width: 100%;
+    padding: 20px 60px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: #eee;
+    border-radius: 40px;
+}
+.message-box textarea::placeholder{
+    color: #bbb;
+    font-weight: 500;
+}
 
-
-  <style>
-    .card_book{
-      height: 380px;
-      margin-top: auto;
-      margin-bottom: auto;
-      width: 1000px;
-      background-color: rgba(252, 253, 255, 0.8) !important;
-    
-      }
-      .p_book{
-        color: black;
-      }
-</style>
-
-{% block content %}
-
-  </head>
-  <body class="main_body">
-    <nav class="navbar navbar-expand-sm bg-white navbar-light">
-      <!-- Brand -->
-      <a class="navbar-brand" href="{% url 'tasks' %}">ABCDE-TODO</a>
-    
-      <!-- Links -->
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'tasks' %}">Homepage</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'manual' %}">Manual</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'feedback' %}">Feedback</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'books' %}">Books</a>
-        </li>
-    
-        <!-- Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-            {{request.user}}
-          </a>
-          <div class="dropdown-menu">
-            <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
-          </div>
-        </li>
-      </ul>
-    </nav>
-    <h1 class="text-dark text-center mx-auto" style="background-color: rgba(252, 253, 255, 0.8); ">List of our favorite books</h1>
-
-
-
-
-
-    <!-- <ul>
-      {% for product in products %}
-          <li>
-              <h2>{{ product.title }}</h2>
-              <p>{{ product.details }}</p>
-              <p>Stars: {{ product.stars }}</p>
-              <img src="{{ product.productpic }}" alt="Product Image">
-              <a href="{{ product.amazon }}" target="_blank">Amazon Link</a>
-          </li>
-      {% endfor %}
-  </ul> -->
-  <section >
-    <div class="container py-5">
-      <div class="row justify-content-center mb-3">
-    {% for product in products %}
-    
-      
-        <div class="col-md-12 col-xl-10">
-          <div class="card_book card shadow-0 border rounded-3">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
-                  <div class="bg-image hover-zoom ripple rounded ripple-surface">
-                    <img src="{{ product.productpic }}"
-                      class="w-100" />
-                    <a href="#!">
-                      <div class="hover-overlay">
-                        <div class="mask" style="background-color: rgba(253, 253, 253, 0.15);"></div>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-6">
-                  <h5>{{ product.title }}</h5>
-                  <div class="d-flex flex-row">
-                    <div class="text-danger mb-1 me-2">
-                      {% for _ in "x"|rjust:product.stars %}
-                        <i class="fa fa-star"></i>
-                      {% endfor %}
-                    </div>
-                    <p class="p_book">Reviews: {{ product.numberreviews }}</p>
-                  </div>
-                  <p class="p_book mb-4 mb-md-0">
-                    {{ product.details }}
-                  </p>
-                </div>
-                <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
-                  <div class="d-flex flex-row align-items-center mb-1">
-                    <h4 class="mb-1 me-1">Price: ${{ product.price }}</h4>
-                  </div>
-                  <h6 class="text-success">Free shipping</h6>
-                  <div class="d-flex flex-column mt-4">
-                    <button class="btn btn-primary btn-sm" type="button" onclick="window.location.href='{{ product.amazon }}'">Buy On Amazon</button>
-
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+.button{
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.button button{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    color: #fff;
+    background-color: #806bcd;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+}
+.message{
+    width: 100%;
+    position: relative;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+}
+.message .success{
+    font-size: 20px;
+    color: green;
+    position: absolute;
+    animation: buttons .3s linear;
+    display: none;
+}
+.message .danger{
+    font-size: 20px;
+    color: red;
+    position: absolute;
+    transition: .3s;
+    animation: buttons .3s linear;
+    display: none;
+}
+@keyframes buttons{
+    0%{
+        transform: scale(0.1);
+    }
+    50%{
+        transform: scale(0.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+   </style>
+</head>
+<body>
+    <!-- Bootstrap Alert for Success -->
+    <div class="container mt-3">
+        <div class="alert alert-success alert-dismissible fade show" role="alert" id="successAlert" style="display: none;">
+            Your Message Successfully Sent!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
         </div>
-      
-      {% endfor %}
-      </div>
     </div>
-  </section>
 
-  {% endblock %}
-  <footer class="text-center text-white fixed-bottom" style="background-color: #f1f1f1;">
-    <!-- Grid container -->
-    <div class="login_container pt-4 " style="background-color: #f1f1f1;" >
-      <!-- Section: Social media -->
-      <section class="mb-4 ">
-        <!-- Facebook -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="https://www.facebook.com/"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-facebook-f"></i
-        ></a>
-  
-        <!-- Twitter -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="https://twitter.com/"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-twitter"></i
-        ></a>
-  
-        <!-- Instagram -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="https://www.instagram.com/"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-instagram"></i
-        ></a>
-  
-        <!-- Linkedin -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="https://www.linkedin.com/"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <!-- Github -->
-        <a
-          class="btn btn-link btn-floating btn-lg text-dark m-1"
-          href="https://github.com/Gavriil1/CI_PP4_TD"
-          role="button"
-          data-mdb-ripple-color="dark"
-          ><i class="fab fa-github"></i
-        ></a>
-      </section>
-      <!-- Section: Social media -->
+    <!-- Bootstrap Alert for Error -->
+    <div class="container mt-3">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="dangerAlert" style="display: none;">
+            Fields Can't be Empty!
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
     </div>
-    <!-- Grid container -->
-  
-    <!-- Copyright -->
-    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2023 Copyright:
-      <a class="text-dark" href="https://github.com/Gavriil1/CI_PP4_TD">GS CD4</a>
+
+    <div class="container">
+        <div class="box">
+            <h3>Get in Touch</h3>
+            <div class="name">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Name" id="name">
+            </div>
+            <div class="email">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="Email" id="email">
+            </div>
+            <div class="message-box">
+                <textarea id="msg" cols="30" rows="10" placeholder="Message"></textarea>
+            </div>
+            <div class="button">
+                <button id="send" onclick="message()">Send</button>
+            </div>
+        </div>
     </div>
-    <!-- Copyright -->
-  </footer>
-  </body>
-  </html>
-  
-  
-  
+
+    <!-- Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <script>
+        function message() {
+            var Name = document.getElementById('name');
+            var email = document.getElementById('email');
+            var msg = document.getElementById('msg');
+            const successAlert = document.getElementById('successAlert');
+            const dangerAlert = document.getElementById('dangerAlert');
+
+            if (Name.value === '' || email.value === '' || msg.value === '') {
+                dangerAlert.style.display = 'block';
+            } else {
+                setTimeout(() => {
+                    Name.value = '';
+                    email.value = '';
+                    msg.value = '';
+                }, 2000);
+
+                successAlert.style.display = 'block';
+            }
+
+            setTimeout(() => {
+                dangerAlert.style.display = 'none';
+                successAlert.style.display = 'none';
+            }, 4000);
+        }
+    </script>
+</body>
+</html>

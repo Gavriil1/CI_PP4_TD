@@ -3,5 +3,5 @@ from .views import books
 from django.contrib.auth.views import LogoutView
 
 urlpatterns = [
-    path('bookstest/', books, name='bookstest'),
+    path('books/', books, name='books'),
     ]

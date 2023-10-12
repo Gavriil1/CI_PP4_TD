@@ -16,6 +16,8 @@ from django.contrib.auth import login
 
 from .models import Task,  Product
 from .forms import PostForm
+#import here messages for django  https://www.youtube.com/watch?v=8kBo91L8JTY
+from django.contrib import messages
 
 # Login and Register Page
 class CustomLoginView(LoginView):
@@ -75,11 +77,23 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
     success_url = reverse_lazy('tasks')
 
 
+# class DeleteView(LoginRequiredMixin, DeleteView):
+#     model = Task
+#     template_name = '/workspace/CI_PP4_TD/templates/task_confirm_delete.html'
+#     context_object_name = 'task'
+#     messages.success(request, "Product added seccesfully")
+#     success_url = reverse_lazy('tasks')
+
 class DeleteView(LoginRequiredMixin, DeleteView):
     model = Task
     template_name = '/workspace/CI_PP4_TD/templates/task_confirm_delete.html'
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, "Todo list updated sucesfully")
+        return super().delete(request, *args, **kwargs)
+
 
 # Pages : Homepage, Manual Page
 @login_required
@@ -208,9 +222,9 @@ def test(request):
     return render(request, '/workspace/CI_PP4_TD/templates/test.html', context)
 
 
-def books(request):
-    products = Product.objects.all()
-    context = {
-        'products': products,
-    }
-    return render(request, '/workspace/CI_PP4_TD/templates/test.html', context)
+# def books(request):
+#     products = Product.objects.all()
+#     context = {
+#         'products': products,
+#     }
+#     return render(request, '/workspace/CI_PP4_TD/templates/test.html', context)
