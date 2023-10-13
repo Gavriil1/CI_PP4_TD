@@ -35,5 +35,5 @@ def contact_form(request):
         contact.save()  # Save the Contact instance to the database
         
         # return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
-        return render(request, "/workspace/CI_PP4_TD/templates/feedbackreceived.html")
-    return render(request, '/workspace/CI_PP4_TD/templates/feedback.html')
+        return render(request, "/workspace/CI_PP4_TD/templates/contactformapp/feedbackreceived.html")
+    return render(request, '/workspace/CI_PP4_TD/templates/contactformapp/feedback.html')

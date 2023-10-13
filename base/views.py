@@ -21,7 +21,7 @@ from django.contrib import messages
 
 # Login and Register Page
 class CustomLoginView(LoginView):
-    template_name = '/workspace/CI_PP4_TD/templates/login.html'
+    template_name = '/workspace/CI_PP4_TD/templates/login-register/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
 
@@ -30,7 +30,7 @@ class CustomLoginView(LoginView):
 
 # Register view page
 class RegisterPage(FormView):
-    template_name = '/workspace/CI_PP4_TD/templates/register.html'
+    template_name = '/workspace/CI_PP4_TD/templates/login-register/register.html'
     form_class = UserCreationForm
     redirect_authenticated_user = True
     success_url = reverse_lazy('tasks')
@@ -57,7 +57,7 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
-    template_name = '/workspace/CI_PP4_TD/templates/task_form.html'
+    template_name = '/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/task_form.html'
     # fields = ['title', 'description', 'complete']
     # fields = '__all__'
     form_class = PostForm
@@ -69,20 +69,14 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         return super(TaskCreate, self).form_valid(form)
 
 
-# class TaskUpdate(LoginRequiredMixin, UpdateView):
-#     model = Task
-#     form_class = PostForm
-#     template_name = '/workspace/CI_PP4_TD/templates/task_form.html'
-#     # fields = '__all__'
-#     # fields = ['title', 'description', 'complete']
-#     success_url = reverse_lazy('tasks')
+
 
 from django.contrib import messages
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     form_class = PostForm
-    template_name = '/workspace/CI_PP4_TD/templates/task_form.html'
+    template_name = '/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/task_form.html'
     # fields = '__all__'
     # fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('tasks')
@@ -92,16 +86,11 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
         return super(TaskUpdate, self).form_valid(form)
 
 
-# class DeleteView(LoginRequiredMixin, DeleteView):
-#     model = Task
-#     template_name = '/workspace/CI_PP4_TD/templates/task_confirm_delete.html'
-#     context_object_name = 'task'
-#     messages.success(request, "Product added seccesfully")
-#     success_url = reverse_lazy('tasks')
+
 
 class DeleteView(LoginRequiredMixin, DeleteView):
     model = Task
-    template_name = '/workspace/CI_PP4_TD/templates/task_confirm_delete.html'
+    template_name = '/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/task_confirm_delete.html'
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
 
@@ -118,7 +107,7 @@ def homepage(request):
   freq_count_w = Task.objects.filter(frequency="Weekly").count()
   freq_count_m = Task.objects.filter(frequency="Monthly").count()
   freq_count_y = Task.objects.filter(frequency="Yearly").count()
-  template = loader.get_template('/workspace/CI_PP4_TD/templates/homepage.html')
+  template = loader.get_template('/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/homepage.html')
   context = {
     'mymembers': mydata,
     'freq_count_d': freq_count_d,
@@ -131,7 +120,7 @@ def homepage(request):
 @login_required
 def manual(request):
   mydata = Task.objects.all()
-  template = loader.get_template('/workspace/CI_PP4_TD/templates/manual.html')
+  template = loader.get_template('/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/manual.html')
   context = {
     'mymembers': mydata,
   }

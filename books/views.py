@@ -22,6 +22,6 @@ def books(request):
     context = {
         'products': products,
     }
-    return render(request, '/workspace/CI_PP4_TD/templates/books.html', context)
+    return render(request, '/workspace/CI_PP4_TD/templates/booksapp/books.html', context)
 
  
