@@ -381,6 +381,20 @@ transition: all 0.3s ease 0s;
     text-align: justify;
   }
 
+  /* Books page */
+  .card_book{
+    height: 380px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1000px;
+    background-color: rgba(252, 253, 255, 0.8) !important;
+  
+    }
+    .p_book{
+      color: black;
+    }
+
+
 
 /* 404 page */
 
