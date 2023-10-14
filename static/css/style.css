@@ -7,6 +7,8 @@ background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
 font-family: 'Numans', sans-serif;
+margin-bottom: 160px;
+   clear: both;
 } 
 
 .main_container{
@@ -20,6 +22,7 @@ margin-top: auto;
 margin-bottom: auto;
 width: 600px;
 background-color: rgba(0,0,0,0.5) !important;
+
 }
 
 .input-group-prepend span{
@@ -37,7 +40,7 @@ box-shadow: 0 0 0 0 !important;
 
 #id_username {
   height: 35px;
-  width: 105%;
+  width: 110%;
   border-style: none;
   margin-top:-5px;
   margin-left:-10px;
@@ -45,7 +48,7 @@ box-shadow: 0 0 0 0 !important;
 
 #id_password {
   height: 35px;
-  width: 105%;
+  width: 110%;
   border-style: none;
   margin-top:-5px;
   margin-left:-10px;
@@ -53,7 +56,7 @@ box-shadow: 0 0 0 0 !important;
 
 #id_password1 {
   height: 35px;
-  width: 105%;
+  width: 110%;
   border-style: none;
   margin-top:-5px;
   margin-left:-10px;
@@ -61,7 +64,7 @@ box-shadow: 0 0 0 0 !important;
 
 #id_password2 {
   height: 35px;
-  width: 105%;
+  width: 110%;
   border-style: none;
   margin-top:-5px;
   margin-left:-10px;
@@ -224,6 +227,8 @@ margin-left: 4px;
     min-height: 100%;
     padding-bottom: 6.74rem;
     box-sizing: inherit;
+    
+    margin-bottom: 50px;
 }
 
 
@@ -393,6 +398,8 @@ transition: all 0.3s ease 0s;
     .p_book{
       color: black;
     }
+
+    @media (max-width: 767.98px) { .border-sm-start-none { border-left: none !important; } }
 
 
 

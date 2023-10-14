@@ -2,9 +2,8 @@
 
 {% block content %}
 
-
 </head>
-<body class="main_body">
+<body class="body-homepage">
   <nav class="navbar navbar-expand-sm bg-white navbar-light">
     <!-- Brand -->
     <a class="navbar-brand" href="{% url 'tasks' %}">ABCDE-TODO</a>
@@ -37,17 +36,17 @@
   </nav>
 
   <br><br>
-	<h1 class="text-white text-center">Please share with us your feedback</h1>
+	<h1 class="text-white text-center">Contact Us!</h1>
 
 <div class="main_container">
 
 	<div class="d-flex justify-content-center h-100">
-		<div class="card" style="height: 425px;width: 1000px">
+		<div class="card" style="height: 470px;width: 1000px">
 			<div class="card-header">
 				<h3 class="text-white text-center">Feedback Form</h3>
 				<!-- <p class="text-white text-center">Please help us to make our up better. Please share your feedback Please share with us your feedback.</p> -->
 			</div>
-			<div class="card-body" style="height: 400px; ">
+			<div class="card-body" style="height: 570px;">
 				<form id="contact-form" name="contact-form" method="POST" class="was-validated">
           {% csrf_token %}
           <!--Grid row-->
@@ -118,5 +117,5 @@
 		</div>
 	</div>
 </div>
-
+<div class="container my-5"></div>
 {%endblock%}
