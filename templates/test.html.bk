@@ -1,0 +1,184 @@
+{% load static %}
+<!DOCTYPE html>
+<html >
+<head>
+	<title>Login Page</title>
+  <!-- form_html -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   <link rel="preconnect" href="https://fonts.googleapis.com"> 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- login, register, delete_page -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,900&family=Nunito:wght@200&family=Oswald:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <!-- home page -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script> 
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <!-- bookpage -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+{% block content %}
+
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <style>
+
+  </style>
+</head>
+<body class="main_body">
+  <nav class="navbar navbar-expand-sm bg-white navbar-light">
+    <!-- Brand -->
+    <a class="navbar-brand" href="{% url 'tasks' %}">ABCDE-TODO</a>
+  
+    <!-- Links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'tasks' %}">Homepage</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'manual' %}">Manual</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'feedback' %}">Feedback</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'books' %}">Books</a>
+      </li>
+  
+      <!-- Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          {{request.user}}
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div class="container mt-5 mb-5">
+    <div class="d-flex justify-content-center row">
+      <div class="col-md-10">
+        {% for product in products %}
+        <div class="row p-2 bg-white border rounded">
+          <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="{{ product.productpic }}"></div>
+          <div class="col-md-6 mt-1">
+            <h5>{{ product.title }}</h5>
+            <div class="d-flex flex-row">
+              <div class="ratings mr-2">
+                {% for _ in "x"|rjust:product.stars %}
+                  <i class="fa fa-star"></i>
+                {% endfor %}
+                </i>
+              </div>
+              <span>{{ product.numberreviews }}</span>
+            </div>
+            <p class="text-justify para mb-0 text-dark">{{ product.details }}<br><br></p>
+          </div>
+          <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+            <div class="d-flex flex-row align-items-center">
+              <h4 class="mr-1">${{ product.price }}</h4>
+            </div>
+            <h6 class="text-success">Free shipping</h6>
+            <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button" onclick="window.location.href='{{ product.amazon }}'">Buy on Amazon</button></div>
+          </div>
+        </div>
+        {% endfor %}
+        <!-- Add more product entries like the one above if needed -->
+        <!-- <div class="row p-2 bg-white border rounded">
+          <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="https://m.media-amazon.com/images/I/617ifz0NfiL._SL1500_.jpg"></div>
+          <div class="col-md-6 mt-1">
+            <h5>Quant olap shirts</h5>
+            <div class="d-flex flex-row">
+              <div class="ratings mr-2"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div><span>310</span>
+            </div>
+            <div class="mt-1 mb-1 spec-1"><span>100% cotton</span><span class="dot"></span><span>Light weight</span><span class="dot"></span><span>Best finish<br></span></div>
+            <div class="mt-1 mb-1 spec-1"><span>Unique design</span><span class="dot"></span><span>For men</span><span class="dot"></span><span>Casual<br></span></div>
+            <p class="text-justify text-truncate para mb-0">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomized words which don't look even slightly believable.<br><br></p>
+          </div>
+          <div class="align-items-center align-content-center col-md-3 border-left mt-1">
+            <div class="d-flex flex-row align-items-center">
+              <h4 class="mr-1">$13.99</h4><span class="strike-text">$20.99</span>
+            </div>
+            <h6 class="text-success">Free shipping</h6>
+            <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button">Details</button><button class="btn btn-outline-primary btn-sm mt-2" type="button">Add to wishlist</button></div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock %}
+  <footer class="text-center text-white fixed-bottom" style="background-color: #f1f1f1;">
+    <!-- Grid container -->
+    <div class="login_container pt-4 " style="background-color: #f1f1f1;" >
+      <!-- Section: Social media -->
+      <section class="mb-4 ">
+        <!-- Facebook -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.facebook.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://twitter.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.instagram.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- Linkedin -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://www.linkedin.com/"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn btn-link btn-floating btn-lg text-dark m-1"
+          href="https://github.com/Gavriil1/CI_PP4_TD"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      © 2023 Copyright:
+      <a class="text-dark" href="https://github.com/Gavriil1/CI_PP4_TD">GS CD4</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+  </body>
+  </html>
+  
+  
+  
