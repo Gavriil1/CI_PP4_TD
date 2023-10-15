@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from .models import Contact
-
+from django.contrib import messages
 
 # Create your views here.
 @login_required
@@ -33,7 +33,9 @@ def contact_form(request):
         contact.message = message  # Assign the message value
         
         contact.save()  # Save the Contact instance to the database
-        
+        messages.success(request, "Message Received. We will get back to you soon! Thank you!")
         # return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
-        return render(request, "/workspace/CI_PP4_TD/templates/contactformapp/feedbackreceived.html")
+        # return render(request, "/workspace/CI_PP4_TD/templates/contactformapp/feedbackreceived.html")
+        # return render(request, "/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/homepage.html")
+        return redirect('tasks')
     return render(request, '/workspace/CI_PP4_TD/templates/contactformapp/feedback.html')
