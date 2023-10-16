@@ -21,7 +21,7 @@ from django.contrib import messages
 
 # Login and Register Page
 class CustomLoginView(LoginView):
-    template_name = '/workspace/CI_PP4_TD/templates/login-register/login.html'
+    template_name = 'templates/login-register/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
 
