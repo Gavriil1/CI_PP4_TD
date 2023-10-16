@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Task,  Product
+from .models import Task
 # Register your models here.
 # Contact
 # admin.site.register(Task)
@@ -14,7 +14,7 @@ class AdminTaskView(admin.ModelAdmin):
 # admin.site.register(Contact)
 
 
-admin.site.register(Product)
+# admin.site.register(Product)
 
 
 

@@ -14,7 +14,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 
-from .models import Task,  Product
+from .models import Task
 from .forms import PostForm
 #import here messages for django  https://www.youtube.com/watch?v=8kBo91L8JTY
 from django.contrib import messages
