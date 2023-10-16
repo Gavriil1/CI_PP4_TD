@@ -103,10 +103,10 @@ class DeleteView(LoginRequiredMixin, DeleteView):
 @login_required
 def homepage(request):
   mydata = Task.objects.filter(user=request.user)
-  freq_count_d = Task.objects.filter(frequency="Daily").count()
-  freq_count_w = Task.objects.filter(frequency="Weekly").count()
-  freq_count_m = Task.objects.filter(frequency="Monthly").count()
-  freq_count_y = Task.objects.filter(frequency="Yearly").count()
+  freq_count_d = Task.objects.filter(user=request.user, frequency="Daily").count()
+  freq_count_w = Task.objects.filter(user=request.user, frequency="Weekly").count()
+  freq_count_m = Task.objects.filter(user=request.user, frequency="Monthly").count()
+  freq_count_y = Task.objects.filter(user=request.user, frequency="Yearly").count()
   template = loader.get_template('/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/homepage.html')
   context = {
     'mymembers': mydata,

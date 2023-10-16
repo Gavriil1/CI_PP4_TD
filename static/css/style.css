@@ -1,7 +1,8 @@
 /* login Register page */
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-.main_html,.main_body{
+/* .main_html, */
+.main_body{
 background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
 background-size: cover;
 background-repeat: no-repeat;
@@ -40,7 +41,7 @@ box-shadow: 0 0 0 0 !important;
 
 #id_username {
   height: 35px;
-  width: 110%;
+  width: 105%;
   border-style: none;
   margin-top:-5px;
   margin-left:-10px;
@@ -48,7 +49,7 @@ box-shadow: 0 0 0 0 !important;
 
 #id_password {
   height: 35px;
-  width: 110%;
+  width: 105%;
   border-style: none;
   margin-top:-5px;
   margin-left:-10px;
@@ -56,7 +57,7 @@ box-shadow: 0 0 0 0 !important;
 
 #id_password1 {
   height: 35px;
-  width: 110%;
+  width: 105%;
   border-style: none;
   margin-top:-5px;
   margin-left:-10px;
@@ -64,7 +65,7 @@ box-shadow: 0 0 0 0 !important;
 
 #id_password2 {
   height: 35px;
-  width: 110%;
+  width: 105%;
   border-style: none;
   margin-top:-5px;
   margin-left:-10px;
@@ -92,10 +93,10 @@ margin-left: 4px;
 
     /* task_form.html */
 
-  .html_task_form {
+  /* .html_task_form {
     height:100%;
     box-sizing: border-box;      
-} 
+}  */
  .body_task_form {
     background-color: #FAFAFA;
     font-family: 'Nunito', sans-serif;
@@ -111,7 +112,7 @@ margin-left: 4px;
     font-family: 'Raleway', sans-serif;
 } 
 
- .footer_task_form
+ /* .footer_task_form
     {
         height: 150px;
         position: absolute;
@@ -119,7 +120,7 @@ margin-left: 4px;
         right: 0;
         bottom: 0;
         width: 100%;
-    } 
+    }  */
 
  p {color: #FAFAFA;}
 
@@ -155,7 +156,8 @@ margin-left: 4px;
  } 
  
 /* task form delete */
-.html_delete,.body_delete{
+/* .html_delete, */
+.body_delete{
   background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -213,10 +215,10 @@ margin-left: 4px;
   }
   
 /* homepage */
-  .html-homepage {
+  /* .html-homepage {
     height: 100%;
     box-sizing: border-box;
-}
+} */
 .body-homepage {
     background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); 
     background-size: cover; 
@@ -228,12 +230,12 @@ margin-left: 4px;
     padding-bottom: 6.74rem;
     box-sizing: inherit;
     
-    margin-bottom: 50px;
+    margin-bottom: 70px;
 }
 
 
 
-.footer-homepage
+/* .footer-homepage
     {
         height: 150px;
         position: absolute;
@@ -241,7 +243,7 @@ margin-left: 4px;
         right: 0;
         bottom: 0;
         width: 100%;
-    }
+    } */
 
 
 .panel{
@@ -344,10 +346,10 @@ transition: all 0.3s ease 0s;
 .pagination li a:focus,
 
 /* manual page */
-.html-manual {
+/* .html-manual {
   height: 100%;
   box-sizing: border-box;
-}
+} */
 .body-manual {    /* background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');  */
   background-size: cover; 
   background-repeat: no-repeat; 
@@ -361,7 +363,7 @@ transition: all 0.3s ease 0s;
 
 
 
-.footer-manual
+/* .footer-manual
   {
       height: 150px;
       position: absolute;
@@ -369,7 +371,7 @@ transition: all 0.3s ease 0s;
       right: 0;
       bottom: 0;
       width: 100%;
-  }
+  } */
   main{
     width: 80%;
     margin: 0 auto;
@@ -387,7 +389,7 @@ transition: all 0.3s ease 0s;
   }
 
   /* Books page */
-  .card_book{
+  /* .card_book{
     height: 380px;
     margin-top: auto;
     margin-bottom: auto;
@@ -397,9 +399,9 @@ transition: all 0.3s ease 0s;
     }
     .p_book{
       color: black;
-    }
+    } */
 
-    @media (max-width: 767.98px) { .border-sm-start-none { border-left: none !important; } }
+    /* @media (max-width: 767.98px) { .border-sm-start-none { border-left: none !important; } } */
 
 
 
