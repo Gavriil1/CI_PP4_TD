@@ -38,4 +38,4 @@ def contact_form(request):
         # return render(request, "/workspace/CI_PP4_TD/templates/contactformapp/feedbackreceived.html")
         # return render(request, "/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/homepage.html")
         return redirect('tasks')
-    return render(request, '/workspace/CI_PP4_TD/templates/contactformapp/feedback.html')
+    return render(request, 'contactformapp/feedback.html')
