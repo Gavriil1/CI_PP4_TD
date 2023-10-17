@@ -57,7 +57,7 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
-    template_name = '/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/task_form.html'
+    template_name = 'todoapp-create-update-delete/task_form.html'
     # fields = ['title', 'description', 'complete']
     # fields = '__all__'
     form_class = PostForm
@@ -76,7 +76,7 @@ from django.contrib import messages
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     form_class = PostForm
-    template_name = '/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/task_form.html'
+    template_name = 'todoapp-create-update-delete/task_form.html'
     # fields = '__all__'
     # fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('tasks')
@@ -90,7 +90,7 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
 
 class DeleteView(LoginRequiredMixin, DeleteView):
     model = Task
-    template_name = '/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/task_confirm_delete.html'
+    template_name = 'todoapp-create-update-delete/task_confirm_delete.html'
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
 
@@ -107,7 +107,7 @@ def homepage(request):
   freq_count_w = Task.objects.filter(user=request.user, frequency="Weekly").count()
   freq_count_m = Task.objects.filter(user=request.user, frequency="Monthly").count()
   freq_count_y = Task.objects.filter(user=request.user, frequency="Yearly").count()
-  template = loader.get_template('/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/homepage.html')
+  template = loader.get_template('todoapp-create-update-delete/homepage.html')
   context = {
     'mymembers': mydata,
     'freq_count_d': freq_count_d,
@@ -120,7 +120,7 @@ def homepage(request):
 @login_required
 def manual(request):
   mydata = Task.objects.all()
-  template = loader.get_template('/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/manual.html')
+  template = loader.get_template('todoapp-create-update-delete/manual.html')
   context = {
     'mymembers': mydata,
   }
@@ -129,7 +129,7 @@ def manual(request):
 
 
 def custom_404(request, exception):
-    return render(request, '/workspace/CI_PP4_TD/templates/404.html', status=404)
+    return render(request, '404.html', status=404)
 
 
 # def feedback(request):
@@ -223,7 +223,7 @@ def test(request):
     context = {
         'products': products,
     }
-    return render(request, '/workspace/CI_PP4_TD/templates/test.html', context)
+    return render(request, 'test.html', context)
 
 
 # def books(request):
