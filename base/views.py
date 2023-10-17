@@ -21,7 +21,7 @@ from django.contrib import messages
 
 # Login and Register Page
 class CustomLoginView(LoginView):
-    template_name = 'templates/login-register/login.html'
+    template_name = 'login-register/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
 
@@ -30,7 +30,7 @@ class CustomLoginView(LoginView):
 
 # Register view page
 class RegisterPage(FormView):
-    template_name = '/workspace/CI_PP4_TD/templates/login-register/register.html'
+    template_name = 'login-register/register.html'
     form_class = UserCreationForm
     redirect_authenticated_user = True
     success_url = reverse_lazy('tasks')
