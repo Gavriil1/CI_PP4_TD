@@ -1,10 +1,10 @@
 # ABCDE Todo List
 
-![Am I Responsive](docs/am-i-responsive.PNG)
+![Am I Responsive](docs/amiresponsive/am_i_responsive.png)
 
 **Developer: Arron Beale**
 
-💻 [Visit live website](https://ci-pp4-the-diplomat.herokuapp.com/)  
+💻 [Visit live website](https://ci-pp4-td-014f88cd1918.herokuapp.com/)  
 (Ctrl + click to open in new tab)
 
 
@@ -36,8 +36,8 @@
   - [Acknowledgements](#acknowledgements)
 
 ### About
+"ABCDE Todo List" is an application that helps a user organize their time according to Brian Tracy's method, as described in his book "Eat That Frog." Additionally, the website features a Feedback/Contact form and a list of the website developer's favorite books.
 
-The Diplomat Bar & Grill is a fictional business where users can create an account, book a table, read a blog and view the food and drinks menu.
 <hr>
 
 ### User Goals
@@ -58,13 +58,16 @@ The Diplomat Bar & Grill is a fictional business where users can create an accou
 ## User Experience
 
 ### Target Audience
-- Users that wish to book a table for a meal or a party with family and friends
-- Past and new customers for the business
-- Tourists visiting the area that are looking for a meal or a drink or both
-- Fans visiting the area for a sports event or a music concert
-- People employed in the area to eat and drink after work
+- Students: managing assignments, study schedules.
+- People with Busy Lifestyles: Manage multiple responsibilities.
+- Project Managers:  To coordinate and track tasks.
+- Individuals Seeking Personal Productivity: To increase personal productivity.
+- Freelancers and Gig Workers: To manage their various freelance projects and deadlines.
+
 
 ### User Requirements and Expectations
+
+
 
 - Fully responsive
 - Accessible
