@@ -407,7 +407,8 @@ transition: all 0.3s ease 0s;
 
 /* 404 page */
 
-.htmlfof, .bodyfo{
+.htmlfof, 
+.bodyfo{
   background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
   background-size: cover;
   background-color: #9cc3d5;
@@ -419,7 +420,7 @@ transition: all 0.3s ease 0s;
   user-select: none;
   } 
   
-   .footer-fof
+   /* .footer-fof
               {
                   height: 150px;
                   position: absolute;
@@ -427,7 +428,7 @@ transition: all 0.3s ease 0s;
                   right: 0;
                   bottom: 0;
                   width: 100%;
-              }
+              } */
   
   .containerfof{
     display: flex;
