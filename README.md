@@ -67,14 +67,12 @@
 
 ### User Requirements and Expectations
 
-
-
-- Fully responsive
-- Accessible
-- A welcoming design
-- Social media
-- Contact information
-- Accessibility
+- Fully responsive website on all devices.
+- Ability to use the app on all types of devices.
+- Calm and relaxing GUI interface.
+- Contact Form to engage with support or leave feedback.
+- Easy and intuitive application.
+- List of books for self-development.
 
 ##### Back to [top](#table-of-contents)<hr>
 
