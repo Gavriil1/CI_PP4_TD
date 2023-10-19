@@ -301,20 +301,23 @@ The wireframes were created using Balsamiq
 
 ### Libraries & Tools
 
-- [Am I Responsive](http://ami.responsivedesign.is/)
-- [Balsamiq](https://balsamiq.com/)
-- [Bootstrap v5.2](https://getbootstrap.com/)
+- [Am I Responsive](https://ui.dev/amiresponsive)
+
+
 - [Cloudinary](https://cloudinary.com/)
+- [Balsamiq](https://balsamiq.com/)
 - [Favicon.io](https://favicon.io)
-- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools/)
-- [Font Awesome](https://fontawesome.com/)
-- [Git](https://git-scm.com/)
-- [GitHub](https://github.com/)
 - [Google Fonts](https://fonts.google.com/)
-- [Heroku Platform](https://id.heroku.com/login)
 - [jQuery](https://jquery.com)
-- [Postgres](https://www.postgresql.org/)
-- [Summernote](https://summernote.org/)
+- [ElePhantSQL](https://www.elephantsql.com/)
+- [Chrome dev tools](https://developer.chrome.com/docs/devtools/)
+- [Font Awesome](https://fontawesome.com/)
+- [GitHub](https://github.com/)
+- [gitpod](https://www.gitpod.io/)
+- [Bootstrap v.4.6.2](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
+- [Heroku](https://dashboard.heroku.com/apps)
+
+
 - Validation:
   - [WC3 Validator](https://validator.w3.org/)
   - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
