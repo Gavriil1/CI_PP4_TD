@@ -1,6 +1,7 @@
 from django.test import TestCase
 from base.forms import PostForm
 
+
 class TestTaskForm(TestCase):
 
     def test_task_form_valid_data(self):
@@ -34,10 +35,4 @@ class TestTaskForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('due', form.errors)
 
-    # Add more tests for specific field types or validation rules as needed
-
-# test_task_form_valid_data: This test checks if the form is valid when valid data is provided for all fields.
-
-# test_task_form_blank_data: This test checks if the form is invalid when no data is provided (since some fields are required).
-
-# test_task_form_invalid_due_date: This test checks if the form is invalid when an invalid date is provided for the 'due' field.
+ 

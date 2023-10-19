@@ -13,6 +13,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
+from django.contrib import messages
+
 
 from .models import Task
 from .forms import PostForm
@@ -58,8 +60,6 @@ class TaskDetail(LoginRequiredMixin, DetailView):
 class TaskCreate(LoginRequiredMixin, CreateView):
     model = Task
     template_name = 'todoapp-create-update-delete/task_form.html'
-    # fields = ['title', 'description', 'complete']
-    # fields = '__all__'
     form_class = PostForm
     success_url = reverse_lazy('tasks')
 
@@ -71,14 +71,10 @@ class TaskCreate(LoginRequiredMixin, CreateView):
 
 
 
-from django.contrib import messages
-
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     form_class = PostForm
     template_name = 'todoapp-create-update-delete/task_form.html'
-    # fields = '__all__'
-    # fields = ['title', 'description', 'complete']
     success_url = reverse_lazy('tasks')
 
     def form_valid(self, form):
@@ -132,92 +128,6 @@ def custom_404(request, exception):
     return render(request, '404.html', status=404)
 
 
-# def feedback(request):
-#     if request.method == "POST":
-#         contact = Contact()  # Create a new instance of the Contact model
-#         name = request.POST.get('name')
-#         email = request.POST.get('email')
-#         subject = request.POST.get('subject')  # Get the subject field
-#         message = request.POST.get('message')  # Get the message field
-        
-#         # Set the values for the Contact instance
-#         contact.name = name
-#         contact.email = email
-#         contact.subject = subject  # Assign the subject value
-#         contact.message = message  # Assign the message value
-        
-#         contact.save()  # Save the Contact instance to the database
-        
-#         # return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
-#         return render(request, "/workspace/CI_PP4_TD/templates/feedbackreceived.html")
-#     return render(request, '/workspace/CI_PP4_TD/templates/feedback.html')
-
-
-# def test(request):
-#   mydata = Task.objects.filter(user=request.user)
-#   freq_count_d = Task.objects.filter(frequency="Daily").count()
-#   freq_count_w = Task.objects.filter(frequency="Weekly").count()
-#   freq_count_m = Task.objects.filter(frequency="Monthly").count()
-#   freq_count_y = Task.objects.filter(frequency="Yearly").count()
-#   template = loader.get_template('/workspace/CI_PP4_TD/templates/test.html')
-#   context = {
-#     'mymembers': mydata,
-#     'freq_count_d': freq_count_d,
-#     'freq_count_w': freq_count_w,
-#     'freq_count_m': freq_count_m,
-#     'freq_count_y': freq_count_y,
-#   }
-#   return HttpResponse(template.render(context, request))
-
-
-# def test(request):
-#     if request.method == "POST":
-#         contact = Contact()  # Use a different variable name here
-#         name = request.POST.get('name')
-#         email = request.POST.get('email')
-#         subject = request.POST.get('subject')
-#         message = request.POST.get('message')
-#         contact.name = name
-#         contact.email = email
-#         contact.subject = subject
-#         contact.message = message
-#         contact.save()
-#         return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
-#     return render(request, '/workspace/CI_PP4_TD/templates/test.html')
-
-# def test(request):
-#     if request.method == "POST":
-#         contact = Contact()  
-#         name = request.POST.get('name')
-#         email = request.POST.get('email')
-#         subject = request.POST.get('subject')  
-#         message = request.POST.get('message')  
-#         contact.name = name
-#         contact.email = email
-#         contact.subject = subject 
-#         contact.message = message 
-        
-#         contact.save()  
-#         return render(request, "/workspace/CI_PP4_TD/templates/feedbackreceived.html")
-  
-#     return render(request, '/workspace/CI_PP4_TD/templates/test.html')
-# Product List according to Category
-
-
-# def test(request):
-#     products = Product.objects.all()  
-#     return render(request, '/workspace/CI_PP4_TD/templates/test.html', {'products': products})
-
-
-# def test(request):
-#   template = loader.get_template('/workspace/CI_PP4_TD/templates/test.html')
-#   products = Product.objects.all()
-#   context = {
-#     'products': products,
-#   }
-#   return HttpResponse(template.render(context, request))
-
-
 def test(request):
     products = Product.objects.all()
     context = {
@@ -225,10 +135,3 @@ def test(request):
     }
     return render(request, 'test.html', context)
 
-
-# def books(request):
-#     products = Product.objects.all()
-#     context = {
-#         'products': products,
-#     }
-#     return render(request, '/workspace/CI_PP4_TD/templates/test.html', context)

@@ -14,6 +14,4 @@ urlpatterns = [
     path('task-delete/<int:pk>/', DeleteView.as_view(), name='task-delete'),
     path('test/', test, name='test'),
     path('custom_404/', custom_404, name='custom_404'),
-    # path('feedback/', feedback, name='feedback'), 
-    # path('books/', books, name='books'), 
     ]

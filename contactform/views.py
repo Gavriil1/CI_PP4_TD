@@ -24,18 +24,13 @@ def contact_form(request):
         name = request.POST.get('name')
         email = request.POST.get('email')
         subject = request.POST.get('subject')  # Get the subject field
-        message = request.POST.get('message')  # Get the message field
-        
+        message = request.POST.get('message')  # Get the message field  
         # Set the values for the Contact instance
         contact.name = name
         contact.email = email
         contact.subject = subject  # Assign the subject value
         contact.message = message  # Assign the message value
-        
         contact.save()  # Save the Contact instance to the database
         messages.success(request, "Message Received. We will get back to you soon! Thank you!")
-        # return HttpResponse("<h1>THANKS FOR CONTACTING US<h1>")
-        # return render(request, "/workspace/CI_PP4_TD/templates/contactformapp/feedbackreceived.html")
-        # return render(request, "/workspace/CI_PP4_TD/templates/todoapp-create-update-delete/homepage.html")
         return redirect('tasks')
     return render(request, 'contactformapp/feedback.html')
