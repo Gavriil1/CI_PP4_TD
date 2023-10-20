@@ -41,17 +41,17 @@
 <hr>
 
 ### User Goals
-
-- To create a table booking
-- To be able to view edit and cancel bookings
-- To view menus, a blog and contact info
+- Create/Update/Delete tasks.
+- Be able to see all tasks in one place.
+- Have access to the manual of the application.
+- Read the list of self-development books.
 
 ### Site Owner Goals
 
-- To provide a solution to allow users to book a table online
-- To attract more business with a well crafted site
-- Provide a modern application with an easy navigation
-- Fully responsive and accessible
+- To provide a solution to allow users to organize to-do tasks.
+- Create an intuitive and easy-to-use application to attract more customers.
+- Develop a fully responsive and accessible website.
+
 <hr>
 
 
@@ -302,8 +302,6 @@ The wireframes were created using Balsamiq
 ### Libraries & Tools
 
 - [Am I Responsive](https://ui.dev/amiresponsive)
-
-
 - [Cloudinary](https://cloudinary.com/)
 - [Balsamiq](https://balsamiq.com/)
 - [Favicon.io](https://favicon.io)
