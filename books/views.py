@@ -13,10 +13,11 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
-
+# importing pagination
+from django.core.paginator import Paginator
 from .models import Product
 
-# @login_required
+@login_required
 def books(request):
     products = Product.objects.all()
     context = {
@@ -24,4 +25,16 @@ def books(request):
     }
     return render(request, 'booksapp/books.html', context)
 
- 
+
+def test(request):
+    products = Product.objects.all()
+    #set up pagination.
+    p = Paginator(Product.objects.all(), 1)
+    page = request.GET.get('page')
+    venues = p.get_page(page)
+    context = {
+        'products': products,
+        'venues': venues,
+    }
+    return render(request, 'test.html', context)
+
