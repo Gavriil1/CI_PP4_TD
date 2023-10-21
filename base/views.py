@@ -135,3 +135,20 @@ def test(request):
     }
     return render(request, 'test.html', context)
 
+
+
+def test(request):
+  mydata = Task.objects.filter(user=request.user)
+  freq_count_d = Task.objects.filter(user=request.user, frequency="Daily").count()
+  freq_count_w = Task.objects.filter(user=request.user, frequency="Weekly").count()
+  freq_count_m = Task.objects.filter(user=request.user, frequency="Monthly").count()
+  freq_count_y = Task.objects.filter(user=request.user, frequency="Yearly").count()
+  template = loader.get_template('test.html')
+  context = {
+    'mymembers': mydata,
+    'freq_count_d': freq_count_d,
+    'freq_count_w': freq_count_w,
+    'freq_count_m': freq_count_m,
+    'freq_count_y': freq_count_y,
+  }
+  return HttpResponse(template.render(context, request))
