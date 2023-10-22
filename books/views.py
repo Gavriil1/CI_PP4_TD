@@ -29,12 +29,16 @@ def books(request):
 def test(request):
     products = Product.objects.all()
     #set up pagination.
-    p = Paginator(Product.objects.all(), 1)
+    p = Paginator(Product.objects.all(), 2)
     page = request.GET.get('page')
     venues = p.get_page(page)
+    # nums = "a" * venues.paginator.num_pages
+    nums = range(1, venues.paginator.num_pages + 1)
     context = {
         'products': products,
         'venues': venues,
+        'nums': nums,
+        'current_page': int(page) if page else 1, 
     }
     return render(request, 'test.html', context)
 
