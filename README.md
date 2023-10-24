@@ -98,18 +98,13 @@
 15. As a User I can read manual to have better undstanding how to use an application (Must Have)
 
 
-
-
-
-
 ### Admin / Authorised User
 
-In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access.
-As an Admin or Authorized User, I am able to manually include, remove, or update books in the list of favorite books.
-As an Admin or Authorized User, I can view messages that have been sent by users through the contact form.
-As an Admin, I have the ability to view, update, or delete user tasks from the backend.
-As an Admin, I can create user, delete user , block and unblock useer.
-
+16. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access.
+17. As an Admin or Authorized User, I am able to manually include, remove, or update books in the list of favorite books.
+18. As an Admin or Authorized User, I can view messages that have been sent by users through the contact form.
+19. As an Admin, I have the ability to view, update, or delete user tasks from the backend.
+20. As an Admin, I can create user, delete user , block and unblock useer.
 
 ### Site Owner  
 23. As a Site Owner I want site to be responsive (Must have)
@@ -152,10 +147,6 @@ As an Admin, I can create user, delete user , block and unblock useer.
 
 I chose bright colours for footer and navbar to make application more positive.
 I added a pcture with star sky to make application relaxing.
-
-### Fonts
-
- The fonts selected is sans-serif.
 
 ### Structure
 
@@ -273,10 +264,59 @@ The ContactUs Model contains the following:
 
 ### Wireframes
 The wireframes were created using Balsamiq
-<details><summary></summary>
-<img src="docs/wireframes.png">
+###  Wireframes
+
+<details><summary>Login</summary>
+
+<img src="docs/wireframes/login.png">
+
 </details>
 
+<details><summary>Register</summary>
+
+<img src="docs/wireframes/register.png">
+
+</details>
+
+<details><summary>Home</summary>
+
+<img src="docs/wireframes/homepage.png">
+
+</details>
+
+<details><summary>Manual</summary>
+
+<img src="docs/wireframes/manual.png">
+
+</details>
+
+<details><summary>Books</summary>
+
+<img src="docs/wireframes/bookshop.png">
+
+</details>
+
+<details><summary>ContactForm</summary>
+
+<img src="docs/wireframes/contactform.png">
+
+</details>
+
+<details><summary>DeleteTask</summary>
+
+<img src="docs/wireframes/delete.png">
+
+</details>
+
+<details><summary>CreateUpdateTask</summary>
+
+<img src="docs/wireframes/createupdate.png">
+
+</details>
+
+<details><summary>404 Page</summary>
+
+<img src="docs/wireframes/404.png">
 
 ## Technologies Used
 

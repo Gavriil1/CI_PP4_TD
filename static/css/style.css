@@ -420,15 +420,7 @@ transition: all 0.3s ease 0s;
   user-select: none;
   } 
   
-   /* .footer-fof
-              {
-                  height: 150px;
-                  position: absolute;
-                  left: 0;
-                  right: 0;
-                  bottom: 0;
-                  width: 100%;
-              } */
+
   
   .containerfof{
     display: flex;

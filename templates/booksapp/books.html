@@ -45,7 +45,7 @@
   <div class="container mt-5 mb-5">
     <div class="d-flex justify-content-center row">
       <div class="col-md-10">
-        {% for product in products %}
+        {% for product in venues %}
         <div class="row p-2 bg-white border rounded">
           <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="{{ product.productpic }}"></div>
           <div class="col-md-6 mt-1">
@@ -70,10 +70,24 @@
           </div>
         </div>
         {% endfor %}
+
+
+
       </div>
     </div>
   </div>
 
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+
+  {% for i in nums %}
+    <li class="page-item {% if i == current_page %} active{% endif %}">
+      <a class="page-link" href="?page={{ forloop.counter }}"page=forloop.counter>{{ forloop.counter }}</a>
+    </li>
+  {% endfor %}
+
+</ul>
+</nav>
 
   {% endblock %}
   
