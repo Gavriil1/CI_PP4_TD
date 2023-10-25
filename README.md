@@ -1,4 +1,4 @@
-# Test ABCDE Todo List
+# ABCDE Todo List
 
 ![Am I Responsive](docs/amiresponsive/am_i_responsive.png)
 
