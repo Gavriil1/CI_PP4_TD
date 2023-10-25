@@ -317,7 +317,7 @@ The wireframes were created using Balsamiq
 <details><summary>404 Page</summary>
 
 <img src="docs/wireframes/404.png">
-
+</details>
 
 
 ## Features
@@ -479,17 +479,17 @@ The wireframes were created using Balsamiq
 
 
 ### Logo & Navigation
-- Custom logo for the business
-- Fully Responsive
-- On small screens switches to hamburger menu
-- Indicates login/logout in status
-- displayed on all pages
+- Shows logo designed for a to-do list
+- Responsive across various screen sizes
+- Transforms into hamburger menu on smaller screens
+- Shows active user
+- Provides access to all available pages directly from the current page
 
 <details><summary>See feature images</summary>
 
-![Footer](docs/features/feature-logo-navbar.PNG)
-![Footer](docs/features/feature-logo-navbar-login.PNG)
-![Footer](docs/features/feature-logo-navbar-hamburger.PNG)
+![Footer](docs/features/feature-homepage.png)
+![Footer](docs/features/navbar-overview-logout.png)
+![Footer](docs/features/navbar-overview-hamburger.png)
 </details>
 
 
@@ -498,80 +498,84 @@ The wireframes were created using Balsamiq
 - displayed across all pages
 
 <details><summary>See feature images</summary>
-
 ![Footer](docs/features/feature-footer.PNG)
+![Footer](docs/features/footer.png)
 </details>
-
 
 ### Sign up / Register
 - Allow users to register an acoount
-- Username and password is required, email is optional
+- Username and password is required.
 
 <details><summary>See feature images</summary>
 
-![Register](docs/features/feature-register.PNG)
+![Register](docs/features/register.png)
 </details>
 
 
 ### Login
-- User can login to create a booking, view bookings, edit and delete bookings
+-  User can login to create/update/delete a task, view list of tasks, send feedback message, see list of favourite books.
 
 <details><summary>See feature images</summary>
-
-![Login](docs/features/feature-login.PNG)
-![Login](docs/features/feature-login2.PNG)
+![Login](docs/features/login.png)
 </details>
 
 
 ### Logout
 - Allows the user to securely log out
-- Ask user if they are sure they want to log out
 
 <details><summary>See feature images</summary>
 
-![Logout](docs/features/feature-logout.PNG)
+![Logout](docs/features/navbar-overview-logout.png)
 </details>
 
 
-### Book
-- Allows the user to book a table using the booking form
-- Messages are displayed if the data is not valid such as phone number lenght is too short and the email address is not a valid format
+### Contact Form
+- Allows the user to contact admin/site owner to share feedback
 
 <details><summary>See feature images</summary>
 
-![Book](docs/features/feature-book-table.PNG)
-![Book](docs/features/feature-book-table2.PNG)
-![Book](docs/features/feature-book-table3.PNG)
+![ContactForm](docs/features/contact-form.png)
 </details>
 
 
-### My Bookings
-- Allows the user to see all their bookings in a paginated layout, 4 per page
-- If the booking is older than today it is automatically expired for the user
-- Status of the booking is displayed, awaiting confirmation and when approved will then change to confirmed status for the user
+### Books
+- Allows the user to see the list of favorite books.
+- User may see the book title, book cover, book description, book's star rating, number of reviews.
+- User may click on "Buy on Amazon" to purchase the book from Amazon.
+- User may utilize pagination to view the complete list of books.
 
 <details><summary>See feature images</summary>
 
-![My Bookings](docs/features/feature-my-bookings.PNG)
+![Book](docs/features/books.png)
 </details>
 
 
-### Edit Booking
-- Allows the user to edit their booking to another date, time, guest count and table
+### Task List 
+- Allows the user to see all their their tasks for Dayly, Weekly, Montlhy, Yearly goals
+- User can see, Severity of the task, deadline of the task, complete status
+- Allows a user an option to create a task, update/view the task, delete the task
+
 <details><summary>See feature images</summary>
 
-![Edit Booking](docs/features/feature-edit-booking.PNG)
-![ImaEdit Bookingge](docs/features/feature-edit-booking2.PNG)
+![Task List](docs/features/task-list.png)
 </details>
 
 
-### Cancel Booking 
-- Allows the user to cancel their booking, asks user are they sure
-  
+### View/Edit Task page
+- Allows the user to edit/view task. 
 <details><summary>See feature images</summary>
 
-![Cancel Booking](docs/features/feature-cancel-booking.PNG)
+![Edit/View Task](docs/features/update-view.png)
 </details>
+
+### View/Edit Task page
+- Allows user to delete task. 
+<details><summary>See feature images</summary>
+
+![Delete Task](docs/features/delete-task.png)
+</details>
+
+
 
 
 ### Food Menu
