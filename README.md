@@ -503,8 +503,7 @@ The wireframes were created using Balsamiq
 </details>
 
 ### Sign up / Register
-- Allow users to register an acoount
-- Username and password is required.
+- Username and password is required
 
 <details><summary>See feature images</summary>
 
@@ -513,9 +512,10 @@ The wireframes were created using Balsamiq
 
 
 ### Login
--  User can login to create/update/delete a task, view list of tasks, send feedback message, see list of favourite books.
+- User can login to create/update/delete a task, view list of tasks, send feedback message, see list of favourite books.
 
 <details><summary>See feature images</summary>
+
 ![Login](docs/features/login.png)
 </details>
 
@@ -568,7 +568,7 @@ The wireframes were created using Balsamiq
 ![Edit/View Task](docs/features/update-view.png)
 </details>
 
-### View/Edit Task page
+### Delete page
 - Allows user to delete task. 
 <details><summary>See feature images</summary>
 
