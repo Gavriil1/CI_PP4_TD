@@ -474,7 +474,7 @@ The wireframes were created using Balsamiq
 
 <details><summary>See feature images</summary>
 
-![Home page](docs/features/feature-homepage.PNG)
+![Home page](docs/features/feature-homepage.png)
 </details>
 
 
