@@ -65,7 +65,7 @@
                 </div>
                 <div class="panel-body table-responsive">
                     {% if freq_count_d > 0 %}
-                    <h1 class="text-white">Daily Goals</h1>
+                        <h1 class="text-white">Daily Goals</h1>
                     <table class="table">
                         <thead>
                             <tr>
@@ -78,36 +78,33 @@
                             </tr>
                         </thead>
                         <tbody>
-                                {% for x in mymembers %}
-                                    {% if x.frequency == "Daily" %}
-                                        <tr>
-                                                <td>
-                                                    <ul class="action-list">
-                                                        <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
-                                                        <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
-                                                    </ul>
-                                                </td>
-                                                <td>{{ x.importance }}</td>
-                                                <td>                 
-                                                    {{ x.title|slice:"0:40" }} 
-                                                </td>
-                                                <td>{{ x.complete }}</td>
-                                                <td>{{ x.frequency }}</td>
-                                                <td>{{ x.due|date:"d-m-y"}}</td>
+                            <tr>
+                            {% for x in mymembers %}
+                                {% if x.frequency == "Daily" %}
+                                    <tr>
+                                            <td>
+                                                <ul class="action-list">
+                                                    <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                                </ul>
+                                            </td>
+                                            <td>{{ x.importance }}</td>
+                                            <td>                 
+                                                {{ x.title|slice:"0:40" }} 
+                                            </td>
+                                            <td>{{ x.complete }}</td>
+                                            <td>{{ x.frequency }}</td>
+                                            <td>{{ x.due|date:"d-m-y"}}</td>
                                         </tr>
-                                    {% endif %}
-                                    {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                            </table>
+                            {% else %}
+                            <h1 class="text-white">Dayly Goals</h1>
+                        <p>There are no dayly tasks. To create task please click "Add New"</p>
+                        {% endif %}            
                         </tbody>
                     </table>
-                                <!-- </table> -->
-                                    {% else %}
-
-                                <h1 class="text-white">Dayly Goals</h1>
-                                <p>There are no dayly tasks. To create task please click "Add New"</p>
-
-                                {% endif %}            
-                        <!-- </tbody>
-                    </table> -->
                 </div>
                 
                 <div class="panel-body table-responsive">
@@ -125,35 +122,34 @@
                             </tr>
                         </thead>
                         <tbody>
-                                
-                                {% for x in mymembers %}
-                                    {% if x.frequency == "Weekly" %}
-                                        <tr>
-                                                <td>
-                                                    <ul class="action-list">
-                                                        <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
-                                                        <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
-                                                        <li><a href="{% url 'task-delete' x.id %}" ><i class="fas fa-times"></i></a></li>
-                                                    </ul>
-                                                </td>
-                                                <td>{{ x.importance }}</td>
-                                                <td>                 
-                                                    {{ x.title|slice:"0:40" }}
-                                                </td>
-                                                <td>{{ x.complete }}</td>
-                                                <td>{{ x.frequency }}</td>
-                                                <td>{{ x.due|date:"d-m-y" }}</td>
+                            <tr>
+                            {% for x in mymembers %}
+                                {% if x.frequency == "Weekly" %}
+                                    <tr>
+                                            <td>
+                                                <ul class="action-list">
+                                                    <li><a href="{% url 'task-update' x.id %}" class="btn btn-primary"><i class="fa fa-pencil-alt"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" class="btn btn-danger"><i class="fa fa-times"></i></a></li>
+                                                    <li><a href="{% url 'task-delete' x.id %}" ><i class="fas fa-times"></i></a></li>
+                                                </ul>
+                                            </td>
+                                            <td>{{ x.importance }}</td>
+                                            <td>                 
+                                                {{ x.title|slice:"0:40" }}
+                                            </td>
+                                            <td>{{ x.complete }}</td>
+                                            <td>{{ x.frequency }}</td>
+                                            <td>{{ x.due|date:"d-m-y" }}</td>
                                         </tr>
-                                    {% endif %}
-                                {% endfor %}
+                                {% endif %}
+                            {% endfor %}
+                            </table>
+                            {% else %}
+                        <h1 class="text-white">Weekly Goals</h1>
+                        <p>There are no dayly tasks. To create task please click "Add New"</p>
+                        {% endif %}            
                         </tbody>
                     </table>
-                                {% else %}
-                                <h1 class="text-white">Weekly Goals</h1>
-                                <p>There are no dayly tasks. To create task please click "Add New"</p>
-                            {% endif %}            
-                        <!-- </tbody>
-                    </table> -->
                 </div>
 
                 <div class="panel-body table-responsive">
@@ -171,7 +167,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+                            <tr>
                             {% for x in mymembers %}
                                 {% if x.frequency == "Monthly" %}
                                     <tr>
@@ -188,17 +184,16 @@
                                             <td>{{ x.complete }}</td>
                                             <td>{{ x.frequency }}</td>
                                             <td>{{ x.due|date:"d-m-y"}}</td>
-                                    </tr>
+                                        </tr>
                                 {% endif %}
                             {% endfor %}
+                            </table>
+                            {% else %}
+                            <h1 class="text-white">Monthly Goals</h1>
+                            <p>There are no dayly tasks. To create task please click "Add New"</p>
+                        {% endif %}            
                         </tbody>
                     </table>
-                            {% else %}
-                                <h1 class="text-white">Monthly Goals</h1>
-                                <p>There are no dayly tasks. To create task please click "Add New"</p>
-                            {% endif %}            
-                        <!-- </tbody>
-                    </table> -->
                 </div>
 
                 <div class="panel-body table-responsive">
@@ -216,7 +211,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            
+                            <tr>
                             {% for x in mymembers %}
                                 {% if x.frequency == "Yearly" %}
                                     <tr>
@@ -233,17 +228,16 @@
                                             <td>{{ x.complete }}</td>
                                             <td>{{ x.frequency }}</td>
                                             <td>{{ x.due|date:"d-m-y" }}</td>
-                                    </tr>
-                                    {% endif %}
-                                {% endfor %}
-                        </tbody>
-                    </table>
-                                {% else %}
-                                <h1 class="text-white">Yearly Goals</h1>
+                                        </tr>
+                                {% endif %}
+                            {% endfor %}
+                            </table>
+                            {% else %}
+                            <h1 class="text-white">Yearly Goals</h1>
                         <p>There are no Yearly tasks. To create task please click here</p>
                   
                         {% endif %} 
-                    <!-- </table> -->
+                    </table>
                 </div>
 
 

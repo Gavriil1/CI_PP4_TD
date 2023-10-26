@@ -17,7 +17,7 @@ from django.contrib.auth import login
 from django.core.paginator import Paginator
 from .models import Product
 
-@login_required
+
 def books(request):
     products = Product.objects.all()
     #set up pagination.
