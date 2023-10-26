@@ -40,7 +40,7 @@
 - displayed across all pages
 
 <details><summary>See feature images</summary>
-![Footer](docs/features/feature-footer.PNG)
+
 ![Footer](docs/features/footer.png)
 </details>
 
@@ -58,6 +58,7 @@
 -  User can login to create/update/delete a task, view list of tasks, send feedback message, see list of favourite books.
 
 <details><summary>See feature images</summary>
+
 ![Login](docs/features/login.png)
 </details>
 
@@ -110,7 +111,7 @@
 ![Edit/View Task](docs/features/update-view.png)
 </details>
 
-### View/Edit Task page
+### Delete Task page
 - Allows user to delete task. 
 <details><summary>See feature images</summary>
 
@@ -122,112 +123,7 @@
 
 
 
-## Features
 
-### Home page
-- Home page includes nav bar, main body and a footer
-
-
-<details><summary>See feature images</summary>
-
-![Home page](docs/features/feature-homepage.png)
-</details>
-
-
-### Logo & Navigation
-- Custom logo for the business
-- Fully Responsive
-- On small screens switches to hamburger menu
-- Indicates login/logout in status
-- displayed on all pages
-
-<details><summary>See feature images</summary>
-
-![Footer](docs/features/feature-logo-navbar.PNG)
-![Footer](docs/features/feature-logo-navbar-login.PNG)
-![Footer](docs/features/feature-logo-navbar-hamburger.PNG)
-</details>
-
-
-### Footer
-- Contains social media links and copyright
-- displayed across all pages
-
-<details><summary>See feature images</summary>
-
-![Footer](docs/features/feature-footer.PNG)
-</details>
-
-
-### Sign up / Register
-- Allow users to register an acoount
-- Username and password is required, email is optional
-
-<details><summary>See feature images</summary>
-
-![Register](docs/features/feature-register.PNG)
-</details>
-
-
-### Login
-- User can login to create a booking, view bookings, edit and delete bookings
-
-<details><summary>See feature images</summary>
-
-![Login](docs/features/feature-login.PNG)
-![Login](docs/features/feature-login2.PNG)
-</details>
-
-
-### Logout
-- Allows the user to securely log out
-- Ask user if they are sure they want to log out
-
-<details><summary>See feature images</summary>
-
-![Logout](docs/features/feature-logout.PNG)
-</details>
-
-
-### Book
-- Allows the user to book a table using the booking form
-- Messages are displayed if the data is not valid such as phone number lenght is too short and the email address is not a valid format
-
-<details><summary>See feature images</summary>
-
-![Book](docs/features/feature-book-table.PNG)
-![Book](docs/features/feature-book-table2.PNG)
-![Book](docs/features/feature-book-table3.PNG)
-</details>
-
-
-### My Bookings
-- Allows the user to see all their bookings in a paginated layout, 4 per page
-- If the booking is older than today it is automatically expired for the user
-- Status of the booking is displayed, awaiting confirmation and when approved will then change to confirmed status for the user
-
-<details><summary>See feature images</summary>
-
-![My Bookings](docs/features/feature-my-bookings.PNG)
-</details>
-
-
-### Edit Booking
-- Allows the user to edit their booking to another date, time, guest count and table
-<details><summary>See feature images</summary>
-
-![Edit Booking](docs/features/feature-edit-booking.PNG)
-![ImaEdit Bookingge](docs/features/feature-edit-booking2.PNG)
-</details>
-
-
-### Cancel Booking 
-- Allows the user to cancel their booking, asks user are they sure
-  
-<details><summary>See feature images</summary>
-
-![Cancel Booking](docs/features/feature-cancel-booking.PNG)
-</details>
 
 
 
