@@ -21,6 +21,120 @@
 
 
 ### Logo & Navigation
+- Shows logo designed for a to-do list
+- Responsive across various screen sizes
+- Transforms into hamburger menu on smaller screens
+- Shows active user
+- Provides access to all available pages directly from the current page
+
+<details><summary>See feature images</summary>
+
+![Footer](docs/features/feature-homepage.png)
+![Footer](docs/features/navbar-overview-logout.png)
+![Footer](docs/features/navbar-overview-hamburger.png)
+</details>
+
+
+### Footer
+- Contains social media links and copyright
+- displayed across all pages
+
+<details><summary>See feature images</summary>
+![Footer](docs/features/feature-footer.PNG)
+![Footer](docs/features/footer.png)
+</details>
+
+### Sign up / Register
+- Allow users to register an acoount
+- Username and password is required.
+
+<details><summary>See feature images</summary>
+
+![Register](docs/features/register.png)
+</details>
+
+
+### Login
+-  User can login to create/update/delete a task, view list of tasks, send feedback message, see list of favourite books.
+
+<details><summary>See feature images</summary>
+![Login](docs/features/login.png)
+</details>
+
+
+### Logout
+- Allows the user to securely log out
+
+<details><summary>See feature images</summary>
+
+![Logout](docs/features/navbar-overview-logout.png)
+</details>
+
+
+### Contact Form
+- Allows the user to contact admin/site owner to share feedback
+
+<details><summary>See feature images</summary>
+
+![ContactForm](docs/features/contact-form.png)
+</details>
+
+
+### Books
+- Allows the user to see the list of favorite books.
+- User may see the book title, book cover, book description, book's star rating, number of reviews.
+- User may click on "Buy on Amazon" to purchase the book from Amazon.
+- User may utilize pagination to view the complete list of books.
+
+<details><summary>See feature images</summary>
+
+![Book](docs/features/books.png)
+</details>
+
+
+### Task List 
+- Allows the user to see all their their tasks for Dayly, Weekly, Montlhy, Yearly goals
+- User can see, Severity of the task, deadline of the task, complete status
+- Allows a user an option to create a task, update/view the task, delete the task
+
+<details><summary>See feature images</summary>
+
+![Task List](docs/features/task-list.png)
+</details>
+
+
+### View/Edit Task page
+- Allows the user to edit/view task. 
+<details><summary>See feature images</summary>
+
+![Edit/View Task](docs/features/update-view.png)
+</details>
+
+### View/Edit Task page
+- Allows user to delete task. 
+<details><summary>See feature images</summary>
+
+![Delete Task](docs/features/delete-task.png)
+</details>
+
+
+
+
+
+
+## Features
+
+### Home page
+- Home page includes nav bar, main body and a footer
+
+
+<details><summary>See feature images</summary>
+
+![Home page](docs/features/feature-homepage.png)
+</details>
+
+
+### Logo & Navigation
 - Custom logo for the business
 - Fully Responsive
 - On small screens switches to hamburger menu
@@ -591,114 +705,7 @@ this for FEATURES
 ##### Back to [top](#table-of-contents)
 
 
-## Features
 
-### Home page
-- Home page includes nav bar, main body and a footer
-
-
-<details><summary>See feature images</summary>
-
-![Home page](docs/features/feature-homepage.png)
-</details>
-
-
-### Logo & Navigation
-- Shows logo designed for a to-do list
-- Responsive across various screen sizes
-- Transforms into hamburger menu on smaller screens
-- Shows active user
-- Provides access to all available pages directly from the current page
-
-<details><summary>See feature images</summary>
-
-![Footer](docs/features/feature-homepage.png)
-![Footer](docs/features/navbar-overview-logout.png)
-![Footer](docs/features/navbar-overview-hamburger.png)
-</details>
-
-
-### Footer
-- Contains social media links and copyright
-- displayed across all pages
-
-<details><summary>See feature images</summary>
-![Footer](docs/features/feature-footer.PNG)
-![Footer](docs/features/footer.png)
-</details>
-
-### Sign up / Register
-- Allow users to register an acoount
-- Username and password is required.
-
-<details><summary>See feature images</summary>
-
-![Register](docs/features/register.png)
-</details>
-
-
-### Login
--  User can login to create/update/delete a task, view list of tasks, send feedback message, see list of favourite books.
-
-<details><summary>See feature images</summary>
-![Login](docs/features/login.png)
-</details>
-
-
-### Logout
-- Allows the user to securely log out
-
-<details><summary>See feature images</summary>
-
-![Logout](docs/features/navbar-overview-logout.png)
-</details>
-
-
-### Contact Form
-- Allows the user to contact admin/site owner to share feedback
-
-<details><summary>See feature images</summary>
-
-![ContactForm](docs/features/contact-form.png)
-</details>
-
-
-### Books
-- Allows the user to see the list of favorite books.
-- User may see the book title, book cover, book description, book's star rating, number of reviews.
-- User may click on "Buy on Amazon" to purchase the book from Amazon.
-- User may utilize pagination to view the complete list of books.
-
-<details><summary>See feature images</summary>
-
-![Book](docs/features/books.png)
-</details>
-
-
-### Task List 
-- Allows the user to see all their their tasks for Dayly, Weekly, Montlhy, Yearly goals
-- User can see, Severity of the task, deadline of the task, complete status
-- Allows a user an option to create a task, update/view the task, delete the task
-
-<details><summary>See feature images</summary>
-
-![Task List](docs/features/task-list.png)
-</details>
-
-
-### View/Edit Task page
-- Allows the user to edit/view task. 
-<details><summary>See feature images</summary>
-
-![Edit/View Task](docs/features/update-view.png)
-</details>
-
-### View/Edit Task page
-- Allows user to delete task. 
-<details><summary>See feature images</summary>
-
-![Delete Task](docs/features/delete-task.png)
-</details>
 
 
 
