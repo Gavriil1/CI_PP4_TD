@@ -32,7 +32,7 @@ def books(request):
         'nums': nums,
         'current_page': int(page) if page else 1, 
     }
-    return render(request, 'test.html', context)
+    return render(request, 'booksapp/books.html', context)
 
 
 def test(request):
