@@ -580,56 +580,38 @@ The wireframes were created using Balsamiq
 ## Validation
 
 The W3C Markup Validation Service
-<details><summary>Home</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-index.PNG">
+
+<details><summary>Login</summary>
+<img src="docs/validation/html-validation/login-html-validation.png">
 </details>
 
 <details><summary>Register</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-register.PNG">
+<img src="docs/validation/html-validation/register-html-validation.png">
 </details>
 
-<details><summary>Login</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-login.PNG">
+
+<details><summary>Home</summary>
+<img src="docs/validation/html-validation/homepage-html-validation.png">
 </details>
 
-<details><summary>Logout</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-logout.PNG">
+<details><summary>Task Create Update</summary>
+<img src="docs/validation/html-validation/create-update-html-validation.png">
 </details>
 
-<details><summary>Bookings</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-booking-list.PNG">
+<details><summary>Task Delete</summary>
+<img src="docs/validation/html-validation/taskdelete-html-validation.png">
 </details>
 
-<details><summary>Edit Booking</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-edit-booking.PNG">
+<details><summary>Manual</summary>
+<img src="docs/validation/html-validation/manual-html-validation.png">
 </details>
 
-<details><summary>Cancel Booking</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-cancel-booking.PNG">
+<details><summary>Contact Form</summary>
+<img src="docs/validation/html-validation/contactform-html-validation.png">
 </details>
 
-<details><summary>Food Menu</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-food-menu.PNG">
-</details>
-
-<details><summary>Drinks Menu</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-drinks-menu.PNG">
-</details>
-
-<details><summary>Blog</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-blog.PNG">
-</details>
-
-<details><summary>Blog Expanded</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-blog-expanded.PNG">
-</details>
-
-<details><summary>Contact Us</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-contact-us.PNG">
-</details>
-
-<details><summary>Confirmed</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-confirmed.PNG">
+<details><summary>Books</summary>
+<img src="docs/validation/html-validation/books-html-validation.png">
 </details>
 
 <details><summary>404</summary>
