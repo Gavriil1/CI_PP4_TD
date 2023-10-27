@@ -615,7 +615,7 @@ The W3C Markup Validation Service
 </details>
 
 <details><summary>404</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-html-404.PNG">
+<img src="docs/validation/html-validation/404-html-validation.png">
 </details><hr>
 
 
