@@ -194,7 +194,11 @@ margin-left: 4px;
     margin-top: 100px;
     width: 700px;
     background-color: rgba(0,0,0,0.5) !important;
-
+<<<<<<< HEAD
+    } 
+=======
+    }
+>>>>>>> fe5d22a08e1ab3bf65c73729fbb6848be35c8c07
   
   .span_delete{
   width: 45px;
