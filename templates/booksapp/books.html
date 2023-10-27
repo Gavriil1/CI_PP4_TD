@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block page-title %}Form{% endblock %}
+{% block page-title %}Books{% endblock %}
 {% block content %}
 
 
@@ -40,7 +40,6 @@
   </nav>
 
   <h1 class="text-dark text-center mx-auto" style="background-color: rgba(252, 253, 255, 0.8); ">List of our favorite bookss</h1>
-  <h1 class="text-dark text-center mx-auto" style="background-color: rgba(252, 253, 255, 0.8); ">List of our favorite bookss</h1>
   <div class="container mt-5 mb-5">
     <div class="d-flex justify-content-center row">
       <div class="col-md-10">
@@ -54,7 +53,7 @@
                 {% for _ in "x"|rjust:product.stars %}
                   <i class="fa fa-star"></i>
                 {% endfor %}
-                </i>
+                <!-- </i> -->
               </div>
               <span>{{ product.numberreviews }}</span>
             </div>
@@ -81,7 +80,8 @@
 
   {% for i in nums %}
     <li class="page-item {% if i == current_page %} active{% endif %}">
-      <a class="page-link" href="?page={{ forloop.counter }}"page=forloop.counter>{{ forloop.counter }}</a>
+      <!-- <a class="page-link" href="?page={{ forloop.counter }}" page=forloop.counter>{{ forloop.counter }}</a> -->
+      <a class="page-link" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a>
     </li>
   {% endfor %}
 
