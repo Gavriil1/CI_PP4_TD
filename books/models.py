@@ -1,8 +1,12 @@
-
+# Imports
+#3d party:
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
+#Internal:
 
+
+# mode for books in books app.
 class Product(models.Model):
     title = models.CharField(max_length=200)
     details = models.TextField()

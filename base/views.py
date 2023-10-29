@@ -20,6 +20,7 @@ from .models import Task
 from .forms import PostForm
 from django.contrib import messages
 
+
 # Login and Register Page
 class CustomLoginView(LoginView):
     """
@@ -58,7 +59,7 @@ class RegisterPage(FormView):
 # Tasks DetailView,CreateView, Task Update, Delete View
 class TaskCreate(LoginRequiredMixin, CreateView):
     """
-    That task is used to create tasks
+    That task is used to create tasks, and display message after task deletion
     """
     model = Task
     template_name = 'todoapp-create-update-delete/task_form.html'
@@ -73,7 +74,7 @@ class TaskCreate(LoginRequiredMixin, CreateView):
 
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     """
-    This class is used to update tasks
+    This class is used to update tasks and display message after task deletion
     """
     model = Task
     form_class = PostForm
@@ -87,7 +88,7 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
 
 class DeleteView(LoginRequiredMixin, DeleteView):
     """
-    This class is used to delete tasks
+    This class is used to delete tasks, and display a message after task deletion
     """
     model = Task
     template_name = 'todoapp-create-update-delete/task_confirm_delete.html'

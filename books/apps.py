@@ -1,4 +1,7 @@
+# Imports
+# Third party:
 from django.apps import AppConfig
+# Internal:
 
 
 class BooksConfig(AppConfig):

@@ -1,8 +1,11 @@
+# Imports
+# 3d party:
 from django.urls import path
-from .views import books, test
-from django.contrib.auth.views import LogoutView
+# Internal: 
+from .views import books
 
+
+# Url which show books on book page
 urlpatterns = [
     path('books/', books, name='books'),
-    path('test/', test, name='test'),
     ]
