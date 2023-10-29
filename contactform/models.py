@@ -1,5 +1,8 @@
+# Imports
+# External:
 from django.db import models
 from django.utils import timezone
+# Internal:
 from django.contrib.auth.models import User
 
 

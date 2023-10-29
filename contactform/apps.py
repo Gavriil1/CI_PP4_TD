@@ -1,4 +1,7 @@
+# Imports.
+# External :
 from django.apps import AppConfig
+# Internal :
 
 
 class ContactformConfig(AppConfig):
