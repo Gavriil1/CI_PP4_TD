@@ -1,7 +1,13 @@
+# Imports
+# External:
 from django.urls import path
-from .views import  TaskCreate, TaskUpdate, DeleteView, CustomLoginView, RegisterPage,   manual, homepage, custom_404, custom_404
 from django.contrib.auth.views import LogoutView
+# Internal:
+from .views import TaskCreate, TaskUpdate, DeleteView, CustomLoginView
+from .views import RegisterPage,   manual, homepage, custom_404
 
+
+# Crete urls which allows us to have Login, Register, Logout Tasklist, Update Tasks, Create Tasks, Delete Tasks.
 urlpatterns = [
     path('', homepage, name='tasks'),
     path('login/', CustomLoginView.as_view(), name='login'),
@@ -11,6 +17,5 @@ urlpatterns = [
     path('task-create/', TaskCreate.as_view(), name='task-create'),
     path('task-update/<int:pk>/', TaskUpdate.as_view(), name='task-update'),
     path('task-delete/<int:pk>/', DeleteView.as_view(), name='task-delete'),
-    # path('test/', test, name='test'),
     path('custom_404/', custom_404, name='custom_404'),
     ]

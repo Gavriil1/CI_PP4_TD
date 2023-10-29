@@ -1,31 +1,27 @@
+# Imports
+# Third Party:
 from django.shortcuts import render, redirect
 from django.template import loader
 from django.http import HttpResponse
 from django.urls import path
-from . import views
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView, FormView
 from django.urls import reverse_lazy
-
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login
 from django.contrib import messages
-
-
+# Internal:
 from .models import Task
 from .forms import PostForm
-from django.contrib import messages
+from . import views
 
 
-# Login and Register Page
+# Login View
 class CustomLoginView(LoginView):
-    """
-    Login page page
-    """
     template_name = 'login-register/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
@@ -34,11 +30,8 @@ class CustomLoginView(LoginView):
         return reverse_lazy('tasks')
 
 
-# Register view page
+# Register page view
 class RegisterPage(FormView):
-    """
-    Register page view
-    """
     template_name = 'login-register/register.html'
     form_class = UserCreationForm
     redirect_authenticated_user = True
@@ -56,11 +49,8 @@ class RegisterPage(FormView):
         return super(RegisterPage, self).get(*args, **kwargs)
 
 
-# Tasks DetailView,CreateView, Task Update, Delete View
+#  That task is used to create tasks, and display message after task creation
 class TaskCreate(LoginRequiredMixin, CreateView):
-    """
-    That task is used to create tasks, and display message after task deletion
-    """
     model = Task
     template_name = 'todoapp-create-update-delete/task_form.html'
     form_class = PostForm
@@ -72,10 +62,8 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         return super(TaskCreate, self).form_valid(form)
 
 
+# This class is used to update tasks and display message after task deletion
 class TaskUpdate(LoginRequiredMixin, UpdateView):
-    """
-    This class is used to update tasks and display message after task deletion
-    """
     model = Task
     form_class = PostForm
     template_name = 'todoapp-create-update-delete/task_form.html'
@@ -86,10 +74,9 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
         return super(TaskUpdate, self).form_valid(form)
 
 
+# This class is used to delete tasks, and display a message after task
+# deletion
 class DeleteView(LoginRequiredMixin, DeleteView):
-    """
-    This class is used to delete tasks, and display a message after task deletion
-    """
     model = Task
     template_name = 'todoapp-create-update-delete/task_confirm_delete.html'
     context_object_name = 'task'
@@ -100,7 +87,19 @@ class DeleteView(LoginRequiredMixin, DeleteView):
         return super().delete(request, *args, **kwargs)
 
 
-# Pages : Homepage, Manual Page
+@login_required
+def manual(request):
+    """
+    This function is used to load manual page
+    """
+    mydata = Task.objects.all()
+    template = loader.get_template('todoapp-create-update-delete/manual.html')
+    context = {
+        'mymembers': mydata,
+    }
+    return HttpResponse(template.render(context, request))
+
+
 @login_required
 def homepage(request):
     """
@@ -118,19 +117,6 @@ def homepage(request):
         'freq_count_w': freq_count_w,
         'freq_count_m': freq_count_m,
         'freq_count_y': freq_count_y,
-    }
-    return HttpResponse(template.render(context, request))
-
-
-@login_required
-def manual(request):
-    """
-    This function is used to load manual page
-    """
-    mydata = Task.objects.all()
-    template = loader.get_template('todoapp-create-update-delete/manual.html')
-    context = {
-        'mymembers': mydata,
     }
     return HttpResponse(template.render(context, request))
 
