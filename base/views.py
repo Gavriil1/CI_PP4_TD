@@ -18,11 +18,13 @@ from django.contrib import messages
 
 from .models import Task
 from .forms import PostForm
-#import here messages for django  https://www.youtube.com/watch?v=8kBo91L8JTY
 from django.contrib import messages
 
 # Login and Register Page
 class CustomLoginView(LoginView):
+    """
+    Login page page
+    """
     template_name = 'login-register/login.html'
     fields = '__all__'
     redirect_authenticated_user = True
@@ -30,8 +32,12 @@ class CustomLoginView(LoginView):
     def get_success_url(self):
         return reverse_lazy('tasks')
 
+
 # Register view page
 class RegisterPage(FormView):
+    """
+    Register page view
+    """
     template_name = 'login-register/register.html'
     form_class = UserCreationForm
     redirect_authenticated_user = True
@@ -50,14 +56,10 @@ class RegisterPage(FormView):
 
 
 # Tasks DetailView,CreateView, Task Update, Delete View
-
-class TaskDetail(LoginRequiredMixin, DetailView):
-    model = Task
-    context_object_name = 'task'
-    template_name = 'base/task.html'
-
-
 class TaskCreate(LoginRequiredMixin, CreateView):
+    """
+    That task is used to create tasks
+    """
     model = Task
     template_name = 'todoapp-create-update-delete/task_form.html'
     form_class = PostForm
@@ -69,9 +71,10 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         return super(TaskCreate, self).form_valid(form)
 
 
-
-
 class TaskUpdate(LoginRequiredMixin, UpdateView):
+    """
+    This class is used to update tasks
+    """
     model = Task
     form_class = PostForm
     template_name = 'todoapp-create-update-delete/task_form.html'
@@ -82,9 +85,10 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
         return super(TaskUpdate, self).form_valid(form)
 
 
-
-
 class DeleteView(LoginRequiredMixin, DeleteView):
+    """
+    This class is used to delete tasks
+    """
     model = Task
     template_name = 'todoapp-create-update-delete/task_confirm_delete.html'
     context_object_name = 'task'
@@ -98,37 +102,40 @@ class DeleteView(LoginRequiredMixin, DeleteView):
 # Pages : Homepage, Manual Page
 @login_required
 def homepage(request):
-  mydata = Task.objects.filter(user=request.user)
-  freq_count_d = Task.objects.filter(user=request.user, frequency="Daily").count()
-  freq_count_w = Task.objects.filter(user=request.user, frequency="Weekly").count()
-  freq_count_m = Task.objects.filter(user=request.user, frequency="Monthly").count()
-  freq_count_y = Task.objects.filter(user=request.user, frequency="Yearly").count()
-  template = loader.get_template('todoapp-create-update-delete/homepage.html')
-  context = {
-    'mymembers': mydata,
-    'freq_count_d': freq_count_d,
-    'freq_count_w': freq_count_w,
-    'freq_count_m': freq_count_m,
-    'freq_count_y': freq_count_y,
-  }
-  return HttpResponse(template.render(context, request))
+    """
+    This function is used to load the page with detailed list of tasklists
+    """
+    mydata = Task.objects.filter(user=request.user)
+    freq_count_d = Task.objects.filter(user=request.user, frequency="Daily").count()
+    freq_count_w = Task.objects.filter(user=request.user, frequency="Weekly").count()
+    freq_count_m = Task.objects.filter(user=request.user, frequency="Monthly").count()
+    freq_count_y = Task.objects.filter(user=request.user, frequency="Yearly").count()
+    template = loader.get_template('todoapp-create-update-delete/homepage.html')
+    context = {
+        'mymembers': mydata,
+        'freq_count_d': freq_count_d,
+        'freq_count_w': freq_count_w,
+        'freq_count_m': freq_count_m,
+        'freq_count_y': freq_count_y,
+    }
+    return HttpResponse(template.render(context, request))
+
 
 @login_required
 def manual(request):
-  mydata = Task.objects.all()
-  template = loader.get_template('todoapp-create-update-delete/manual.html')
-  context = {
-    'mymembers': mydata,
-  }
-  return HttpResponse(template.render(context, request))
-
+    """
+    This function is used to load manual page
+    """
+    mydata = Task.objects.all()
+    template = loader.get_template('todoapp-create-update-delete/manual.html')
+    context = {
+        'mymembers': mydata,
+    }
+    return HttpResponse(template.render(context, request))
 
 
 def custom_404(request, exception):
+    """
+    This function is used to load 404 page
+    """
     return render(request, '404.html', status=404)
-
-
-# def test(request):
-#     return render(request, '404.html', status=404)
-
-
