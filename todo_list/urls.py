@@ -27,3 +27,4 @@ urlpatterns = [
 handler404 = 'base.views.custom_404'
 
 
+
