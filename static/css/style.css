@@ -3,7 +3,7 @@
 
 /* .main_html, */
 .main_body{
-background-image: url('/media/images/background1.webp');
+background-image: url('/static/images/background1.webp');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
