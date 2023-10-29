@@ -13,7 +13,7 @@ class Task(models.Model):
         ('Monthly', 'Monthly'),
         ('Yearly', 'Yearly'),
     ]
-    
+
     Important_Choice = [
         ('A', 'A'),
         ('B', 'B'),
@@ -26,7 +26,7 @@ class Task(models.Model):
         ('Completed', 'Completed'),
         ('InComplete', 'InComplete'),
 
-    ]    
+    ]
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
@@ -37,10 +37,9 @@ class Task(models.Model):
     importance = models.CharField(max_length=10, choices=Important_Choice, default='A')
     completed = models.CharField(max_length=10, choices=COMPLETED_CHOICE, default='InComplete')
     due = models.DateField(default=timezone.now().date())
-    
 
     def __str__(self):
         return self.title
-    
+
     class Meta:
         ordering = ['complete']

@@ -15,5 +15,5 @@ admin.site.unregister(Group)
 # with the bollow class I add more options to Task form in admin view
 class AdminTaskView(admin.ModelAdmin):
     list_display = ['id', 'title', 'description', 'importance', 'complete']
-    list_filter = ['importance', 'frequency','user']
+    list_filter = ['importance', 'frequency', 'user']
     search_fields = ['description']
