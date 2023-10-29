@@ -3,6 +3,7 @@
 
 /* .main_html, */
 .main_body{
+/* background-image: url('/static/images/background.webp'); */
 background-image: url('/static/images/background.webp');
 background-size: cover;
 background-repeat: no-repeat;
@@ -32,12 +33,6 @@ background-color: #FFC312;
 color: black;
 border:0 !important;
 }
-
-/* input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
-
-} */
 
 #id_username {
   height: 35px;
