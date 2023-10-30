@@ -638,39 +638,29 @@ The W3C Jigsaw CSS Validation Service
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-css.PNG">
 </details><hr>
 
-### JavaScript Validation
-JSHint JS Validation Service
-
-<details><summary>Script.js</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/validation-js.PNG">
-</details><hr>
 
 ### PEP8 Validation
-PEP8 Validation Service was used to check the code for PEP8 requirements via Pycodestyle as PEP8online was down
+[PEP8 Validation Service](https://pep8ci.herokuapp.com/) The code underwent verification for PEP8 compliance and successfully passed without any errors or warnings.
 
-<details><summary>Tool used: Pycodestyle</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle.PNG">
+
+<hr><summary>TODO(base) Aplication. </summary><hr>
+
+
+<details><summary>base/admin.py</summary>
+<img src="docs/validation/python/base/base.admin.png">
 </details>
 
-<hr><summary>Bar & Grill</summary><hr>
-
-
-<details><summary>Admin.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-admin.PNG">
+<details><summary>base/apps.py</summary>
+<img src="docs/validation/python/base/base.apps.png">
 </details>
 
-<details><summary>models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-models.PNG">
+<details><summary>base/forms.py</summary>
+<img src="docs/validation/python/base/base.forms.png">
 </details>
 
-<details><summary>urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-urls.PNG">
+<details><summary>base/models.py</summary>
+<img src="">
 </details>
-
-<details><summary>views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-views.PNG">
-</details>
-
 <details><summary>test_models.py</summary>
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-test-models.PNG">
 </details>

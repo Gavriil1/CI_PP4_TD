@@ -15,7 +15,10 @@ class DateInput(forms.DateInput):
 class PostForm(forms.ModelForm):
     class Meta:
         model = Task
-        fields = ('title', 'description', 'completed', 'frequency', 'importance', 'due')
+        fields = (
+            'title',
+            'description', 'completed', 'frequency', 'importance', 'due'
+            )
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
