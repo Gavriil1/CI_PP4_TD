@@ -95,7 +95,7 @@ margin-left: 4px;
  .body_task_form {
     background-color: #FAFAFA;
     font-family: 'Nunito', sans-serif;
-    background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); 
+    background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -144,7 +144,7 @@ margin-left: 4px;
 /* task form delete */
 /* .html_delete, */
 .body_delete{
-  background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+  background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp');
   background-size: cover;
   background-repeat: no-repeat;
   height: 100%;
@@ -208,7 +208,7 @@ margin-left: 4px;
     box-sizing: border-box;
 } */
 .body-homepage {
-    background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg'); 
+    background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp'); 
     background-size: cover; 
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -397,7 +397,7 @@ transition: all 0.3s ease 0s;
 
 .htmlfof, 
 .bodyfo{
-  background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
+  background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp');
   background-size: cover;
   background-color: #9cc3d5;
   background-repeat: no-repeat;
