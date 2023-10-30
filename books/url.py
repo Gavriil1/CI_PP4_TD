@@ -1,7 +1,7 @@
 # Imports
 # 3d party:
 from django.urls import path
-# Internal: 
+# Internal:
 from .views import books
 
 

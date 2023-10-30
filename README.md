@@ -683,22 +683,27 @@ The W3C Jigsaw CSS Validation Service
 </details>
 
 
-<hr><summary>Bookings</summary><hr>
 
-<details><summary>Admin.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bookings-admin.PNG">
+<hr><summary>Books</summary><hr>
+
+<details><summary>books/admin.py</summary>
+<img src="docs/validation/python/books/books.admin.png">
 </details>
 
-<details><summary>models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bookings-models.PNG">
+<details><summary>books/apps.py</summary>
+<img src="docs/validation/python/books/books.apps.png">
 </details>
 
-<details><summary>urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bookings-urls.PNG">
+<details><summary>books/models.py</summary>
+<img src="docs/validation/python/books/books.models.png">
 </details>
 
-<details><summary>views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bookings-views.PNG">
+<details><summary>books/urls.py</summary>
+<img src="docs/validation/python/books/books.urls.png">
+</details>
+
+<details><summary>books/views.py</summary>
+<img src="docs/validation/python/books/books.views.png">
 </details>
 
 <details><summary>test_models.py</summary>
@@ -718,22 +723,26 @@ The W3C Jigsaw CSS Validation Service
 </details>
 
 
-<hr><summary>Blog</summary><hr>
+<hr><summary>Contact Form</summary><hr>
 
-<details><summary>Admin.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-admin.PNG">
+<details><summary>contactform/admin.py</summary>
+<img src="docs/validation/python/contactform/contactform.admin.png">
 </details>
 
-<details><summary>models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-models.PNG">
+<details><summary>contactform/apps.py</summary>
+<img src="docs/validation/python/contactform/contactform.apps.png">
 </details>
 
-<details><summary>urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-urls.PNG">
+<details><summary>contactform/models.py</summary>
+<img src="docs/validation/python/contactform/contactform.models.png">
 </details>
 
-<details><summary>views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-views.PNG">
+<details><summary>contactform/urls.py</summary>
+<img src="docs/validation/python/contactform/contactforms.urls.png">
+</details>
+
+<details><summary>contactform/views.py</summary>
+<img src="docs/validation/python/contactform/contactform.views.png">
 </details>
 
 <details><summary>test_models.py</summary>
@@ -753,42 +762,7 @@ The W3C Jigsaw CSS Validation Service
 </details>
 
 
-<hr><summary>Contact</summary><hr>
 
-<details><summary>Admin.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-contact-admin.PNG">
-</details>
-
-<details><summary>models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-contact-models.PNG">
-</details>
-
-<details><summary>urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-contact-urls.PNG">
-</details>
-
-<details><summary>views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-contact-views.PNG">
-</details>
-
-<details><summary>test_views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-contact-test-views.PNG">
-</details>
-
-<details><summary>test_urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-contact-test-urls.PNG">
-</details>
-
-
-<hr><summary>Home</summary><hr>
-
-<details><summary>urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-home-urls.PNG">
-</details>
-
-<details><summary>views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-home-views.PNG">
-</details><hr>
 
 
 ### Lighthouse

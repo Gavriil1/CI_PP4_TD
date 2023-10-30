@@ -1,9 +1,9 @@
 # Imports
-#3d party:
+# 3d party:
 from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
-#Internal:
+# Internal:
 
 
 # mode for books in books app.

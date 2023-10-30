@@ -16,16 +16,18 @@ def contact_form(request):
     This function allows user to send text or feedback to admin
     """
     if request.method == "POST":
-        contact = Contact()  
+        contact = Contact()
         name = request.POST.get('name')
         email = request.POST.get('email')
-        subject = request.POST.get('subject')  
-        message = request.POST.get('message')  
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
         contact.name = name
         contact.email = email
-        contact.subject = subject  
-        contact.message = message  
-        contact.save() 
-        messages.success(request, "Message Received. We will get back to you soon! Thank you!")
+        contact.subject = subject
+        contact.message = message
+        contact.save()
+        messages.success(
+            request,
+            "Message Received. We will get back to you soon! Thank you!")
         return redirect('tasks')
     return render(request, 'contactformapp/feedback.html')
