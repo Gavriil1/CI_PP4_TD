@@ -29,6 +29,7 @@ background-color: rgba(0,0,0,0.5) !important;
 
 .input-group-prepend span{
 width: 45px;
+height: 38px;
 background-color: #FFC312;
 color: black;
 border:0 !important;
@@ -39,7 +40,7 @@ border:0 !important;
   width: 105%;
   border-style: none;
   margin-top:-5px;
-  margin-left:-10px;
+  margin-left:-12px;
 }
 
 #id_password {
@@ -47,7 +48,7 @@ border:0 !important;
   width: 105%;
   border-style: none;
   margin-top:-5px;
-  margin-left:-10px;
+  margin-left:-12px;
 }
 
 #id_password1 {
