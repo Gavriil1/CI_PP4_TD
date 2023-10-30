@@ -659,8 +659,17 @@ The W3C Jigsaw CSS Validation Service
 </details>
 
 <details><summary>base/models.py</summary>
-<img src="">
+<img src="docs/validation/python/base/base.models.png">
 </details>
+
+<details><summary>base/url.py</summary>
+<img src="docs/validation/python/base/base.urls.png">
+</details>
+
+<details><summary>base/views.py</summary>
+<img src="docs/validation/python/base/base.views.png">
+</details>
+
 <details><summary>test_models.py</summary>
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-test-models.PNG">
 </details>
