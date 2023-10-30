@@ -101,7 +101,7 @@ def manual(request):
     return HttpResponse(template.render(context, request))
 
 
-@login_required
+# @login_required
 def homepage(request):
     """
     This function is used to load the page with detailed list of tasklists

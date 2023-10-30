@@ -878,20 +878,31 @@ Performance, best practices and SEO was tested using Lighthouse.
 ### Wave
 WAVE was used to test the websites accessibility.
 
-<details><summary>Index</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-index.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-index2.PNG">
+<details><summary>Login</summary>
+We have 2 errors and 1 contrast error. All errors are false positive.
+
+Contast error says, that contrast is very low, but in reality the contast is very good.
+It is very easy to read "Welcome to ABCDE ToDoList
+
+Other two errors related to Form. Waive check says that labels are empty.
+The labels have picture instead of text, because of that the labels are not empty.
+<img src="docs/validation/accessibility/login-waive-1.png">
+<img src="docs/validation/accessibility/login-waive-2.png">
 </details>
 
 <details><summary>Register</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-register.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-register2.PNG">
+We have 3 errors and 1 contrast error. All errors are false positive.
+
+Contast error says, that contrast is very low, but in reality the contast is very good.
+It is very easy to read "Welcome to ABCDE ToDoList
+
+Other three errors related to Form. Waive check says that labels are empty.
+The labels have picture instead of text, because of that the labels are not empty.
+<img src="docs/validation/accessibility/register-waive-1.png">
+<img src="docs/validation/accessibility/register-waive-2.png">
 </details>
 
-<details><summary>Login</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-login.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-login2.PNG">
-</details>
+
 
 <details><summary>Logout</summary>
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-logout.PNG">

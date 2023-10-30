@@ -19,27 +19,27 @@
 				<form method="POST">
                     {% csrf_token %}
 					<div class="input-group form-group">
-						<div class="input-group-prepend">
+						<label for="{{ form.username.id_for_label }}" class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
+						</label>
                         <div class="form-control">
                         {{ form.username }}
                       </div>
 						
 					</div>
 					<div class="input-group form-group">
-						<div class="input-group-prepend">
+						<label for="{{ form.password1.id_for_label }}" class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
+						</label>
                         <div class="form-control">
                         {{form.password1}}
                         </div>
                     </div>
 
                     <div class="input-group form-group">
-						<div class="input-group-prepend">
+						<label for="{{ form.password2.id_for_label }}" class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
-						</div>
+						</label>
 						<!-- <input type="password" class="form-control" placeholder="password"> -->
                         <div class="form-control">
                         {{form.password2}}
