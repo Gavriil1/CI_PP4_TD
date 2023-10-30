@@ -4,7 +4,7 @@
 /* .main_html, */
 .main_body{
 /* background-image: url('/static/images/background.webp'); */
-background-image: url('/static/images/background.jpg');
+background-image: url('/static/images/background.webp');
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
