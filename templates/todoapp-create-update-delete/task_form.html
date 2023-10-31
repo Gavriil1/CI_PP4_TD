@@ -4,10 +4,7 @@
 
 <style>
    
-        /* p {color: #d30d0d;}
-  */
-  /* label {
-    background-color: rgba(0,0,0,0.5); /* Change this to your desired background color  */
+
 </style>
 
     <body class="body_task_form">
@@ -15,7 +12,7 @@
             <a href="{% url 'tasks' %}">&#8592; Back</a>
             <p>this is task_form.html</p>
         </div>
-
+        <h1 class="text-center text-white"><span style="background-color: rgba(0,0,0,0.5);">Create/Update task</span></h1>
     <div class="card_body_task_form">
         <form method="POST">
             {%csrf_token%}

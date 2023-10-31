@@ -897,16 +897,18 @@ the labels have icons instead of text.
 
 
 <details><summary>HomePage</summary>
+We see 2-8 false positive errors: "A link contains no text."
+This happens because I used icons instead of text to create links 
 <img src="docs/validation/accessibility/homepage-waive-1.png">
 <img src="docs/validation/accessibility/homepage-waive-2.png">
 </details>
 
-<details><summary>Drinks Menu</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-drink-menu.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-drink-menu2.PNG">
+<details><summary>Create/Update Task</summary>
+<img src="docs/validation/accessibility/create-update-task-1.png">
+<img src="docs/validation/accessibility/create-update-task-1.png">
 </details>
 
-<details><summary>Book</summary>
+<details><summary>Books</summary>
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-booking.PNG">
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-booking2.PNG">
 </details>
