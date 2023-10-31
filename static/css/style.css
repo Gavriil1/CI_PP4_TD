@@ -245,8 +245,8 @@ padding: 15px;
 border-radius: 0;
 }
 .panel .panel-heading .btn{
-color: #fff;
-background-color: #888484;
+color: #ffffff;
+background-color: #7040e0;
 font-size: 14px;
 font-weight: 600;
 padding: 7px 15px;
@@ -275,8 +275,8 @@ padding: 0;
 border-radius: 0;
 }
 .panel .panel-body .table thead tr th{
-color: #fff;
-background: #8D8D8D;
+color: #ffffff;
+background: #7040e0;
 font-size: 17px;
 font-weight: 700;
 padding: 12px;
