@@ -903,13 +903,7 @@ The labels have picture instead of text, because of that the labels are not empt
 </details>
 
 
-
-<details><summary>Logout</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-logout.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-logout2.PNG">
-</details>
-
-<details><summary>Food Menu</summary>
+<details><summary>HomePage</summary>
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-food-menu.PNG">
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-food-menu2.PNG">
 </details>

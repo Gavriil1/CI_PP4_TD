@@ -45,9 +45,9 @@
       <div class="col-md-10">
         {% for product in venues %}
         <div class="row p-2 bg-white border rounded">
-          <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="{{ product.productpic }}" alt="Amazon Book Cover"></div>
+          <div class="col-md-3 mt-1"><img class="img-fluid img-responsive rounded product-image" src="{{ product.productpic }}" alt="{{ product.title }}"></div>
           <div class="col-md-6 mt-1">
-            <h5>{{ product.title }}</h5>
+            <h2>{{ product.title }}</h2>
             <div class="d-flex flex-row">
               <div class="ratings mr-2">
                 {% for _ in "x"|rjust:product.stars %}
@@ -57,14 +57,14 @@
               </div>
               <span>{{ product.numberreviews }}</span>
             </div>
-            <p class="text-justify para mb-0 text-dark">{{ product.details }}<br><br></p>
+            <p class="text-left para mb-0 text-dark">{{ product.details }}<br><br></p>
           </div>
           <div class="align-items-center align-content-center col-md-3 border-left mt-1">
             <div class="d-flex flex-row align-items-center">
-              <h4 class="mr-1">${{ product.price }}</h4>
+              <h3 class="mr-1">${{ product.price }}</h3>
             </div>
-            <h6 class="text-success">Free shipping</h6>
-            <div class="d-flex flex-column mt-4"><button class="btn btn-primary btn-sm" type="button" onclick="window.location.href='{{ product.amazon }}'">Buy on Amazon</button></div>
+            <h3 class="text-success">Free shipping</h3>
+            <div class="d-flex flex-column mt-4"><button class="btn btn-secondary btn-lg" type="button" onclick="window.location.href='{{ product.amazon }}'">Buy on Amazon</button></div>
           </div>
         </div>
         {% endfor %}

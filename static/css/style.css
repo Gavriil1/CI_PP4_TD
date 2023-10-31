@@ -373,7 +373,7 @@ transition: all 0.3s ease 0s;
   }
   .p-manual{
     font-size: 18px;
-    text-align: justify;
+    text-align: left;
   }
 
   /* Books page */
