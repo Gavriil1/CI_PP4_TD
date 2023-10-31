@@ -905,22 +905,22 @@ This happens because I used icons instead of text to create links
 
 <details><summary>Create/Update Task</summary>
 <img src="docs/validation/accessibility/create-update-task-1.png">
-<img src="docs/validation/accessibility/create-update-task-1.png">
+<img src="docs/validation/accessibility/create-update-task-2.png">
 </details>
 
-<details><summary>Books</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-booking.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-booking2.PNG">
+<details><summary>Delete Tasks</summary>
+<img src="docs/validation/accessibility/delete-waive-1.png">
+<img src="docs/validation/accessibility/delete-waive-2.png">
 </details>
 
-<details><summary>My Bookings</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-booking-list.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-booking-list2.PNG">
+<details><summary>Manual</summary>
+<img src="docs/validation/accessibility/manual-waive-1.png">
+<img src="docs/validation/accessibility/manual-waive-2.png">
 </details>
 
-<details><summary>Edit Booking</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-edit-booking.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-edit-booking2.PNG">
+<details><summary>Feedback</summary>
+<img src="docs/validation/accessibility/feedback-waive-1.png">
+<img src="docs/validation/accessibility/feedback-waive-2.png">
 </details>
 
 <details><summary>Cancel Booking</summary>
