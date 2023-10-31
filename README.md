@@ -923,29 +923,19 @@ This happens because I used icons instead of text to create links
 <img src="docs/validation/accessibility/feedback-waive-2.png">
 </details>
 
-<details><summary>Cancel Booking</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-cancel-booking.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-cancel-booking2.PNG">
-</details>
-
-<details><summary>Blog</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-blog.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-blog2.PNG">
-</details>
-
-<details><summary>Blog Expanded</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-blog-expanded.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-blog-expanded2.PNG">
-</details>
-
-<details><summary>Contact Us</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-contact-us.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-contact-us2.PNG">
+<details><summary>Books</summary>
+We have false positive contrast error. Pagination background and page number
+have very good contrast
+<img src="docs/validation/accessibility/books-waive-1.png">
+<img src="docs/validation/accessibility/books-waive-2.png">
 </details>
 
 <details><summary>404</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-404.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-4042.PNG">
+We have one alert "Suspicious link text" which means that purpose  of the 
+link is not described well, but the link is part of sentence "Otherwise, Click here to redirect to homepage.  Sentence expains the purpose of the link.
+For this reason the alert is false positive.
+<img src="docs/validation/accessibility/404-waive-1.png">
+<img src="docs/validation/accessibility/404-waive-2.png">
 </details>
 
 
