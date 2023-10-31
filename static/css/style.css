@@ -109,6 +109,9 @@ margin-left: 4px;
 
 
  p {color: #FAFAFA;}
+ label {
+  background-color: rgba(0,0,0,0.5); /* Change this to your desired background color */
+}
 
 .header_bar_task_form{
     display: flex;
