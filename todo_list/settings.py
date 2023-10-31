@@ -24,7 +24,7 @@ SECRET_KEY = "SECRET_KEY"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # Debug to false
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 

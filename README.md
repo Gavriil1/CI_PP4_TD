@@ -897,8 +897,8 @@ the labels have icons instead of text.
 
 
 <details><summary>HomePage</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-food-menu.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/wave-food-menu2.PNG">
+<img src="docs/validation/accessibility/homepage-waive-1.png">
+<img src="docs/validation/accessibility/homepage-waive-2.png">
 </details>
 
 <details><summary>Drinks Menu</summary>
