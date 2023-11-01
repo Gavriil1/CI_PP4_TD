@@ -93,23 +93,7 @@
 
 ## User Stories
 
-### Users
 
-1.	As a User I can navigate across the site so that I can move to each feature of the site easily. (Must Have)
-2.	As a User I can use a navbar, footer, and social icons so that I can navigate the site, access menus, and access socials (Must Have)
-3.	As a User I can create a Task. (Must Have)
-4.	As a User I can update a Task. (Must Have)
-5.	As a User I can delete a Task. (Must Have)
-6.  As a User I want to see, task importance. (Must Have)
-7.  As a User I want to see, task time deadline. (Should Have)
-8.  As a User I want to see, if it is dayly, monthly, or weekly or yearly goald (Should Have)
-9.	As a user I can view all my tasks on a single page. (Must Have)
-10. As a User I can I am notified so that I know my action of creation, edit, or deletion of a task was succesfull. (Should Have)
-11. As a User I can register to create an account so I could create my own todo list to manage my personal tasks. (Must Have)
-12. As a user I can login so I can see the list of my tasks, or send an email to site developer. (Must have)
-13. As a user I can see my login status so that I know if I am logged in or not  (Should Have)
-14. As a User I can view the site's books which will help me to use application more efficiently (Should Have)
-15. As a User I can read manual to have better undstanding how to use an application (Must Have)
 
 
 ### Admin / Authorised User
@@ -910,63 +894,51 @@ For this reason the alert is false positive.
 
 1. Manual testing
 2. Automated testing
+### Users
+
+0.  As a User I would like to login to my account.
+00.  As a User I would like to create a new account.
+1.	As a User I can navigate across the site so that I can move to each feature of the site easily. (Must Have)
+2.	As a User I can use a navbar, footer, and social icons so that I can navigate the site, access menus, and access socials (Must Have)
+3.	As a User I can create a Task. (Must Have)
+4.	As a User I can update a Task. (Must Have)
+5.	As a User I can delete a Task. (Must Have)
+6.  As a User I want to see, task importance. (Must Have)
+7.  As a User I want to see, task time deadline. (Should Have)
+8.  As a User I want to see, if it is dayly, monthly, or weekly or yearly goald (Should Have)
+9.	As a user I can view all my tasks on a single page. (Must Have)
+10. As a User I can I am notified so that I know my action of creation, edit, or deletion of a task was succesfull. (Should Have)
+11. As a User I can register to create an account so I could create my own todo list to manage my personal tasks. (Must Have)
+12. As a user I can login so I can see the list of my tasks, or send an email to site developer. (Must have)
+13. As a user I can see my login status so that I know if I am logged in or not  (Should Have)
+14. As a User I can view the site's books which will help me to use application more efficiently (Should Have)
+15. As a User I can read manual to have better undstanding how to use an application (Must Have)
 
 ### Manual testing
 
-1. As a User I can navigate across the site so that I can move to each feature of the site easily
+
+
+0.  As a User I would like to login to my account.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on the 'Home' link in the navigation bar | Homepage will load| Works as expected |
-| Click on the 'Register' link in the navigation bar | Sign up page will load| Works as expected |
-| Click on the 'Login' link in the navigation bar | Login page will load| Works as expected |
-| Click on the 'Menus' link in the navigation bar, select 'Food Menu' | Food menu page will load| Works as expected |
-| Click on the 'Menus' link in the navigation bar, select 'Drinks Menu' | Drinks menu page will load| Works as expected |
-| Click on the 'Menus' link in the navigation bar, select 'Drinks Menu' | Drinks menu page will load| Works as expected |
-| Click on the 'Blog' link in the navigation bar | Blog page will load| Works as expected |
-| Click on the 'Book' link in the navigation bar | Reservations page will load| Works as expected |
-| Click on the 'Book' link in the navigation bar | Reservations page will load| Works as expected |
-| Click on the 'Contact Us' link in the navigation bar | Contact us page will load| Works as expected |
-| Click on the 'My Bookings' link in the navigation bar | Booking list page will load| Works as expected |
-| Click on the 'Logout' link in the navigation bar | Logout page will load| Works as expected |
+ | Open application URL. See login page. User credentials to log in | User logs in | Works as expected |
+
 
 <details><summary></summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-08.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-01.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-10.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-02.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-02.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-03.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-04.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-05.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-06.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-07.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-09.PNG">
+<img src="docs/userstories/log-in-to-user-account.png">
+
 
 </details>
 
-2. As a User I can use a navbar, footer, and social icons so that I can navigate the site, access menus, and access socials
+00 As a User I would like to create a new account.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
- | See test 1 | See test 1 | Works as expected |
- | Scroll to footer at bottom of page | find footer | Works as expected |
- | Scroll to footer at bottom of page | find social links | Works as expected |
+| On login page click "Sign Up". On register page register your username and password | New account is created and user logged in | Works as expected |
 
 <details><summary></summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-11.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-12.PNG">
-
-</details>
-
-3. As a Site Owner I can provide a contact us page so that users can get in touch with my business
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-| Click on the 'Contact Us' link in the navigation bar | Contact us page will load| Works as expected |
-
-<details><summary></summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-06.PNG">
+<img src="docs/userstories/register-an-account-user-account.png">
 
 </details>
 
