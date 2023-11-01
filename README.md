@@ -998,7 +998,7 @@ For this reason the alert is false positive.
 <details><summary></summary>
 <img src="docs/userstories/delete-homepage.png">
 
-
+</details>
 
 
 
