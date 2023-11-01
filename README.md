@@ -93,6 +93,17 @@
 
 ## User Stories
 
+1.  As a User I would like to login to my account.
+2.  As a User I would like to create a new account.
+3. As a User I would like to be able to move from Register page to Log In Page.
+4. As a user, I would like to create a new task. While creating the task, I may modify the following fieldsL 'title', 'description',  'importance','frequency', 'deadline'.
+5. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
+6. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
+7. As a user I would like to delete the task.
+8. As a user, while on "Delete" page I would like to return to homepage without deleting the task.
+9. As a user,  I would like to read manual, to understand how to use the application.
+10. As a user I would like to be able to send an email to admin, to contact him or share feedback.
+11. As a user I would like to see the list of book the admin propose for self development, and visit Amazon website where I can buy it.
 
 
 
@@ -896,21 +907,13 @@ For this reason the alert is false positive.
 2. Automated testing
 ### Users
 
-0.  As a User I would like to login to my account.
-00.  As a User I would like to create a new account.
-000. As a User I would like to be able to move from Register page to Log In Page.
-1. As a user, I would like to create a new task. While creating the task, I may modify the following fieldsL 'title', 'description',  'importance','frequency', 'deadline'.
-2. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
-3. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
-4. As a user I would like to delete the task.
-5. As a user, while on "Delete" page I would like to return to homepage without deleting the task.
-6. As
+
 
 ### Manual testing
 
+## User Stories
 
-
-0.  As a User I would like to login to my account.
+1.  As a User I would like to login to my account.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -923,7 +926,7 @@ For this reason the alert is false positive.
 
 </details>
 
-00 As a User I would like to create a new account.
+2. As a User I would like to create a new account.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -934,7 +937,7 @@ For this reason the alert is false positive.
 
 </details>
 
-000.  As a User I would like to be able to move from Register page to Log In Page.
+3.  As a User I would like to be able to move from Register page to Log In Page.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -945,7 +948,7 @@ For this reason the alert is false positive.
 
 </details>
 
-1. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
+4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
 
  **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -956,7 +959,7 @@ For this reason the alert is false positive.
 
 </details>
 
-2. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
+5. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -967,7 +970,7 @@ For this reason the alert is false positive.
 
 </details>
 
-3. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
+6. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -978,7 +981,7 @@ For this reason the alert is false positive.
 
 </details>
 
-4. As a user I would like to delete the task.
+7. As a user I would like to delete the task.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -988,7 +991,7 @@ For this reason the alert is false positive.
 <img src="docs/userstories/delete-task.png">
 </details>
 
-5. As a user, while on "Delete" page I would like to return to homepage without deleting the task.
+8. As a user, while on "Delete" page I would like to return to homepage without deleting the task.
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -1001,7 +1004,39 @@ For this reason the alert is false positive.
 </details>
 
 
+9. As a user,  I would like to read manual, to understand how to use the application.
 
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| While on homepage, click "Manual" in navigation bar | The user redirected to manual page where he can read instructions.  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/read-manual.png">
+
+</details>
+
+10. As a user I would like to be able to send an email to admin, to contact him or share feedback.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| While on homepage, click "Feedback", complete all fields and click send feedback. | User redirected to homepage, and see the message that the email was received  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/feedback-1.png">
+<img src="docs/userstories/feedback-2.png">
+</details>
+
+11. As a user I would like to see the list of book the admin propose for self development, and visit Amazon website where I can buy it.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| While on homepage, click "Books". See books' cover, description, rating. Click on button "Buy on Amazon" to navigate to Amazon page, where you may buy a book | User redirected to 'Books' page and after to Amazon's website  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/books.png">
+
+</details>
 
 ### Automated testing
 
