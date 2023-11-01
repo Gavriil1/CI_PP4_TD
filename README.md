@@ -899,7 +899,10 @@ For this reason the alert is false positive.
 0.  As a User I would like to login to my account.
 00.  As a User I would like to create a new account.
 000. As a User I would like to be able to move from Register page to Log In Page.
-1. As a user, I would like to create a new task. While creating the task, I need to write the 'title,' 'task description,' select the 'deadline,' specify 'severity,' 'importance,' and 'frequency.
+1. As a user, I would like to create a new task. While creating the task, I may modify the following fieldsL 'title', 'description',  'importance','frequency', 'deadline'.
+2. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
+3. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
+4. As a user I would like to delete the task.
 1.	As a User I can navigate across the site so that I can move to each feature of the site easily. (Must Have)
 2.	As a User I can use a navbar, footer, and social icons so that I can navigate the site, access menus, and access socials (Must Have)
 3.	As a User I can create a Task. (Must Have)
@@ -955,29 +958,47 @@ For this reason the alert is false positive.
 
 </details>
 
-1. As a user, I would like to create a new task. While creating the task, I need to write the 'title,' 'task description,' select the 'deadline,' specify 'severity,' 'importance,' and 'frequency'.
+1. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
 
  **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| On homepage, click "Add New". On Create/Update page. Complete fields: 'title,' 'task description,' select the 'deadline,' 'severity,' 'importance,' 'frequency' and click Submit| Find the booking form on the reservations page | Works as expected |
+| On homepage, click "Add New". On Create/Update page. Complete fields: 'title,' 'task description,' select the 'deadline,' 'severity,' 'importance,' 'frequency' and click Submit| New Task is created with required fields. | Works as expected |
 
 <details><summary></summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-05.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-14.PNG">
+<img src="docs/userstories/create-new-task.png">
 
 </details>
 
-5. As a User I would like to create a new task
+2. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on the 'Book' link in the navigation bar | Find the booking form on the reservations page | Works as expected |
+| Click on a penscil in edit colon. On "Create/Update Task" you may6 modify one of the following fields: 'title', 'description',  'importance','frequency', 'deadline' | Task Modified | Works as expected |
 
 <details><summary></summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-05.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-14.PNG">
+<img src="docs/userstories/update-a-task.png">
 
 </details>
+
+3. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| While on "Create/Update" page click on an arrow on left top corner.| User is redirected to Homepage  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/create-update-homepage.png">
+
+</details>
+
+4. As a user I would like to delete the task.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Click on x in Edit colon. On Delete page click "Delete" | The task is deleted  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/delete-task.png">
 
 6. As a User I can update my booking so that I can choose another available time and date
 
