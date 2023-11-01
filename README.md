@@ -898,6 +898,8 @@ For this reason the alert is false positive.
 
 0.  As a User I would like to login to my account.
 00.  As a User I would like to create a new account.
+000. As a User I would like to be able to move from Register page to Log In Page.
+1. As a user, I would like to create a new task. While creating the task, I need to write the 'title,' 'task description,' select the 'deadline,' specify 'severity,' 'importance,' and 'frequency.
 1.	As a User I can navigate across the site so that I can move to each feature of the site easily. (Must Have)
 2.	As a User I can use a navbar, footer, and social icons so that I can navigate the site, access menus, and access socials (Must Have)
 3.	As a User I can create a Task. (Must Have)
@@ -942,19 +944,30 @@ For this reason the alert is false positive.
 
 </details>
 
-4. As a User I can view the opening hours and contact details so that I know when the business is open and how to contact them via email, phone and socials
+000.  As a User I would like to be able to move from Register page to Log In Page.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on the 'Contact Us' link in the navigation bar, scroll to bottom of page | Find contact details and opening hours | Works as expected |
+| On Register page, click on  link "Login". | User is redirected to Log In Page | Works as expected |
 
 <details><summary></summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-06.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-13.PNG">
+<img src="docs/userstories/redirect-register-login.png">
 
 </details>
 
-5. As a User I can create a booking by selecting a date and time so that I can reserve my table
+1. As a user, I would like to create a new task. While creating the task, I need to write the 'title,' 'task description,' select the 'deadline,' specify 'severity,' 'importance,' and 'frequency'.
+
+ **Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| On homepage, click "Add New". On Create/Update page. Complete fields: 'title,' 'task description,' select the 'deadline,' 'severity,' 'importance,' 'frequency' and click Submit| Find the booking form on the reservations page | Works as expected |
+
+<details><summary></summary>
+<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-05.PNG">
+<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/user-story-testing-14.PNG">
+
+</details>
+
+5. As a User I would like to create a new task
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
