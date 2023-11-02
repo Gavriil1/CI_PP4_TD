@@ -109,45 +109,13 @@
 
 ### Admin / Authorised User
 
-16. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access.
-17. As an Admin or Authorized User, I am able to manually include, remove, or update books in the list of favorite books.
-18. As an Admin or Authorized User, I can view messages that have been sent by users through the contact form.
-19. As an Admin, I have the ability to view, update, or delete user tasks from the backend.
-20. As an Admin, I can create user, delete user , block and unblock useer.
-
-### Site Owner  
-23. As a Site Owner I want site to be responsive (Must have)
-24. As a Site Owner  I want to add validation to the contact form, to make sure that all required fields are completed.
-
-### Kanban, Epics & User Stories
-- GitHub Kanban was used to track all open user stories
-- Epics were created using the milestones feature
-- Backlog, In Progress, Done headings were used in the kanban
-
-<details><summary>Epics</summary>
-
-![Epics](https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/features/kanban-epics.PNG)
-![Epic 1](https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/features/kanban-epic-1.PNG)
-![Epic 2](https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/features/kanban-epic-2.PNG)
-![Epic 3](https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/features/kanban-epic-3.PNG)
-![Epic 4](https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/features/kanban-epic-4.PNG)
-</details>
-
-<details><summary>User Stories</summary>
-
-![User stories](https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/features/user-stories.PNG)
-
-</details>
-
-<details><summary>Kanban</summary>
-
-![Kanban mid](https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/features/kanban-mid.PNG)
-![Kanban finish](https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/features/kanban-finish.PNG)
-
-</details>
-
-
-##### Back to [top](#table-of-contents)<hr>
+13. As an Admin, I can create user, delete user .
+14. As an Admin, I want to modify user's settings: Firs Name, Perissions.
+15. As an Admin, I want to filter user by staff , superuser or active status.
+16. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.
+17. As an Admin , I can view messages that have been sent by users through the contact form.
+18. As an Admin , I can view, update, delete user's tasks.
+19. As an Admin , I can filter tasks by: importance, frequency, user.
 
 
 ## Design
@@ -1051,7 +1019,8 @@ For this reason the alert is false positive.
 
 </details>
 
-Admin/Site owner user stories.
+
+## Admin/Site owner user stories.
 
 13. As an Admin, I can create user, delete user .
 
@@ -1065,7 +1034,7 @@ Admin/Site owner user stories.
 
 </details>
 
-14. As an Admin, I want to modify user settings: Firs Name, Perissions.
+14. As an Admin, I want to modify user's settings: Firs Name, Perissions.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1077,7 +1046,7 @@ Admin/Site owner user stories.
 
 </details>
 
-15. As an Admin, I want to filter user by staff , superuser or active status
+15. As an Admin, I want to filter user by staff , superuser or active status.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
