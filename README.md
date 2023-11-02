@@ -1034,7 +1034,114 @@ For this reason the alert is false positive.
 | While on homepage, click "Books". See books' cover, description, rating. Click on button "Buy on Amazon" to navigate to Amazon page, where you may buy a book | User redirected to 'Books' page and after to Amazon's website  | Works as expected |
 
 <details><summary></summary>
+<img src="docs/userstories/login-administration-panel.png">
+
+</details>
+
+## Testing Admin user stories:
+
+12. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| navigate to https://ci-pp4-td-014f88cd1918.herokuapp.com/admin/ Complete username and Password and click next to login | User redirected to admin console.  | Works as expected |
+
+<details><summary></summary>
 <img src="docs/userstories/books.png">
+
+</details>
+
+Admin/Site owner user stories.
+
+13. As an Admin, I can create user, delete user .
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| In admin console, click Users. Click "Add User" in the right top corner to create a user, complete Username and passwords fields and click Save. Select a user, from "Action" select "Delete selected user" click go | One user is created, one user is deleted  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/create-user-admin.png">
+<img src="docs/userstories/delete-user-admin.png">
+
+</details>
+
+14. As an Admin, I want to modify user settings: Firs Name, Perissions.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| In admin console click on "Users", click on user, modify user's settings and click "Save" | User's settings are updated.  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/update-users-settings.png">
+
+
+</details>
+
+15. As an Admin, I want to filter user by staff , superuser or active status
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| In admin console click "Users", "Filter", select required filter settings. | Users are filtered according to filter settings.  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/filter-users-admin.png">
+
+
+</details>
+
+
+16. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| In admin console click "Products". On the top right corner select "Add Product, complete all the fields, and click Save. To update click on a book text, update all required fields and click Save. To delete a book, select a book, "Action", "Delete selected products", "Go"| Book added, updated deleted sucesfully | Works as expected |
+
+<details><summary></summary>
+Add a new book.
+<img src="docs/userstories/add-book-admin.png">
+Update a book.
+<img src="docs/userstories/update-book-admin.png">
+Delete a book.
+<img src="docs/userstories/delete-book-admin.png">
+
+
+</details>
+
+
+
+
+17. As an Admin , I can view messages that have been sent by users through the contact form.
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| In admin console, click on Contacts, and click on the text of a message.  | A new window opens, and I can see full   message which was sent by user. | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/view-feedback-admin.png">
+
+
+
+</details>
+
+18. As an Admin , I can view, update, delete user's tasks
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Navigate to "Tasks", Click on task.  | A new window opens,where I can see, update or delete the task | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/view-udpate-delete-task.png">
+
+</details>
+
+19. As an Admin , I can filter tasks by: importance, frequency, user
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Navigate to "Tasks". Find Filter, set desired filters.  | Tasks are filterd according to filter settings. | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/filter-tasks-admin.png">
 
 </details>
 
