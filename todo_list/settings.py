@@ -93,6 +93,61 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+# this is code which tutor asked me to add after the database statement
+if 'test' in sys.argv:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+            }
+    }
+
+# DATABASES = {
+#     'default': {
+#     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+#     },
+#     'TEST': {
+#     'ENGINE': 'django.db.backends.sqlite3',
+#     'NAME': BASE_DIR / "test_db.sqlite3",
+#     },
+# }
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / "db.sqlite3",
+#     },
+#     'TEST': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / "test_db.sqlite3",
+#     },
+# }
+
+# testing database
+# DATABASES = {
+#     'default': {
+#     'ENGINE': 'django.db.backends.sqlite3',
+#     'NAME': BASE_DIR / "db.sqlite3",
+# }
+# }
+
+# if os.environ.get("DEVELOPMENT") == "True":
+#     # Testing Database
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+#     # Heroku Database
+#     DATABASES = {
+#         'default': dj_database_url.parse(os.environ.get("DATABASE_URL")),
+#         }
+
+
 
 AUTH_PASSWORD_VALIDATORS = [
 ]
