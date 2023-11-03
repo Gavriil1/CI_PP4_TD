@@ -371,6 +371,28 @@ The wireframes were created using Balsamiq
 ![Delete Task](docs/features/delete-task.png)
 </details>
 
+### Social Media Links and CopyRight
+- A logo and link is used for each social media displayed
+- All links open in a new tab to ensure user is not directed away from the business
+- Displayed on all pages
+  
+<details><summary>See feature images</summary>
+
+![Social Media Links](docs/features/media-links.png)
+</details>
+
+
+### Pagination
+- Pagination is used on the bookings list and the blog page
+- Ensures the page is kept tidy as only 2 items are displayed per page
+  
+<details><summary>See feature images</summary>
+
+![Pagination](docs/features/pagination.png)
+</details>
+
+
+
 ### 404  page
 - Page is displayed when user enters incorrect URL. 
 <details><summary>See feature images</summary>
@@ -417,103 +439,6 @@ The wireframes were created using Balsamiq
 
 ##### Back to [top](#table-of-contents)
 
-
-
-
-
-
-
-### Food Menu
-- The food menu displays all available foods on the menu
-- Menu is seperated by starters, mains and desserts
-- Items can be added via the admin panel in the backend by staff
-- Staff can create, update and delete foods via the admin panel
-  
-<details><summary>See feature images</summary>
-
-![Food Menu](docs/features/feature-food-menu.PNG)
-</details>
-
-
-### Drinks Menu
-- The drinks menu displays all available foods on the menu
-- Menu is seperated by wines, beers and cocktails
-- Items can be added via the admin panel in the backend by staff
-- Staff can create, update and delete foods via the admin panel 
-  
-<details><summary>See feature images</summary>
-
-![Drinks Menu](docs/features/feature-drinks-menu.PNG)
-</details>
-
-
-### Blog
-- The blog displays each post made by a staff member
-- Paginations is used to display 4 posts per page
-  
-<details><summary>See feature images</summary>
-
-![Blog](docs/features/feature-blog.PNG)
-</details>
-
-
-### Blog Expanded
-- Expands into the selected blog the user wishes to read
-- Displays a featured image uploaded by the poster
-- If no image is uploaded a default image is then used
-- Registerd user can comment on the blog
-  
-<details><summary>See feature images</summary>
-
-![Blog Expanded](docs/features/feature-blog2.PNG)
-</details>
-
-
-### Comments
-- Comments made are set to pending approval status to ensure nothing bad is displayed
-- Only registered users can comment on a blog post
-- Staff can approve comments via the admin panel on the backend
-  
-<details><summary>See feature images</summary>
-
-![Comments](docs/features/feature-comments.PNG)
-</details>
-
-
-### Contact Us
-- Registered users can DM staff via the message box
-- Contact info such as, phone, email, and address is displayed
-- A Google Map is embedded with the address for users to use
-  
-<details><summary>See feature images</summary>
-
-![Contact Us](docs/features/feature-contact-us.PNG)
-![Contact Us](docs/features/feature-contact-us2.PNG)
-</details>
-
-
-### Social Media Links
-- A logo and link is used for each social media displayed
-- All links open in a new tab to ensure user is not directed away from the business
-- Displayed on all pages
-  
-<details><summary>See feature images</summary>
-
-![Social Media Links](docs/features/feature-social-links.PNG)
-</details>
-
-
-### Pagination
-- Pagination is used on the bookings list and the blog page
-- Ensures the page is kept tidy as only 4 items are displayed per page
-  
-<details><summary>See feature images</summary>
-
-![Pagination](docs/features/feature-pagination.PNG)
-</details>
-
-
-##### Back to [top](#table-of-contents)<hr>
 
 
 ## Validation
@@ -687,9 +612,6 @@ The W3C Jigsaw CSS Validation Service
 <details><summary>forms.py</summary>
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-forms.PNG">
 </details>
-
-
-
 
 
 ### Lighthouse
@@ -1130,35 +1052,28 @@ Delete a book.
 
 ### Device Testing & Browser compatibility
 
-The site uses to test on various real world devices was [BrowserStack](https://ci-pp4-the-diplomat.herokuapp.com/)  
+###  Performing tests on various devices
 
-This allowed me to test on real devices and not just device emulators.
+Testing of the website was conducted on the following devices:
 
-The following devices were used to test my site:
+- Latitude 5520
 
-<details><summary>Samsung Galaxy S22 Ultra</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/device-test-samsung-s22-ultra.PNG">
-</details>
+- Redmi Note 10
 
-<details><summary>Apple iPhone 13</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/device-test-iphone-13.PNG">
-</details>
+- Samsung Tablet A10.1
 
-<details><summary>Google Pixel 5</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/device-test-google-pixel-5.PNG">
-</details>
+Furthermore, the website underwent testing using the Device Toggling feature of Google Chrome Developer Tools, which includes all available device options.
 
-<details><summary>Mozilla Firefox (v105 latest)</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/device-test-firefox.PNG">
-</details>
+###  Browser compatability
 
-<details><summary>Google Chrome (v106 latest)</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/device-test-chrome.PNG">
-</details>
+The following browsers were used to test the website:
 
-<details><summary>Safari (Monteray v15.3 latest)</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/device-test-safari-monteray-15.3.PNG">
-</details>
+- Google Chrome
+
+- Mozilla Firefox
+
+- Microsoft Egde
+
 
 
 ##### Back to [top](#table-of-contents)<hr>
