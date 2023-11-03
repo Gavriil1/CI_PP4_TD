@@ -7,10 +7,10 @@ from django.contrib.auth.models import User
 
 
 class Contact(models.Model):
-    name = models.CharField(max_length=200)
-    email = models.EmailField()
-    subject = models.CharField(max_length=200)
-    message = models.TextField(null=True, blank=True)
+    name = models.CharField(max_length=45)
+    email = models.EmailField(max_length=45)
+    subject = models.CharField(max_length=100)
+    message = models.CharField(max_length=300, null=True, blank=True)
 
     def __str__(self):
         return self.name

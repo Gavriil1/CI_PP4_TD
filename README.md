@@ -116,7 +116,7 @@
 17. As an Admin , I can view messages that have been sent by users through the contact form.
 18. As an Admin , I can view, update, delete user's tasks.
 19. As an Admin , I can filter tasks by: importance, frequency, user.
-
+20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons/
 
 ## Design
 
@@ -134,18 +134,14 @@ The site was designed for the user to be familiar with the layout such as a navi
 The footer contains all relevant social media links that the business has so the user can visit any social media site and follow the business there to expand the businesses followers, likes and shares.
 
 - The site consists of the following pages:
-  - Homepage with cards for the user to choose to book a table, view the food or drinks menu.
-  - Food menu has the current list of all available foods from the database sorted by starters, mains and desserts
-  - Drinks menu has the current list of all available drinks from the databse sorted by type
-  - Blog page has a paginated list of blogs posted by an admin or authorised user, 4 per page
-  - Blog expanded displays a blog the user has selected so they can read the blog, if they are logged in they can also leave a comment which will then need to be approved before it is displayed
-  - Book page allows registered users to book a table , guest count, date requested, time requested and table location
-  - My bookings displays all bookings for the user that they have made, bookings in the past are automatically expired
-  - Edit booking allows the user to change their date, time, table and guest count
-  - Cancel booking allows the user to cancel the booking which will then delete it from the database
-  - Contact us allows the user to send us a DM if the are registered, or they can contact us from the displayed email and phone number or visit the address listed.
-  - Login / Logout allows users to login to make bookings, view, edit, and delete bookings
-  - Register allows the user to regiser so they can use the booking system
+  - Login page where the user can login to his account.
+  - Register page where the user can register.
+  - Homepage where the user can see all his tasks.
+  - Create/Update task page, where the user can create or update the task.
+  - Delete page, where the user can delete the task.
+  - Manual page, where the user can read how to use the application
+  - Contact/Feedback page, where the user can complete form to share his feedack or just sent email to the admin/owner.
+  - Books page, where the user can see admin's favourite books on sales development.
   - 404 error page to display if a 404 error is raised
 
 #### Database
@@ -154,7 +150,7 @@ The footer contains all relevant social media links that the business has so the
 - Two database model shows all the fields stored in the database
 
 <details><summary>Show diagram</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/database-schema.PNG">
+<img src="docs/databases/databases.png">
 </details>
 
 
@@ -172,71 +168,39 @@ The User Model contains the following:
 - is_active
 - date_joined
 
-##### FoodItem Model
-The FoodItem Model contains the following:
-- food_id
-- food_name
-- description
-- price
-- available
-
-##### DrinkItem Model
-The DrinkItem Model contains the following:
-- drink_id
-- drink_name
-- description
-- price
-- available
-
-##### Table Model
-The Table Model contains the following:
-- table_id (PrimaryKey)
-- table_name
-- max_seats
-- available
-
-
-##### Booking Model
-The Booking Model contains the following:
-- booking_id (PrimaryKey)
-- created_date
-- requested_date
-- requested_time
-- table (ForeignKey)
-- guest (ForeignKey)
-- seats
-- guest_count
-
-##### Post Model
-The Post Model contains the following:
-- title
-- post_id (PrimaryKey)
-- author (ForeignKey)
-- created_date
-- updated_date
-- content
-- featured_image
-- excerpt
-- slug
-- status
-
-##### Comment Model
-The Comment Model contains the following:
-- post (ForeignKey)
+##### Contact Model
+The Contact Model contains the following:
+- id
 - name
 - email
-- body
-- created_date
-- approved
-- Meta: created_on
+- subject
+- message
 
-##### ContactUs Model
-The ContactUs Model contains the following:
-- contact_id (PrimaryKey)
-- name (ForeignKey)
-- email (ForeignKey)
-- phone (ForeignKey)
-- body
+
+##### Books Model
+The Books Model contains the following:
+- id
+- title
+- details
+- stars
+- numberreviews
+- price
+- productpic
+- amazon
+
+
+##### Tasks Model
+The Tasks Model contains the following:
+- id
+- user
+- title
+- description
+- complete
+- created
+- frequency
+- importance
+- completed
+- due
 
 
 ### Wireframes
@@ -1111,6 +1075,17 @@ Delete a book.
 
 <details><summary></summary>
 <img src="docs/userstories/filter-tasks-admin.png">
+
+</details>
+
+20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons/
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| On homepage find footer. Click on one of the icons  | User is redirected to social media | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/social-media-admin.png">
 
 </details>
 
