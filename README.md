@@ -1099,110 +1099,82 @@ The following browsers were used to test the website:
 
 [Official Page](https://devcenter.heroku.com/articles/git) (Ctrl + click)
 
-This application has been deployed from Github using Heroku. Here's how:
+### Heroku Deployment
 
-1. Create an account at heroku.com
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-01.PNG">
+Before deploying to Heroku, environment variables must be defined in the django project so that local development functions correctly. Once these environment variables are set up in the workspace, the project can be deployed and the environment variables can be copied into heroku as config vars (to ensure the deployed app works correctly with 3rd party dependecies.)
+
+1. Create a file called env.py in the root directory of your workspace and ensure that the file is included in .gitignore. These variables should NOT be committed and pushed to GitHub.
+2. import os to the file.
+3. os.environ['DATABASE_URL'] = URL copied from ElephantSQL
+4. os.environ['SECRET_KEY'] = A randomly generated key of your choosing. This keeps django from serving data to/from an unauthorised source.
+5. os.environ['CLOUDINARY_URL'] = The URL from a cloudinary account. This can be found on the following page on the cloudinary website: www.cloudinary.com
+
+<img src="docs/heroku-deployment/cloudinari-key.png">
+
+These environment variables can now be accessed and configured in the settings.py file of the django project.
+
+The website was deployed to Heroku using the following process:
+
+1. Login to  [Heroku](https://dashboard.heroku.com/) 
+
+<details><summary>Heroku Login</summary>
+<img src="docs/heroku-deployment/login-heroku.png">
 </details>
 
-2. Create an app, give it a name for such as ci-pp4-the-diplomat, and select a region
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-02.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-03.PNG">
+2. Click on New > Create new app in the top right of the screen.
+<details><summary>Create New App</summary>
+<img src="docs/heroku-deployment/create-new-app.png">
 </details>
 
-3. Under resources search for postgres, and add a Postgres database to the app
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-04.PNG">
+3. Add an app name and select location, then click 'create app'.
+
+<details><summary>Create New App</summary>
+<img src="docs/heroku-deployment/select-app-region.png">
 </details>
 
-Heroku Postgres
-
-1. Note the DATABASE_URL, this can be set as an environment variable in Heroku and your local deployment(env.py)
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-18.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-17.PNG">
+4. Under the deploy tab of the next page, select connect to GitHub.
+5. Log in to your GitHub account when prompted.
+<details><summary>Github Deploy</summary>
+<img src="docs/heroku-deployment/deploy-app.png">
 </details>
 
-2. Install the plugins dj-database-url and psycopg2-binary.
-
-3. Run pip3 freeze > requirements.txt so both are added to the requirements.txt file
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-05.PNG">
+6. Select the repository that you want to be connected to the Heroku app.
+<details><summary>Select Repository</summary>
+<img src="docs/heroku-deployment/connect-to-github-project.png">
 </details>
-
-4. Create a Procfile with the text: web: gunicorn the_diplomat.wsgi
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-06.PNG">
+7. Click on the settings and in "Config Vars" click on "Reveal Config Vars".
+<details><summary>Select Repository</summary>
+<img src="docs/heroku-deployment/reveal-vars.png">
 </details>
-
-5. In the settings.py ensure the connection is to the Heroku postgres database, no indentation if you are not using a seperate test database.
-I store mine in env.py
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-07.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-08.PNG">
+8. Scroll down to the config vars section, and add config vars specified at the start of this section of the README. Also, include a var with the key 'PORT' and value '8000' to avoid build errors. The end result should look something like this:
+KEY: DATABASE_URL
+VALUE: postgresurlexample123.com
+<details><summary>Configure Vars</summary>
+<img src="docs/heroku-deployment/var-configuration.png">
 </details>
-
-6. Ensure debug is set to false in the settings.py file
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-09.PNG">
+9. Navigate back to the 'deploy' tab.
+10.  Select automatic deploys to allow Heroku to build the site with new changes each time changes are pushed to GitHub.
+<details><summary>Automatic Deploy</summary>
+<img src="docs/heroku-deployment/automatic-deploy.png">
 </details>
-
-7. Add localhost, and ci-pp4-the-diplomat.herokuapp.com to the ALLOWED_HOSTS variable in settings.py
-
-8. Run "python3 manage.py showmigrations" to check the status of the migrations
-
-9. Run "python3 manage.py migrate" to migrate the database
-
-10. Run "python3 manage.py createsuperuser" to create a super/admin user
-
-11. Run "python3 manage.py loaddata categories.json" on the categories file in products/fixtures to create the categories
-
-12. Run "python3 manage.py loaddata products.json" on the products file in products/fixtures to create the products
-
-13. Install gunicorn and add it to the requirements.txt file using the command pip3 freeze > requirements.txt
-
-14. Disable collectstatic in Heroku before any code is pushed using the command heroku config:set DISABLE_COLLECTSTATIC=1 -a ci-pp4-the-diplomat
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-19.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-10.PNG">
+11.  In the 'manual deploy' section beneath this, make sure the branch selected is 'main' and click deploy branch.
+<details><summary>Automatic Deploy</summary>
+<img src="docs/heroku-deployment/manual-deploy.png">
 </details>
-
-
-15. Ensure the following environment variables are set in Heroku
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-11.PNG">
-</details>
-
-16. Connect the app to GitHub, and enable automatic deploys from main if you wish
-<details>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-13.PNG">
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/heroku/heroku-deployment-14.PNG">
-</details>
-
-17. Click deploy to deploy your application to Heroku for the first time
-
-18. Click on the link provided to access the application
-
-19. If you encounter any issues accessing the build logs is a good way to troubleshoot the issue
-<hr>
-
-### Fork Repository
-To fork the repository by following these steps:
-1. Go to the GitHub repository
-2. Click on Fork button in upper right hand corner
+12.  The site should now be built and Heroku should provide a url for the built site.
 <hr>
 
 ### Clone Repository
-You can clone the repository by following these steps:
+Follow these steps to clone the repository:
 1. Go to the GitHub repository 
-2. Locate the Code button above the list of files and click it 
-3. Select if you prefere to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+2. Find the "Code" button located above the file list and click on it.
+3. Choose whether you prefer to clone via HTTPS, SSH, or Github CLI, and then click on the copy button to copy the URL to your clipboard.
 4. Open Git Bash
-5. Change the current working directory to the one where you want the cloned directory
+5. Navigate to the directory where you would like to clone the directory and set it as the current working directory.
 6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY)
-7.Press Enter to create your local clone.
+7. Hit the Enter key to create your local clone.
+
+Please check the following link for more information: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 ##### Back to [top](#table-of-contents)<hr>
 
