@@ -1083,14 +1083,13 @@ The following browsers were used to test the website:
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-| css not loading| the css folder was created in uppercase as CSS, renamed and fixed |
-| While logged in as a user, on edit bookings page, if you changed the url booking number and if the number was a valid booking for another user it would access the booking | Defensive programming to make sure that only bookings made by the user would be visible |
-| Double bookings | Adjusted code to check that the date, time and table were unique together and to give an error to indicate to the user that the booking was unavailable for that date, time and table combination |
-| Food item description not showing on menu | A "p" element was used to encase the jinja code, once removed the food item description was then visible |
-| Foods not listing by type, starters, manins and desserts | I needed to fix the database loop for the food items to specify the food type had to be a starter to display in the starter section of the menu, and the same for mains and desserts |
-| Drinks not listing by type, wines, beers and cocktails | I needed to fix the database loop for the drinks item to specify the drink type had to be a wine to display in the wine section of the menu, and the same for beers and cocktails |
-| Card links not working on home page for book a table, food menu and drinks menu | The links were not set within urls.py so just needed to be wired up to load each relevant page |
-| Booking form accepting phone number that are too short | I used Django PhoneNumberField to ensure only valid phone formats were accepted |
+| css not loading| static files confiugration in settings.py was not correct, after fixing it the issue resolved. |
+| User could see the tasks of other users| Denesive programming. Configured user's to see only their tasks by adding mydata = Task.objects.filter(user=request.user) to the equation|
+|  Users could update and delete other users' tasks |  Adjusted cosde which check if task belongs to the user, and it is not it show 404 page |
+| Footer was not on the button of the page, when the content was big. | Changed footer class to class="text-center text-white fixed-bottom" . After that the issue fixed on all pages. |
+| The contact form was not saving subject of a message in admin | modified views.py script for feedback page to link correct subject to correct variable. |
+| Homepage, was not showing correct display when tasks of the user were 0| I found that it was counting tasks in other, users. Added additional filter which made application to count tasks only of logged user and not all users by adding   user=request.user|
+| Update page did not open, when I pressed on update button | The links were not set within urls.py so just needed to be wired up to load each relevant page |
 
 ##### Back to [top](#table-of-contents)<hr>
 

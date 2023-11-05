@@ -76,7 +76,7 @@ class TaskUpdate(LoginRequiredMixin, UpdateView):
 
         # Check if the user is the owner of the task
         if obj.user != self.request.user:
-            raise Http404()
+            raise Http404("You do not have permission to update this task.")
         return obj
 
     def form_valid(self, form):
@@ -91,6 +91,15 @@ class DeleteView(LoginRequiredMixin, DeleteView):
     template_name = 'todoapp-create-update-delete/task_confirm_delete.html'
     context_object_name = 'task'
     success_url = reverse_lazy('tasks')
+
+    def get_object(self, queryset=None):
+        obj = super(DeleteView, self).get_object(queryset)
+
+        # Check if the user is the owner of the task
+        if obj.user != self.request.user:
+            raise Http404("You do not have permission to delete this task.")
+
+        return obj
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, "Todo list updated sucesfully")
