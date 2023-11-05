@@ -62,13 +62,22 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         messages.success(self.request, "Task was created successfully")
         return super(TaskCreate, self).form_valid(form)
 
-
+from django.http import Http404
 # This class is used to update tasks and display message after task deletion
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task
     form_class = PostForm
     template_name = 'todoapp-create-update-delete/task_form.html'
     success_url = reverse_lazy('tasks')
+
+    def get_object(self, queryset=None):
+        # Get the task object
+        obj = super(TaskUpdate, self).get_object(queryset)
+
+        # Check if the user is the owner of the task
+        if obj.user != self.request.user:
+            raise Http404()
+        return obj
 
     def form_valid(self, form):
         messages.success(self.request, "Task updated successfully")

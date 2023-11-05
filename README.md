@@ -1108,9 +1108,9 @@ Before deploying to Heroku, environment variables must be defined in the django 
 3. os.environ['DATABASE_URL'] = URL copied from ElephantSQL
 4. os.environ['SECRET_KEY'] = A randomly generated key of your choosing. This keeps django from serving data to/from an unauthorised source.
 5. os.environ['CLOUDINARY_URL'] = The URL from a cloudinary account. This can be found on the following page on the cloudinary website: www.cloudinary.com
-
+<details><summary>Cloudinary</summary>
 <img src="docs/heroku-deployment/cloudinari-key.png">
-
+</details>
 These environment variables can now be accessed and configured in the settings.py file of the django project.
 
 The website was deployed to Heroku using the following process:
@@ -1183,11 +1183,16 @@ Please check the following link for more information: https://docs.github.com/en
 
 ### Images
 
-Images used were sourced from Pexels.com and an AI image generator (Dalle2) was used for an image with the permission from OpenAI
+Backgroun image was taken from https://getwallpapers.com/
 
 ### Code
 
-Bootstrap dark navigation theme was used alongside boostrap classes and carousel
+1. First version of the App was built from Django Tutorial of Dennis Ivy: https://www.youtube.com/watch?v=llbtoQTt4qw
+2. Code which is locatd on Bootstrap 4.6 page https://getbootstrap.com/docs/4.6/getting-started/introduction/  was used to deploy NavBar and Footer
+3. Pagination was taken from this video: https://www.youtube.com/watch?v=wY_BNsxCEi4&t=61s
+4. Login, Register, Feedback pages are inspired from: https://bootsnipp.com/snippets/vl4R7
+5. Automatic testing: https://www.youtube.com/watch?v=0MrgsYswT1c&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=2
+
 
 ##### Back to [top](#table-of-contents)<hr>
 
