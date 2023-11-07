@@ -1,82 +1,66 @@
 from django.test import TestCase, Client
 from django.urls import reverse
 from base.models import Task
+from django.contrib.auth.models import User
 import json
 
-from django.contrib.auth.models import User  # Add this import
 
+"""
+This test checks if the URL is generated correctly dynamically from the view name for login and register.
+It checks if the response for login and register URL is 200.
+It checks if the correct template was used to generate the login and register pages.
+"""
 class NonAuthViews(TestCase):
-    # ok
-    # testing login view
     def test_project_list_GET_login(self):
         client = Client()
         response = client.get(reverse('login'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'base/login.html')
-    #ok
-    # register page
+        self.assertTemplateUsed(response, 'login-register/login.html')
     def test_project_list_GET_register(self):
         client = Client()
         response = client.get(reverse('register'))
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'base/register.html')
+        self.assertTemplateUsed(response, 'login-register/register.html')
 
-
+"""
+This test checks if the URL is generated correctly dynamically from the view name for Homepage, Manual, Create Page, Update Page, Delete Page.
+It checks if the  URL response for the tested pages is 200.
+It checks if the correct template was used to generate tested pages.
+"""
 
 class AuthViews(TestCase):
-
     def setUp(self):
-        # Create a test user and log them in
         self.client = Client()
         self.user = User.objects.create_user(username='testuser', password='testpassword')
         self.client.login(username='testuser', password='testpassword')
-        # Creating a task for  temporary database
         self.task = Task.objects.create(title='Test Task', description='This is a test task', user=self.user)
-    # ok
     def test_project_list_GET(self):
         response = self.client.get(reverse('tasks'))
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'base/homepage.html')
-    # ok
-    # checking if create task works
+        self.assertTemplateUsed(response, 'todoapp-create-update-delete/homepag.html')
     def test_project_list_GET_create_task(self):
         response = self.client.get(reverse('task-create'))
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'base/task_form.html')
-    #ok
+        self.assertTemplateUsed(response, 'todoapp-create-update-delete/task_form.html')
     def test_project_list_GET_manual(self):
         response = self.client.get(reverse('manual'))
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'base/manual.html')
-
-    #  here I check if crated task in the database is ok.
-    # ok
+        self.assertTemplateUsed(response, 'todoapp-create-update-delete/manual.html')
     def test_project_list_GET_task(self):
-        # Replace '1' with a valid Task primary key
-        task_pk = 1  # Change this to a valid primary key
+        task_pk = 1 
         response = self.client.get(reverse('task', kwargs={'pk': task_pk}))
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, 'base/task.html')
-
-    # checking if update view works well
-    #ok 
     def test_project_list_GET_task(self):
-        # Replace '1' with a valid Task primary key
-        task_pk = 1  # Change this to a valid primary key
+        task_pk = 1
         response = self.client.get(reverse('task-update', kwargs={'pk': task_pk}))
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'base/task_form.html')
-
-    # ok
-    # checking if deleteview rorks well.
+        self.assertTemplateUsed(response, 'todoapp-create-update-delete/task_form.html')
     def test_project_list_GET_task_delete(self):
-        # Replace '1' with a valid Task primary key
-        task_pk = 1  # Change this to a valid primary key
+        task_pk = 1 
         response = self.client.get(reverse('task-delete', kwargs={'pk': task_pk}))
         self.assertEquals(response.status_code, 200)
-        self.assertTemplateUsed(response, 'base/task_confirm_delete.html')
-    # ok
-    # logout view checking if it redirects.
+        self.assertTemplateUsed(response, 'todoapp-create-update-delete/task_confirm_delete.html')
     def test_project_list_GET_logoutview(self):
         response = self.client.get(reverse('logout'))
         self.assertEquals(response.status_code, 302)
