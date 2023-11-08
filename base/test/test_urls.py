@@ -1,6 +1,7 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-from base.views import CustomLoginView, RegisterPage,  TaskCreate, TaskUpdate, DeleteView,  homepage, manual
+from base.views import CustomLoginView, RegisterPage,  TaskCreate
+from base.views import TaskUpdate, DeleteView,  homepage, manual
 
 
 class TestUrls(SimpleTestCase):
@@ -37,7 +38,6 @@ class TestUrls(SimpleTestCase):
         print(resolve(url))
         self.assertEquals(resolve(url).func.view_class, RegisterPage)
 
-
     def test_list_url_is_resolved_task_create(self):
         """
         Checks if the create-task URL is resolved correctly.
@@ -50,18 +50,17 @@ class TestUrls(SimpleTestCase):
         """
         Checks if the update page URL is resolved correctly.
         """
-        task_id = 1  
+        task_id = 1
         url = reverse('task-update', kwargs={'pk': task_id})
         print(resolve(url))
         self.assertEquals(resolve(url).func.view_class, TaskUpdate)
 
     def test_list_url_is_resolved_task_delete(self):
-        task_id = 1  
+        """
+        Checks if delete page URL is resolved correctly.
+        """
+        task_id = 1
         url = reverse('task-delete', kwargs={'pk': task_id})
         print(resolve(url))
         self.assertEquals(resolve(url).func.view_class, DeleteView)
-
-
-    
-
-
+        

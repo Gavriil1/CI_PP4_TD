@@ -27,7 +27,6 @@ class TestTaskForm(TestCase):
 
         self.assertFalse(form.is_valid())
 
-
     def test_task_form_invalid_due_date(self):
         """
         Checks if form is invalid when wrong date is provided.
@@ -43,5 +42,3 @@ class TestTaskForm(TestCase):
 
         self.assertFalse(form.is_valid())
         self.assertIn('due', form.errors)
-
- 

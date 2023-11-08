@@ -522,16 +522,20 @@ The W3C Jigsaw CSS Validation Service
 <img src="docs/validation/python/base/base.views.png">
 </details>
 
-<details><summary>test_models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-test-models.PNG">
+<details><summary>python/base/test_forms.py</summary>
+<img src="docs/validation/python/base/test_forms_validation_base.png">
 </details>
 
-<details><summary>test_views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-test-views.PNG">
+<details><summary>python/base/test_models.py</summary>
+<img src="docs/validation/python/base/test_models_validation_base.png">
 </details>
 
-<details><summary>test_urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bar-and-grill-test-urls.PNG">
+<details><summary>python/base/test_views.py</summary>
+<img src="docs/validation/python/base/test_views_validation_base.png">
+</details>
+
+<details><summary>python/base/test_urls.py</summary>
+<img src="docs/validation/python/base/test_url_validation_base.png">
 </details>
 
 
@@ -558,21 +562,18 @@ The W3C Jigsaw CSS Validation Service
 <img src="docs/validation/python/books/books.views.png">
 </details>
 
-<details><summary>test_models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bookings-test-models.PNG">
+<details><summary>python/books/test_models.py</summary>
+<img src="docs/validation/python/books/test_models_book.png">
 </details>
 
-<details><summary>test_views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bookings-test-views.PNG">
+<details><summary>python/books/test_views.py</summary>
+<img src="docs/validation/python/books/test_views_books.png">
 </details>
 
-<details><summary>test_urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bookings-test-urls.PNG">
+<details><summary>python/books/test_urls.py</summary>
+<img src="docs/validation/python/books/test_url_book.png">
 </details>
 
-<details><summary>forms.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-bookings-forms.PNG">
-</details>
 
 
 <hr><summary>Contact Form</summary><hr>
@@ -597,21 +598,19 @@ The W3C Jigsaw CSS Validation Service
 <img src="docs/validation/python/contactform/contactform.views.png">
 </details>
 
-<details><summary>test_models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-test-models.PNG">
+<details><summary>python/contactform/test_models.py</summary>
+<img src="docs/validation/python/contactform/test_models_contactform.png">
 </details>
 
-<details><summary>test_views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-test-views.PNG">
+<details><summary>python/contactform/test_views.py</summary>
+<img src="docs/validation/python/contactform/test_views_contactform.png">
 </details>
 
-<details><summary>test_urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-test-urls.PNG">
+<details><summary>python/contactform/test_urls.py</summary>
+<img src="docs/validation/python/contactform/test_urls_contactform.png">
 </details>
 
-<details><summary>forms.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/validation/pep8-validation-pycodestyle-blog-forms.PNG">
-</details>
+
 
 
 ### Lighthouse
