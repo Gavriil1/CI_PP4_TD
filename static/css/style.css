@@ -1,7 +1,7 @@
 /* login Register page */
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
-/* .main_html, */
+
 .main_body{
 background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp');
 background-size: cover;
@@ -77,21 +77,6 @@ color: black;
 background-color: white;
 }
 
-/* .links{
-color: white;
-}
-
-.links a{
-margin-left: 4px;
-} */
-
-
-    /* task_form.html */
-
-  /* .html_task_form {
-    height:100%;
-    box-sizing: border-box;      
-}  */
  .body_task_form {
     background-color: #FAFAFA;
     font-family: 'Nunito', sans-serif;
@@ -110,7 +95,7 @@ margin-left: 4px;
 
  p {color: #FAFAFA;}
  label {
-  background-color: rgba(0,0,0,0.5); /* Change this to your desired background color */
+  background-color: rgba(0,0,0,0.5); 
 }
 
 .header_bar_task_form{
@@ -145,7 +130,6 @@ margin-left: 4px;
  } 
  
 /* task form delete */
-/* .html_delete, */
 .body_delete{
   background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp');
   background-size: cover;
@@ -206,10 +190,6 @@ margin-left: 4px;
   }
   
 /* homepage */
-  /* .html-homepage {
-    height: 100%;
-    box-sizing: border-box;
-} */
 .body-homepage {
     background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp'); 
     background-size: cover; 
@@ -223,19 +203,6 @@ margin-left: 4px;
     
     margin-bottom: 70px;
 }
-
-
-
-/* .footer-homepage
-    {
-        height: 150px;
-        position: absolute;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-    } */
-
 
 .panel{
 font-family: 'Raleway', sans-serif;
@@ -313,7 +280,6 @@ padding: 0;
 border-radius: 0;
 transition: all 0.3s ease 0s;
 }
-/* .panel .panel-body .table tbody .action-list li a:hover{ box-shadow: 0 0 5px #ddd; } */
 .panel .panel-footer{
 color: #fff;
 background: #535353;
@@ -333,14 +299,8 @@ border: none;
 border-radius: 0;
 transition: all 0.3s ease 0s;
 }
-/* .pagination li a:hover, */
-/* .pagination li a:focus, */
 
 /* manual page */
-/* .html-manual {
-  height: 100%;
-  box-sizing: border-box;
-} */
 .body-manual {    /* background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');  */
   background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp');
   background-size: cover; 
@@ -353,17 +313,6 @@ transition: all 0.3s ease 0s;
   box-sizing: inherit;
 }
 
-
-
-/* .footer-manual
-  {
-      height: 150px;
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-  } */
   main{
     width: 80%;
     margin: 0 auto;
@@ -380,21 +329,7 @@ transition: all 0.3s ease 0s;
     text-align: left;
   }
 
-  /* Books page */
-  /* .card_book{
-    height: 380px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 1000px;
-    background-color: rgba(252, 253, 255, 0.8) !important;
-  
-    }
-    .p_book{
-      color: black;
-    } */
-
-    /* @media (max-width: 767.98px) { .border-sm-start-none { border-left: none !important; } } */
-
+/* Books page */
 
 
 /* 404 page */
@@ -412,9 +347,6 @@ transition: all 0.3s ease 0s;
   user-select: none;
   margin-bottom: 200px;
   } 
-  
-
-  
   .containerfof{
     display: flex;
     flex-direction: column;
