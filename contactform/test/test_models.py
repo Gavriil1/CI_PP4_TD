@@ -3,10 +3,12 @@ from django.contrib.auth.models import User
 from contactform.models import Contact
 
 """
-Function creates new contact form  entry.
-After it checks if the product was sucesfully added (HTTP status code 302 indicates success).
+Function creates new contact form  entry.After it checks if the product was
+sucesfully added (HTTP status code 302 indicates success).
 Finaly it checks if product variables have the correct values.
 """
+
+
 class ContactModelTest(TestCase):
     def setUp(self):
         self.contact = Contact.objects.create(

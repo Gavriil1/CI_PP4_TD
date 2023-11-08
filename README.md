@@ -1016,35 +1016,55 @@ Delete a book.
 - Coverage was also usesd to generate a report
 
 
-<details><summary>Bar & Grill App, test_models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/unittest-bar-and-grill-test-models.PNG">
+<details><summary>base, test_models.py</summary>
+<img src="docs/automatic_testing/base/base_test_models.png">
 </details>
 
-<details><summary>Bar & Grill App, test_views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/unittest-bar-and-grill-test-views.PNG">
+<details><summary>base, test_views.py</summary>
+<img src="docs/automatic_testing/base/base_test_views.png">
 </details>
 
-<details><summary>Bar & Grill App, test_urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/unittest-bar-and-grill-test-urls.PNG">
+<details><summary>base, test_urls.py</summary>
+<img src="docs/automatic_testing/base/base_test_url.png">
 </details>
 
-<details><summary>Bar & Grill App, Coverage</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/coverage-bar-and-grill.PNG">
+<details><summary>base, test_form.py</summary>
+<img src="docs/automatic_testing/base/base_test_form.png">
 </details>
 
-<details><summary>Bookings App, test_models.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/unittest-bookings-test-models.PNG">
+---
+
+<details><summary>books, test_models.py</summary>
+<img src="docs/automatic_testing/books/books_test_models.png">
 </details>
 
-<details><summary>Bookings App, test_views.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/unittest-bookings-test-views.PNG">
+<details><summary>books, test_views.py</summary>
+<img src="docs/automatic_testing/books/books_test_views.png">
 </details>
 
-<details><summary>Bookings App, test_urls.py</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/unittest-bookings-test-urls.PNG">
+<details><summary>books, test_urls.py</summary>
+<img src="docs/automatic_testing/books/books_test_urls.png">
 </details>
 
-<details><summary>Bookings App, Coverage</summary>
+---
+
+<details><summary>contactform, test_models.py</summary>
+<img src="docs/automatic_testing/contactform/test_models_contactform.png">
+</details>
+
+<details><summary>contactform, test_views.py</summary>
+<img src="docs/automatic_testing/contactform/test_views_contactform.png">
+</details>
+
+<details><summary>contactform, test_urls.py</summary>
+<img src="docs/automatic_testing/contactform/test_url_contactform.png">
+</details>
+
+
+
+<br>
+
+<details><summary>Coverage Report For All Applications</summary>
 <img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/coverage-bookings.PNG">
 </details>
 
