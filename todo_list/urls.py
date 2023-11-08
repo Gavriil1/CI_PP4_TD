@@ -22,7 +22,6 @@ urlpatterns = [
     path('', include('base.url')),
     path('', include('contactform.url')),
     path('', include('books.url')),
-    path('accounts/', include('allauth.urls')),
 ]
 
 handler404 = 'base.views.custom_404'

@@ -1015,6 +1015,7 @@ Delete a book.
 - Testing was done using the built in Django module, unittest.
 - Coverage was also usesd to generate a report
 
+<br>
 
 <details><summary>base, test_models.py</summary>
 <img src="docs/automatic_testing/base/base_test_models.png">
@@ -1032,7 +1033,7 @@ Delete a book.
 <img src="docs/automatic_testing/base/base_test_form.png">
 </details>
 
----
+<br>
 
 <details><summary>books, test_models.py</summary>
 <img src="docs/automatic_testing/books/books_test_models.png">
@@ -1046,7 +1047,7 @@ Delete a book.
 <img src="docs/automatic_testing/books/books_test_urls.png">
 </details>
 
----
+<br>
 
 <details><summary>contactform, test_models.py</summary>
 <img src="docs/automatic_testing/contactform/test_models_contactform.png">
