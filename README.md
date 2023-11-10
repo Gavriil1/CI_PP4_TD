@@ -107,45 +107,47 @@
 
 ### Admin / Authorised User
 
-13. As an Admin, I can create user, delete user .
-14. As an Admin, I want to modify user's settings: Firs Name, Perissions.
-15. As an Admin, I want to filter user by staff , superuser or active status.
-16. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.
-17. As an Admin , I can view messages that have been sent by users through the contact form.
-18. As an Admin , I can view, update, delete user's tasks.
-19. As an Admin , I can filter tasks by: importance, frequency, user.
-20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons/
+12. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access.
+13. As an Admin, I can create users, delete users.
+14. As an Admin, I want to modify user's settings: First Name, Permissions.
+15. As an Admin, I want to filter users by staff, superuser, or active status.
+16. As an Admin, I am able to manually include, remove, or update books in the list of favorite books.
+17. As an Admin, I can view messages that have been sent by users through the contact form.
+18. As an Admin, I can view, update, delete users' tasks.
+19. As an Admin, I can filter tasks by: importance, frequency, user.
+20. As an Admin, I would like a user to find all company's social links and navigate to them by clicking footer's icons.
 
 ## Design
 
 ### Colours
 
-I chose bright colours for footer and navbar to make application more positive.
-I added a pcture with star sky to make application relaxing.
+I chose bright colors for the footer and navbar to make the application more positive.
+I added a picture with a starry sky to make the application relaxing.
 
 ### Structure
 
 #### Website pages
 
-The site was designed for the user to be familiar with the layout such as a navigation bar along the top of the pages and a hamburger menu button for smaller screen.
+The site was designed for the user to be familiar with the layout, such as a navigation bar along the top of the pages and a hamburger menu button for smaller screens.
 
-The footer contains all relevant social media links that the business has so the user can visit any social media site and follow the business there to expand the businesses followers, likes and shares.
+The footer contains all relevant social media links that the business has, so the user can visit any social media site and follow the business there to expand the business's followers, likes, and shares.
 
-- The site consists of the following pages:
-  - Login page where the user can login to his account.
-  - Register page where the user can register.
-  - Homepage where the user can see all his tasks.
-  - Create/Update task page, where the user can create or update the task.
-  - Delete page, where the user can delete the task.
-  - Manual page, where the user can read how to use the application
-  - Contact/Feedback page, where the user can complete form to share his feedack or just sent email to the admin/owner.
-  - Books page, where the user can see admin's favourite books on sales development.
-  - 404 error page to display if a 404 error is raised
+The site consists of the following pages:
+
+- Login page where the user can log in to his account.
+- Register page where the user can register.
+- Homepage where the user can see all his tasks.
+- Create/Update task page, where the user can create or update the task.
+- Delete page, where the user can delete the task.
+- Manual page, where the user can read how to use the application.
+- Contact/Feedback page, where the user can complete a form to share his feedback or just send an email to the admin/owner.
+- Books page, where the user can see the admin's favorite books on sales development.
+- 404 error page to display if a 404 error is raised.
 
 #### Database
 
-- Built with Python and the Django framework with a database of a Postgres for the deployed Heroku version(production)
-- Two database model shows all the fields stored in the database
+- Built with Python and the Django framework with a database of ElephantSQL for the deployed Heroku version (production).
+
 
 <details><summary>Show diagram</summary>
 <img src="docs/databases/databases.png">
@@ -262,7 +264,7 @@ The wireframes were created using Balsamiq
 ## Features
 
 ### Home page
-- Home page includes nav bar, main body and a footer
+- Home page includes navbar, main body, and a footer.
 
 
 <details><summary>See feature images</summary>
@@ -272,11 +274,11 @@ The wireframes were created using Balsamiq
 
 
 ### Logo & Navigation
-- Shows logo designed for a to-do list
-- Responsive across various screen sizes
-- Transforms into hamburger menu on smaller screens
-- Shows active user
-- Provides access to all available pages directly from the current page
+- Shows logo designed for a to-do list.
+- Responsive across various screen sizes.
+- Transforms into hamburger menu on smaller screens.
+- Shows active user.
+- Provides access to all available pages directly from the current page.
 
 <details><summary>See feature images</summary>
 
@@ -764,7 +766,7 @@ For this reason the alert is false positive.
 
 ## User Stories
 
-1.  As a user, I would like to log in to my account.
+1.  As a User I would like to login to my account.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -777,7 +779,7 @@ For this reason the alert is false positive.
 
 </details>
 
-2. As a user, I would like to create a new account.
+2. As a User I would like to create a new account.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -788,8 +790,7 @@ For this reason the alert is false positive.
 
 </details>
 
-
-3. As a user, I would like to be able to move from the Register page to the Log In page.
+3.  As a User I would like to be able to move from Register page to Log In Page.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -800,7 +801,7 @@ For this reason the alert is false positive.
 
 </details>
 
-4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
+4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
 
  **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -811,7 +812,7 @@ For this reason the alert is false positive.
 
 </details>
 
-5. As a user, I would like to update a task. While updating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
+5. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -822,7 +823,7 @@ For this reason the alert is false positive.
 
 </details>
 
-6. As a user, while on the "Create/Update Task" page, I need to go back without modifying or creating a task.
+6. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -833,7 +834,7 @@ For this reason the alert is false positive.
 
 </details>
 
-7. As a user, I would like to delete a task.
+7. As a user I would like to delete the task.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -843,7 +844,7 @@ For this reason the alert is false positive.
 <img src="docs/userstories/delete-task.png">
 </details>
 
-8. As a user, while on the "Delete" page, I would like to return to the homepage without deleting the task.
+8. As a user, while on "Delete" page I would like to return to homepage without deleting the task.
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -856,7 +857,8 @@ For this reason the alert is false positive.
 </details>
 
 
-9. As a user, I would like to read the manual to understand how to use the application.
+9. As a user,  I would like to read manual, to understand how to use the application.
+
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -867,7 +869,7 @@ For this reason the alert is false positive.
 
 </details>
 
-10. As a user, I would like to be able to send an email to the admin to contact him or share feedback.
+10. As a user I would like to be able to send an email to admin, to contact him or share feedback.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -878,7 +880,7 @@ For this reason the alert is false positive.
 <img src="docs/userstories/feedback-2.png">
 </details>
 
-11. As a user, I would like to see the list of books the admin proposes for self-development and visit the Amazon website where I can buy them.
+11. As a user I would like to see the list of book the admin propose for self development, and visit Amazon website where I can buy it.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -905,7 +907,7 @@ For this reason the alert is false positive.
 
 ## Admin/Site owner user stories.
 
-13. As an Admin, I can create users, delete users.
+13. As an Admin, I can create user, delete user .
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -917,7 +919,7 @@ For this reason the alert is false positive.
 
 </details>
 
-14. As an Admin, I want to modify user's settings: First Name, Permissions.
+14. As an Admin, I want to modify user's settings: Firs Name, Perissions.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -929,7 +931,7 @@ For this reason the alert is false positive.
 
 </details>
 
-15. As an Admin, I want to filter users by staff, superuser, or active status.
+15. As an Admin, I want to filter user by staff , superuser or active status.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -942,7 +944,7 @@ For this reason the alert is false positive.
 </details>
 
 
-16. As an Admin, I am able to manually include, remove, or update books in the list of favorite books.
+16. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -962,7 +964,7 @@ Delete a book.
 
 
 
-17. As an Admin, I can view messages that have been sent by users through the contact form.
+17. As an Admin , I can view messages that have been sent by users through the contact form.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -975,7 +977,7 @@ Delete a book.
 
 </details>
 
-18. As an Admin, I can view, update, delete users' tasks.
+18. As an Admin , I can view, update, delete user's tasks
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -986,7 +988,7 @@ Delete a book.
 
 </details>
 
-19. As an Admin, I can filter tasks by: importance, frequency, user.
+19. As an Admin , I can filter tasks by: importance, frequency, user
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -997,7 +999,7 @@ Delete a book.
 
 </details>
 
-20. As an Admin, I would like a user to find all company's social links and navigate to them by clicking footer's icons.
+20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons/
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
