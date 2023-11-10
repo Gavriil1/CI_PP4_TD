@@ -415,7 +415,6 @@ Contains social media links and copyright, displayed across all pages.
 - [Am I Responsive](https://ui.dev/amiresponsive)
 - [Cloudinary](https://cloudinary.com/)
 - [Balsamiq](https://balsamiq.com/)
-- [Favicon.io](https://favicon.io)
 - [Google Fonts](https://fonts.google.com/)
 - [jQuery](https://jquery.com)
 - [ElePhantSQL](https://www.elephantsql.com/)
@@ -613,7 +612,7 @@ The W3C Jigsaw CSS Validation Service
 
 ### Lighthouse
 
-Performance, best practices and SEO was tested using Lighthouse.
+Performance, best practices, and SEO were tested using Lighthouse.
 
 #### Desktop
 <details><summary>Login</summary>
@@ -686,19 +685,20 @@ Performance, best practices and SEO was tested using Lighthouse.
 
 
 ### Wave
-WAVE was used to test the websites accessibility.
+WAVE was used to test the website accessibility.
 
 <details><summary>Login</summary>
-We have two false positive errors.
-Waive check says that labels are empty, but in reality the 
-the labels have icons instead of text.
+We have two false positive errors. The WAVE
+check indicates that labels are empty, but in reality,
+ the labels have icons instead of text
+
 <img src="docs/validation/accessibility/login-waive-1.png">
 <img src="docs/validation/accessibility/login-waive-2.png">
 </details>
 
 <details><summary>Register</summary>
-We have 3 false positive errors, like before.
-Waive check says that labels are empty, but in reality the 
+We have 3 false positive errors, as before. The WAVE
+check says that labels are empty, but in reality,
 the labels have icons instead of text.
 
 <img src="docs/validation/accessibility/register-waive-1.png">
@@ -707,8 +707,8 @@ the labels have icons instead of text.
 
 
 <details><summary>HomePage</summary>
-We see 2-8 false positive errors: "A link contains no text."
-This happens because I used icons instead of text to create links 
+We observe 2-8 false positive errors, specifically, 'A link contains
+no text.' This occurs because I used icons instead of text to create links.
 <img src="docs/validation/accessibility/homepage-waive-1.png">
 <img src="docs/validation/accessibility/homepage-waive-2.png">
 </details>
@@ -734,16 +734,17 @@ This happens because I used icons instead of text to create links
 </details>
 
 <details><summary>Books</summary>
-We have false positive contrast error. Pagination background and page number
-have very good contrast
+We have a false positive contrast error. Pagination background 
+and page numbers have very good contrast.
 <img src="docs/validation/accessibility/books-waive-1.png">
 <img src="docs/validation/accessibility/books-waive-2.png">
 </details>
 
 <details><summary>404</summary>
-We have one alert "Suspicious link text" which means that purpose  of the 
-link is not described well, but the link is part of sentence "Otherwise, Click here to redirect to homepage.  Sentence expains the purpose of the link.
-For this reason the alert is false positive.
+We have one alert: 'Suspicious link text,' which indicates that the purpose of the link is not
+described well. However, the link is part of the sentence 'Otherwise, click here to redirect
+to the homepage.' This sentence explains the purpose of the link. For this reason, the alert 
+is a false positive.
 <img src="docs/validation/accessibility/404-waive-1.png">
 <img src="docs/validation/accessibility/404-waive-2.png">
 </details>
