@@ -289,8 +289,7 @@ The wireframes were created using Balsamiq
 
 
 ### Footer
-- Contains social media links and copyright
-- displayed across all pages
+Contains social media links and copyright, displayed across all pages.
 
 <details><summary>See feature images</summary>
 
@@ -298,8 +297,7 @@ The wireframes were created using Balsamiq
 </details>
 
 ### Sign up / Register
-- Allow users to register an acoount
-- Username and password is required.
+- Allow users to register an account. Username and password are required
 
 <details><summary>See feature images</summary>
 
@@ -308,7 +306,7 @@ The wireframes were created using Balsamiq
 
 
 ### Login
--  User can login to create/update/delete a task, view list of tasks, send feedback message, see list of favourite books.
+- Users can log in to create, update, or delete tasks, view a list of tasks, send feedback messages, and see a list of favorite books.
 
 <details><summary>See feature images</summary>
 
@@ -317,7 +315,7 @@ The wireframes were created using Balsamiq
 
 
 ### Logout
-- Allows the user to securely log out
+- Enables users to securely log out
 
 <details><summary>See feature images</summary>
 
@@ -326,7 +324,7 @@ The wireframes were created using Balsamiq
 
 
 ### Contact Form
-- Allows the user to contact admin/site owner to share feedback
+- Enables users to contact the admin/site owner to share feedback.
 
 <details><summary>See feature images</summary>
 
@@ -335,10 +333,10 @@ The wireframes were created using Balsamiq
 
 
 ### Books
-- Allows the user to see the list of favorite books.
-- User may see the book title, book cover, book description, book's star rating, number of reviews.
-- User may click on "Buy on Amazon" to purchase the book from Amazon.
-- User may utilize pagination to view the complete list of books.
+- Allows the user to view the list of favorite books.
+- Users may see the book title, book cover, book description, star rating, and the number of reviews.
+- Users can click on 'Buy on Amazon' to purchase the book from Amazon.
+- Users can utilize pagination to view the complete list of books.
 
 <details><summary>See feature images</summary>
 
@@ -347,9 +345,9 @@ The wireframes were created using Balsamiq
 
 
 ### Task List 
-- Allows the user to see all their their tasks for Dayly, Weekly, Montlhy, Yearly goals
-- User can see, Severity of the task, deadline of the task, complete status
-- Allows a user an option to create a task, update/view the task, delete the task
+- Allows the user to see all their tasks for Daily, Weekly, Monthly, Yearly goals.
+- Users can see the severity of the task, deadline of the task, and completion status.
+- Allows users the option to create a task, update/view the task, and delete the task.
 
 <details><summary>See feature images</summary>
 
@@ -358,23 +356,23 @@ The wireframes were created using Balsamiq
 
 
 ### View/Edit Task page
-- Allows the user to edit/view task. 
+- Allows the user to edit/view tasks.
 <details><summary>See feature images</summary>
 
 ![Edit/View Task](docs/features/update-view.png)
 </details>
 
 ### Delete Task page
-- Allows user to delete task. 
+- Allows the user to delete a task.
 <details><summary>See feature images</summary>
 
 ![Delete Task](docs/features/delete-task.png)
 </details>
 
 ### Social Media Links and CopyRight
-- A logo and link is used for each social media displayed
-- All links open in a new tab to ensure user is not directed away from the business
-- Displayed on all pages
+- A logo and link are used for each social media platform displayed.
+- All links open in a new tab to ensure the user is not directed away from the business.
+- Displayed on all pages.
   
 <details><summary>See feature images</summary>
 
@@ -383,8 +381,8 @@ The wireframes were created using Balsamiq
 
 
 ### Pagination
-- Pagination is used on the bookings list and the blog page
-- Ensures the page is kept tidy as only 2 items are displayed per page
+- Pagination is used on the bookings list and the blog page.
+- This ensures that the page is kept tidy, with only two items displayed per page.
   
 <details><summary>See feature images</summary>
 
@@ -394,7 +392,7 @@ The wireframes were created using Balsamiq
 
 
 ### 404  page
-- Page is displayed when user enters incorrect URL. 
+- A page is displayed when the user enters an incorrect URL.
 <details><summary>See feature images</summary>
 
 ![Delete Task](docs/features/404.png)
