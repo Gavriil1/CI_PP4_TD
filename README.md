@@ -769,7 +769,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
- | Open application URL. See login page. User credentials to log in | User logs in | Works as expected |
+ | Open the application URL and navigate to the login page. Enter user credentials to log in. | User loged in. | Works as expected. |
 
 
 <details><summary></summary>
@@ -782,7 +782,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| On login page click "Sign Up". On register page register your username and password | New account is created and user logged in | Works as expected |
+| On login page click "Sign Up". On register page register your username and password. | New account is created and user logged in. | Works as expected. |
 
 <details><summary></summary>
 <img src="docs/userstories/register-an-account-user-account.png">
@@ -793,7 +793,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| On Register page, click on  link "Login". | User is redirected to Log In Page | Works as expected |
+| On Register page, click on  link "Login". | User is redirected to Log In Page. | Works as expected. |
 
 <details><summary></summary>
 <img src="docs/userstories/redirect-register-login.png">
@@ -804,7 +804,7 @@ is a false positive.
 
  **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| On homepage, click "Add New". On Create/Update page. Complete fields: 'title,' 'task description,' select the 'deadline,' 'severity,' 'importance,' 'frequency' and click Submit| New Task is created with required fields. | Works as expected |
+| On the homepage, click 'Add New.' On the Create/Update page, complete the fields: 'title,' 'task description,' select the 'deadline,' 'severity,' 'importance,' 'frequency,' and click Submit. | A new task is created with the required fields filled out. | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/create-new-task.png">
