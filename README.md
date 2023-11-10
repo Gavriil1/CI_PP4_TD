@@ -48,11 +48,11 @@
 
 
 ### About
-"ABCDE Todo List" is an application that helps a user organize their time according to Brian Tracy's method, as described in his book "Eat That Frog." Additionally, the website has additional features: 
+"ABCDE Todo List" is an application that helps a user organize their time according to Brian Tracy's method, as described in his book "Eat That Frog." Additionally, the website has additional features:
 - Feedback form 
 - Admin favorite books.
 
-<hr>
+
 
 ### User Goals
 - Create/Update/Delete tasks.
@@ -66,17 +66,15 @@
 - Create an intuitive and easy-to-use application to attract more customers.
 - Develop a fully responsive and accessible website.
 
-<hr>
-
-
 ## User Experience
 
 ### Target Audience
+
 - Students: managing assignments, study schedules.
 - People with Busy Lifestyles: Manage multiple responsibilities.
-- Project Managers:  To coordinate and track tasks.
+- Project Managers: To coordinate and track tasks.
 - Individuals Seeking Personal Productivity: To increase personal productivity.
-- Freelancers and Gig Workers: To manage their various freelance projects and deadlines.
+- Freelancers and Gig Workers: To manage their various freelance projects and deadlines
 
 
 ### User Requirements and Expectations
@@ -93,17 +91,17 @@
 
 ## User Stories
 
-1.  As a User I would like to login to my account.
-2.  As a User I would like to create a new account.
-3. As a User I would like to be able to move from Register page to Log In Page.
-4. As a user, I would like to create a new task. While creating the task, I may modify the following fieldsL 'title', 'description',  'importance','frequency', 'deadline'.
-5. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
-6. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
-7. As a user I would like to delete the task.
-8. As a user, while on "Delete" page I would like to return to homepage without deleting the task.
-9. As a user,  I would like to read manual, to understand how to use the application.
-10. As a user I would like to be able to send an email to admin, to contact him or share feedback.
-11. As a user I would like to see the list of book the admin propose for self development, and visit Amazon website where I can buy it.
+1. As a user, I would like to log in to my account.
+2. As a user, I would like to create a new account.
+3. As a user, I would like to be able to move from the Register page to the Log In page.
+4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
+5. As a user, I would like to update a task. While updating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
+6. As a user, while on the "Create/Update Task" page, I need to go back without modifying or creating a task.
+7. As a user, I would like to delete a task.
+8. As a user, while on the "Delete" page, I would like to return to the homepage without deleting the task.
+9. As a user, I would like to read the manual to understand how to use the application.
+10. As a user, I would like to be able to send an email to the admin to contact him or share feedback.
+11. As a user, I would like to see the list of books the admin proposes for self-development and visit the Amazon website where I can buy them.
 
 
 
@@ -766,7 +764,7 @@ For this reason the alert is false positive.
 
 ## User Stories
 
-1.  As a User I would like to login to my account.
+1.  As a user, I would like to log in to my account.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -779,7 +777,7 @@ For this reason the alert is false positive.
 
 </details>
 
-2. As a User I would like to create a new account.
+2. As a user, I would like to create a new account.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -790,7 +788,8 @@ For this reason the alert is false positive.
 
 </details>
 
-3.  As a User I would like to be able to move from Register page to Log In Page.
+
+3. As a user, I would like to be able to move from the Register page to the Log In page.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -801,7 +800,7 @@ For this reason the alert is false positive.
 
 </details>
 
-4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
+4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
 
  **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -812,7 +811,7 @@ For this reason the alert is false positive.
 
 </details>
 
-5. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
+5. As a user, I would like to update a task. While updating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -823,7 +822,7 @@ For this reason the alert is false positive.
 
 </details>
 
-6. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
+6. As a user, while on the "Create/Update Task" page, I need to go back without modifying or creating a task.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -834,7 +833,7 @@ For this reason the alert is false positive.
 
 </details>
 
-7. As a user I would like to delete the task.
+7. As a user, I would like to delete a task.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -844,7 +843,7 @@ For this reason the alert is false positive.
 <img src="docs/userstories/delete-task.png">
 </details>
 
-8. As a user, while on "Delete" page I would like to return to homepage without deleting the task.
+8. As a user, while on the "Delete" page, I would like to return to the homepage without deleting the task.
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -857,8 +856,7 @@ For this reason the alert is false positive.
 </details>
 
 
-9. As a user,  I would like to read manual, to understand how to use the application.
-
+9. As a user, I would like to read the manual to understand how to use the application.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -869,7 +867,7 @@ For this reason the alert is false positive.
 
 </details>
 
-10. As a user I would like to be able to send an email to admin, to contact him or share feedback.
+10. As a user, I would like to be able to send an email to the admin to contact him or share feedback.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -880,7 +878,7 @@ For this reason the alert is false positive.
 <img src="docs/userstories/feedback-2.png">
 </details>
 
-11. As a user I would like to see the list of book the admin propose for self development, and visit Amazon website where I can buy it.
+11. As a user, I would like to see the list of books the admin proposes for self-development and visit the Amazon website where I can buy them.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -907,7 +905,7 @@ For this reason the alert is false positive.
 
 ## Admin/Site owner user stories.
 
-13. As an Admin, I can create user, delete user .
+13. As an Admin, I can create users, delete users.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -919,7 +917,7 @@ For this reason the alert is false positive.
 
 </details>
 
-14. As an Admin, I want to modify user's settings: Firs Name, Perissions.
+14. As an Admin, I want to modify user's settings: First Name, Permissions.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -931,7 +929,7 @@ For this reason the alert is false positive.
 
 </details>
 
-15. As an Admin, I want to filter user by staff , superuser or active status.
+15. As an Admin, I want to filter users by staff, superuser, or active status.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -944,7 +942,7 @@ For this reason the alert is false positive.
 </details>
 
 
-16. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.
+16. As an Admin, I am able to manually include, remove, or update books in the list of favorite books.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -964,7 +962,7 @@ Delete a book.
 
 
 
-17. As an Admin , I can view messages that have been sent by users through the contact form.
+17. As an Admin, I can view messages that have been sent by users through the contact form.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -977,7 +975,7 @@ Delete a book.
 
 </details>
 
-18. As an Admin , I can view, update, delete user's tasks
+18. As an Admin, I can view, update, delete users' tasks.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -988,7 +986,7 @@ Delete a book.
 
 </details>
 
-19. As an Admin , I can filter tasks by: importance, frequency, user
+19. As an Admin, I can filter tasks by: importance, frequency, user.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -999,7 +997,7 @@ Delete a book.
 
 </details>
 
-20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons/
+20. As an Admin, I would like a user to find all company's social links and navigate to them by clicking footer's icons.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
