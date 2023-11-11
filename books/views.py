@@ -9,7 +9,7 @@ from django.core.paginator import Paginator
 from .models import Product
 
 
-@login_required
+# @login_required
 def books(request):
     """
     This page load books and creates pagination
