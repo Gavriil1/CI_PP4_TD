@@ -26,7 +26,6 @@
   - [User Stories](#user-stories)
   - [Design](#design)
     - [Colours](#colours)
-    - [Fonts](#fonts)
     - [Structure](#structure)
       - [Website pages](#website-pages)
       - [Database](#database)
@@ -37,8 +36,8 @@
   - [Testing](#testing)
     - [Manual testing](#manual-testing)
     - [Automated testing](#automated-testing)
-    - [Tests on various devices](#tests-on-various-devices)
-    - [Browser compatibility](#browser-compatibility)
+    - [Tests on various devices](#performing-tests-on-various-devices)
+    - [Browser compatibility](#browser-compatability)
   - [Bugs](#bugs)
   - [Heroku Deployment](#heroku-deployment)
   - [Credits](#credits)
@@ -86,7 +85,6 @@
 - Easy and intuitive application.
 - List of books for self-development.
 
-##### Back to [top](#table-of-contents)<hr>
 
 
 ## User Stories
@@ -412,7 +410,7 @@ Contains social media links and copyright, displayed across all pages.
 
 ### Libraries & Tools
 
-- [Am I Responsive](https://ui.dev/amiresponsive)
+- [Am I Responsive](https://amiresponsive.blogspot.com/)
 - [Cloudinary](https://cloudinary.com/)
 - [Balsamiq](https://balsamiq.com/)
 - [Google Fonts](https://fonts.google.com/)
@@ -434,7 +432,7 @@ Contains social media links and copyright, displayed across all pages.
   - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
   - [Wave Validator](https://wave.webaim.org/)
 
-##### Back to [top](#table-of-contents)
+
 
 
 
@@ -750,7 +748,7 @@ is a false positive.
 </details>
 
 
-##### Back to [top](#table-of-contents)<hr>
+
 
 
 ## Testing
@@ -815,7 +813,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on a penscil in edit colon. On "Create/Update Task" you may6 modify one of the following fields: 'title', 'description',  'importance','frequency', 'deadline' | Task Modified | Works as expected |
+| Click on a pencil icon in the edit column. On the 'Create/Update Task' page, you may modify one or more of the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.' | Task Modified | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/update-a-task.png">
@@ -826,7 +824,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| While on "Create/Update" page click on an arrow on left top corner.| User is redirected to Homepage  | Works as expected |
+| While on "Create/Update" page click on an arrow on left top corner. | User is redirected to Homepage  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/create-update-homepage.png">
@@ -837,7 +835,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Click on x in Edit colon. On Delete page click "Delete" | The task is deleted  | Works as expected |
+| Click on x in Edit colon. On Delete page click "Delete". | The task is deleted  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/delete-task.png">
@@ -848,7 +846,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| While on a "Delete" page, click on the arrow on the top left corner| The user redirected back to homepage, task is not deleted  | Works as expected |
+| While on a "Delete" page, click on the arrow on the top left corner.| The user redirected back to homepage, task is not deleted.  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/delete-homepage.png">
@@ -861,7 +859,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| While on homepage, click "Manual" in navigation bar | The user redirected to manual page where he can read instructions.  | Works as expected |
+| While on homepage, click "Manual" in navigation bar. | "The user is redirected to the manual page where they can read instructions.  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/read-manual.png">
@@ -872,7 +870,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| While on homepage, click "Feedback", complete all fields and click send feedback. | User redirected to homepage, and see the message that the email was received  | Works as expected |
+| While on the homepage, click on 'Feedback,' complete all fields, and then click 'Send Feedback'. | UThe user is redirected to the homepage and sees the message that the email was received  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/feedback-1.png">
@@ -883,7 +881,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| While on homepage, click "Books". See books' cover, description, rating. Click on button "Buy on Amazon" to navigate to Amazon page, where you may buy a book | User redirected to 'Books' page and after to Amazon's website  | Works as expected |
+| While on the homepage, click on 'Books.' View the book covers, descriptions, and ratings. Click the 'Buy on Amazon' button to navigate to the Amazon page, where you can make a purchase | The user is redirected to the 'Books' page and then to Amazon's website.  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/login-administration-panel.png">
@@ -910,7 +908,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| In admin console, click Users. Click "Add User" in the right top corner to create a user, complete Username and passwords fields and click Save. Select a user, from "Action" select "Delete selected user" click go | One user is created, one user is deleted  | Works as expected |
+| In the admin console, click on 'Users.' Then, click on 'Add User' in the top right corner to create a new user. Complete the username and password fields and click 'Save.' To delete a user, select the user, choose 'Delete selected user' from the 'Action' menu, and click 'Go. | One user is created, one user is deleted.  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/create-user-admin.png">
@@ -922,7 +920,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| In admin console click on "Users", click on user, modify user's settings and click "Save" | User's settings are updated.  | Works as expected |
+| In the admin console, click on 'Users,' select a user, modify the user's settings, and click 'Save | User's settings are updated.  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/update-users-settings.png">
@@ -934,7 +932,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| In admin console click "Users", "Filter", select required filter settings. | Users are filtered according to filter settings.  | Works as expected |
+| In the admin console, click on 'Users,' then click on 'Filter,' and select the required filter settings. | Users are filtered according to the specified filter settings.  | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/filter-users-admin.png">
@@ -947,7 +945,7 @@ is a false positive.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| In admin console click "Products". On the top right corner select "Add Product, complete all the fields, and click Save. To update click on a book text, update all required fields and click Save. To delete a book, select a book, "Action", "Delete selected products", "Go"| Book added, updated deleted sucesfully | Works as expected |
+| In the admin console, click on 'Products.' In the top right corner, select 'Add Product,' complete all the fields, and click 'Save.' To update a product, click on the product's name, update all required fields, and click 'Save.' To delete a product, select the product, choose 'Delete selected products' from the 'Action' menu, and then click 'Go.'| Book added, updated, deleted successfully. | Works as expected |
 
 <details><summary></summary>
 Add a new book.
@@ -980,14 +978,14 @@ Delete a book.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| Navigate to "Tasks", Click on task.  | A new window opens,where I can see, update or delete the task | Works as expected |
+| In admin console, Navigate to "Tasks", Click on task.  | A new window opens,where I can see, update or delete the task | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/view-udpate-delete-task.png">
 
 </details>
 
-19. As an Admin , I can filter tasks by: importance, frequency, user
+19. As an Admin , I can filter tasks by: importance, frequency, user.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -998,11 +996,11 @@ Delete a book.
 
 </details>
 
-20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons/
+20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons.
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
-| On homepage find footer. Click on one of the icons  | User is redirected to social media | Works as expected |
+| On homepage find footer. Click on one of the icons.  | User is redirected to social media | Works as expected |
 
 <details><summary></summary>
 <img src="docs/userstories/social-media-admin.png">
@@ -1095,22 +1093,22 @@ The following browsers were used to test the website:
 
 
 
-##### Back to [top](#table-of-contents)<hr>
+
 
 
 ## Bugs
 
 | **Bug** | **Fix** |
 | ------- | ------- |
-| css not loading| static files confiugration in settings.py was not correct, after fixing it the issue resolved. |
-| User could see the tasks of other users| Denesive programming. Configured user's to see only their tasks by adding mydata = Task.objects.filter(user=request.user) to the equation|
-|  Users could update and delete other users' tasks |  Adjusted cosde which check if task belongs to the user, and it is not it show 404 page |
-| Footer was not on the button of the page, when the content was big. | Changed footer class to class="text-center text-white fixed-bottom" . After that the issue fixed on all pages. |
-| The contact form was not saving subject of a message in admin | modified views.py script for feedback page to link correct subject to correct variable. |
-| Homepage, was not showing correct display when tasks of the user were 0| I found that it was counting tasks in other, users. Added additional filter which made application to count tasks only of logged user and not all users by adding   user=request.user|
-| Update page did not open, when I pressed on update button | The links were not set within urls.py so just needed to be wired up to load each relevant page |
+| css not loading| The static files configuration in settings.py was not correct. After fixing it, the issue was resolved |
+| User could see the tasks of other users| Defensive programming: Configured users to see only their tasks by adding 'mydata = Task.objects.filter(user=request.user)' to the equation.|
+|  Users could update and delete other users' tasks |  Adjusted code to check if the task belongs to the user; if not, it shows a 404 page. |
+| The footer was not at the bottom of the page when the content was big | "I changed the footer class to 'class="text-center text-white fixed-bottom"'. After that, the issue was fixed on all pages. |
+| The contact form was not saving subject of a message in admin. | Modified views.py script for feedback page to link correct subject to correct variable. |
+| The homepage was not displaying correctly when the user had no tasks. | I found that it was counting tasks for other users. I added an additional filter to make the application count tasks only for the logged-in user by including 'user=request.user'.|
+| Update page did not open, when I pressed on update button | The links were not set within urls.py, so they just needed to be wired up to load each relevant page." |
+| Admin panel has "section" which is not used | Opened ticket with support, they informed me to leave everything as it is https://res.cloudinary.com/dtdqranu0/image/upload/v1699719979/pictures/glxfztk7cqr8r4n9puc9.png |
 
-##### Back to [top](#table-of-contents)<hr>
 
 
 ### Heroku Deployment
@@ -1119,9 +1117,9 @@ The following browsers were used to test the website:
 
 ### Heroku Deployment
 
-Before deploying to Heroku, environment variables must be defined in the django project so that local development functions correctly. Once these environment variables are set up in the workspace, the project can be deployed and the environment variables can be copied into heroku as config vars (to ensure the deployed app works correctly with 3rd party dependecies.)
+Before deploying to Heroku, environment variables must be defined in the Django project so that local development functions correctly. Once these environment variables are set up in the workspace, the project can be deployed, and the environment variables can be copied into Heroku as config vars (to ensure the deployed app works correctly with 3rd party dependencies).
 
-1. Create a file called env.py in the root directory of your workspace and ensure that the file is included in .gitignore. These variables should NOT be committed and pushed to GitHub.
+1. Create a file called env.py in the root directory of your workspace and ensure that the file is included in .gitignore. These variables should NOT be committed or pushed to GitHub.
 2. import os to the file.
 3. os.environ['DATABASE_URL'] = URL copied from ElephantSQL
 4. os.environ['SECRET_KEY'] = A randomly generated key of your choosing. This keeps django from serving data to/from an unauthorised source.
@@ -1139,47 +1137,52 @@ The website was deployed to Heroku using the following process:
 <img src="docs/heroku-deployment/login-heroku.png">
 </details>
 
-2. Click on New > Create new app in the top right of the screen.
+2. Select "New" and then choose "Create new app" from the options in the top right corner of the screen.
 <details><summary>Create New App</summary>
 <img src="docs/heroku-deployment/create-new-app.png">
 </details>
 
-3. Add an app name and select location, then click 'create app'.
+3. Specify an app name, choose a location, and then click on 'create app'.
 
 <details><summary>Create New App</summary>
 <img src="docs/heroku-deployment/select-app-region.png">
 </details>
 
-4. Under the deploy tab of the next page, select connect to GitHub.
-5. Log in to your GitHub account when prompted.
+4. On the subsequent page, navigate to the deploy tab and choose the option to connect to GitHub.
+5. Sign in to your GitHub account as prompted.
 <details><summary>Github Deploy</summary>
 <img src="docs/heroku-deployment/deploy-app.png">
 </details>
 
-6. Select the repository that you want to be connected to the Heroku app.
+6. Choose the repository you wish to link to the Heroku app.
 <details><summary>Select Repository</summary>
 <img src="docs/heroku-deployment/connect-to-github-project.png">
 </details>
-7. Click on the settings and in "Config Vars" click on "Reveal Config Vars".
+
+7. Navigate to the settings and click on "Reveal Config Vars" under "Config Vars."
 <details><summary>Select Repository</summary>
 <img src="docs/heroku-deployment/reveal-vars.png">
 </details>
-8. Scroll down to the config vars section, and add config vars specified at the start of this section of the README. Also, include a var with the key 'PORT' and value '8000' to avoid build errors. The end result should look something like this:
+
+8. Scroll down to the "Config Vars" section and input the configuration variables mentioned at the beginning of this README section. Additionally, include a variable with the key 'PORT' and the value '8000' to prevent build errors. The final configuration should resemble this example:
 KEY: DATABASE_URL
 VALUE: postgresurlexample123.com
 <details><summary>Configure Vars</summary>
 <img src="docs/heroku-deployment/var-configuration.png">
 </details>
-9. Navigate back to the 'deploy' tab.
-10.  Select automatic deploys to allow Heroku to build the site with new changes each time changes are pushed to GitHub.
+
+9. Return to the 'deploy' tab.
+
+10.  Choose automatic deploys to enable Heroku to build the site with new changes whenever updates are pushed to GitHub.
 <details><summary>Automatic Deploy</summary>
 <img src="docs/heroku-deployment/automatic-deploy.png">
 </details>
-11.  In the 'manual deploy' section beneath this, make sure the branch selected is 'main' and click deploy branch.
+
+11.  In the 'manual deploy' section below, ensure that the selected branch is 'main,' and then click 'deploy branch.
 <details><summary>Automatic Deploy</summary>
 <img src="docs/heroku-deployment/manual-deploy.png">
 </details>
-12.  The site should now be built and Heroku should provide a url for the built site.
+12.  The site should be successfully built, and Heroku will furnish a URL for the constructed site
 <hr>
 
 ### Clone Repository
@@ -1194,7 +1197,7 @@ Follow these steps to clone the repository:
 
 Please check the following link for more information: https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
-##### Back to [top](#table-of-contents)<hr>
+
 
 
 ## Credits
@@ -1212,7 +1215,6 @@ Backgroun image was taken from https://getwallpapers.com/
 5. Automatic testing: https://www.youtube.com/watch?v=0MrgsYswT1c&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=2
 
 
-##### Back to [top](#table-of-contents)<hr>
 
 ## Acknowledgements
 
