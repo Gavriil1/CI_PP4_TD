@@ -1108,6 +1108,7 @@ The following browsers were used to test the website:
 | The homepage was not displaying correctly when the user had no tasks. | I found that it was counting tasks for other users. I added an additional filter to make the application count tasks only for the logged-in user by including 'user=request.user'.|
 | Update page did not open, when I pressed on update button | The links were not set within urls.py, so they just needed to be wired up to load each relevant page." |
 | Admin panel has "section" which is not used | Opened ticket with support, they informed me to leave everything as it is https://res.cloudinary.com/dtdqranu0/image/upload/v1699719979/pictures/glxfztk7cqr8r4n9puc9.png |
+| In login, while testing  register/login page on different resolutions,  form form-control shrinks differently than input field. For this reason. For this reason"form-control" and input field have different sizes" https://res.cloudinary.com/dtdqranu0/image/upload/v1699790878/pictures/xcvu2nx2dfcq6gvxndrd.png | Created chat with support. Support informed me to leave everything as it is and just to add comment to bugs that bootstrap code does not work as expected https://res.cloudinary.com/dtdqranu0/image/upload/v1699790885/pictures/xd6fcamkuxomaizc2cee.png |
 
 
 

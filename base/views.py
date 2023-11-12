@@ -13,7 +13,7 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import login, authenticate
 from django.contrib import messages
 # Internal:
 from .models import Task
@@ -145,3 +145,4 @@ def custom_404(request, exception):
     This function is used to load 404 page
     """
     return render(request, '404.html', status=404)
+
