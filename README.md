@@ -1214,6 +1214,10 @@ Backgroun image was taken from https://getwallpapers.com/
 3. Pagination was taken from this video: https://www.youtube.com/watch?v=wY_BNsxCEi4&t=61s
 4. Login, Register, Feedback pages are inspired from: https://bootsnipp.com/snippets/vl4R7
 5. Automatic testing: https://www.youtube.com/watch?v=0MrgsYswT1c&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=2
+6. Product list : https://mdbootstrap.com/docs/standard/extended/product-cards/
+7. Django Contact Form : https://www.youtube.com/watch?v=lSgRWA4PMt4
+8. Main page todo app, I found it on internet. I can be wrong but I think I took it from here, it was this on another very similar todo template
+https://bootdey.com/snippets/view/Task-Details
 
 
 
