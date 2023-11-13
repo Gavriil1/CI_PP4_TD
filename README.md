@@ -89,31 +89,33 @@
 
 ## User Stories
 
-1. As a user, I would like to log in to my account.
-2. As a user, I would like to create a new account.
-3. As a user, I would like to be able to move from the Register page to the Log In page.
+1. As a user, I would like to log in to my account. (Must Have) (Epic-1: Authentication)
+2. As a user, I would like to create a new account. (Must Have) (Epic-1: Authentication)
+3. As a user, I would like to be able to move from the Register page to the Log In page. (Must Have) (Epic-1: Authentication)
 4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
+(Must Have) (Epic-2: List-Create-Add-Delete-Tasks)
 5. As a user, I would like to update a task. While updating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
-6. As a user, while on the "Create/Update Task" page, I need to go back without modifying or creating a task.
-7. As a user, I would like to delete a task.
-8. As a user, while on the "Delete" page, I would like to return to the homepage without deleting the task.
-9. As a user, I would like to read the manual to understand how to use the application.
-10. As a user, I would like to be able to send an email to the admin to contact him or share feedback.
-11. As a user, I would like to see the list of books the admin proposes for self-development and visit the Amazon website where I can buy them.
+(Should Have) (Epic-2: List-Create-Add-Delete-Tasks)
+6. As a user, while on the "Create/Update Task" page, I need to go back without modifying or creating a task. (Could Have) (Epic-2: List-Create-Add-Delete-Tasks)
+7. As a user, I would like to delete a task. (Could Have) (Epic-2: List-Create-Add-Delete-Tasks)
+8. As a user, while on the "Delete" page, I would like to return to the homepage without deleting the task. (Could Have) (Epic-2:List-Create-Add-Delete-Tasks)
+9. As a user, I would like to read the manual to understand how to use the application. (Should Have) (Epic-3: Contact Form)
+10. As a user, I would like to be able to send an email to the admin to contact him or share feedback. (Could Have) (Epic-3: Contact Form)
+11. As a user, I would like to see the list of books the admin proposes for self-development and visit the Amazon website where I can buy them. (Should Have) (Epic4-Product List)
 
 
 
 ### Admin / Authorised User
 
-12. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access.
-13. As an Admin, I can create users, delete users.
-14. As an Admin, I want to modify user's settings: First Name, Permissions.
-15. As an Admin, I want to filter users by staff, superuser, or active status.
-16. As an Admin, I am able to manually include, remove, or update books in the list of favorite books.
-17. As an Admin, I can view messages that have been sent by users through the contact form.
-18. As an Admin, I can view, update, delete users' tasks.
-19. As an Admin, I can filter tasks by: importance, frequency, user.
-20. As an Admin, I would like a user to find all company's social links and navigate to them by clicking footer's icons.
+12. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access. (Must Have) (Epic5: Back-End-Administration)
+13. As an Admin, I can create users, delete users. (Must Have) (Epic5: Bakl-End-Administration)
+14. As an Admin, I want to modify user's settings: First Name, Permissions. (Should Have) (Epic5: Bakl-End-Administration)
+15. As an Admin, I want to filter users by staff, superuser, or active status. (Should Have) (Epic5: Bakl-End-Administration)
+16. As an Admin, I am able to manually include, remove, or update books in the list of favorite books. (Should Have) (Epic5: Bakl-End-Administration)
+17. As an Admin, I can view messages that have been sent by users through the contact form. (Should Have) (Epic5: Bakl-End-Administration)
+18. As an Admin, I can view, update, delete users' tasks. (Could Have) (Epic5: Bakl-End-Administration)
+19. As an Admin, I can filter tasks by: importance, frequency, user. (Should Have) (Epic5: Bakl-End-Administration)
+20. As an Admin, I would like a user to find all company's social links and navigate to them by clicking footer's icons. (Should Have) (Epic6: Other)
 
 ## Design
 
@@ -763,7 +765,7 @@ is a false positive.
 
 ## User Stories
 
-1.  As a User I would like to login to my account.
+1.  As a User I would like to login to my account. (Must Have) (Epic-1: Authentication)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -776,7 +778,7 @@ is a false positive.
 
 </details>
 
-2. As a User I would like to create a new account.
+2. As a User I would like to create a new account. (Must Have). (Epic-1: Authentication)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -787,7 +789,7 @@ is a false positive.
 
 </details>
 
-3.  As a User I would like to be able to move from Register page to Log In Page.
+3.  As a User I would like to be able to move from Register page to Log In Page. (Must Have) (Epic-1: Authentication)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -799,6 +801,7 @@ is a false positive.
 </details>
 
 4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
+(Must Have) (Epic-2: List-Create-Add-Delete-Tasks)
 
  **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -810,6 +813,7 @@ is a false positive.
 </details>
 
 5. As a user, I would like to update a new task. While updating the task, I may modify the following fields: 'title', 'description',  'importance','frequency', 'deadline'.
+(Should Have) (Epic-2: List-Create-Add-Delete-Tasks)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -820,7 +824,7 @@ is a false positive.
 
 </details>
 
-6. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task.
+6. As a user, while I am on "Create/Update Task" I need to go back, without modifying or creating task. (Could Have) (Epic-2: List-Create-Add-Delete-Tasks)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -831,7 +835,7 @@ is a false positive.
 
 </details>
 
-7. As a user I would like to delete the task.
+7. As a user I would like to delete the task. (Could Have) (Epic-2: List-Create-Add-Delete-Tasks)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -841,7 +845,7 @@ is a false positive.
 <img src="docs/userstories/delete-task.png">
 </details>
 
-8. As a user, while on "Delete" page I would like to return to homepage without deleting the task.
+8. As a user, while on "Delete" page I would like to return to homepage without deleting the task. (Could Have) (Epic-2:List-Create-Add-Delete-Tasks)
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -854,7 +858,7 @@ is a false positive.
 </details>
 
 
-9. As a user,  I would like to read manual, to understand how to use the application.
+9. As a user,  I would like to read manual, to understand how to use the application. (Should Have) (Epic-3: Contact Form)
 
 
 **Step** | **Expected Result** | **Actual Result**
@@ -866,7 +870,7 @@ is a false positive.
 
 </details>
 
-10. As a user I would like to be able to send an email to admin, to contact him or share feedback.
+10. As a user I would like to be able to send an email to admin, to contact him or share feedback. (Could Have) (Epic-3: Contact Form)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -877,7 +881,7 @@ is a false positive.
 <img src="docs/userstories/feedback-2.png">
 </details>
 
-11. As a user I would like to see the list of book the admin propose for self development, and visit Amazon website where I can buy it.
+11. As a user I would like to see the list of book the admin propose for self development, and visit Amazon website where I can buy it. (Should Have) (Epic4-Product List)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -890,7 +894,7 @@ is a false positive.
 
 ## Testing Admin user stories:
 
-12. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access.
+12. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access. (Must Have) (Epic5: Back-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -904,7 +908,7 @@ is a false positive.
 
 ## Admin/Site owner user stories.
 
-13. As an Admin, I can create user, delete user .
+13. As an Admin, I can create user, delete user . (Must Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -916,7 +920,7 @@ is a false positive.
 
 </details>
 
-14. As an Admin, I want to modify user's settings: Firs Name, Perissions.
+14. As an Admin, I want to modify user's settings: Firs Name, Perissions. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -928,7 +932,7 @@ is a false positive.
 
 </details>
 
-15. As an Admin, I want to filter user by staff , superuser or active status.
+15. As an Admin, I want to filter user by staff , superuser or active status. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -941,7 +945,7 @@ is a false positive.
 </details>
 
 
-16. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.
+16. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.  (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -961,7 +965,7 @@ Delete a book.
 
 
 
-17. As an Admin , I can view messages that have been sent by users through the contact form.
+17. As an Admin , I can view messages that have been sent by users through the contact form. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -974,7 +978,7 @@ Delete a book.
 
 </details>
 
-18. As an Admin , I can view, update, delete user's tasks
+18. As an Admin , I can view, update, delete user's tasks. (Could Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -985,7 +989,7 @@ Delete a book.
 
 </details>
 
-19. As an Admin , I can filter tasks by: importance, frequency, user.
+19. As an Admin , I can filter tasks by: importance, frequency, user.  (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -996,7 +1000,8 @@ Delete a book.
 
 </details>
 
-20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons.
+20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons. 
+(Should Have) (Epic6: Othe)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1216,7 +1221,7 @@ Backgroun image was taken from https://getwallpapers.com/
 5. Automatic testing: https://www.youtube.com/watch?v=0MrgsYswT1c&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=2
 6. Product list : https://mdbootstrap.com/docs/standard/extended/product-cards/
 7. Django Contact Form : https://www.youtube.com/watch?v=lSgRWA4PMt4
-8. Main page todo app, I found it on internet. I can be wrong but I think I took it from here, it was this on another very similar todo template
+8. "Main page todo app, I found it on the internet. I could be wrong, but I think I took it from here. It was this on another very similar todo template:
 https://bootdey.com/snippets/view/Task-Details
 
 
