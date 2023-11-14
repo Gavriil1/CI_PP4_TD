@@ -117,6 +117,36 @@
 19. As an Admin, I can filter tasks by: importance, frequency, user. (Should Have) (Epic5: Bakl-End-Administration)
 20. As an Admin, I would like a user to find all company's social links and navigate to them by clicking footer's icons. (Should Have) (Epic6: Other)
 
+
+### Kanban, Epics & User Stories
+- The GitHub Kanban board was utilized for monitoring open user stories.
+- Milestones feature was employed to establish Epics.
+- The Kanban board incorporated columns such as Backlog, In Progress, and Done.
+
+<details><summary>Epics</summary>
+
+![Epics](docs/epic-kanban/epics.png)
+![Epic 1](docs/epic-kanban/epic-1.png)
+![Epic 2](docs/epic-kanban/epic-2.png)
+![Epic 3](docs/epic-kanban/epic-3.png)
+![Epic 4](docs/epic-kanban/epic-4.png)
+![Epic 5](docs/epic-kanban/epic-5.png)
+![Epic 66](docs/epic-kanban/epic-6.png)
+</details>
+
+
+<details><summary>User Stories</summary>
+
+![User stories](docs/epic-kanban/user-story.png)
+
+</details>
+
+<details><summary>Kanban</summary>
+
+![Kanban](docs/epic-kanban/kan-ban.png)
+
+</details>
+
 ## Design
 
 ### Colours
@@ -265,7 +295,7 @@ The wireframes were created using Balsamiq
 
 ### Home page
 - Home page includes navbar, main body, and a footer.
-
+User stories: 5, 6, 7,  22, 23
 
 <details><summary>See feature images</summary>
 
@@ -279,6 +309,7 @@ The wireframes were created using Balsamiq
 - Transforms into hamburger menu on smaller screens.
 - Shows active user.
 - Provides access to all available pages directly from the current page.
+User stories: 23
 
 <details><summary>See feature images</summary>
 
@@ -290,6 +321,7 @@ The wireframes were created using Balsamiq
 
 ### Footer
 Contains social media links and copyright, displayed across all pages.
+User stories: 22
 
 <details><summary>See feature images</summary>
 
@@ -298,6 +330,7 @@ Contains social media links and copyright, displayed across all pages.
 
 ### Sign up / Register
 - Allow users to register an account. Username and password are required
+User stories: 2
 
 <details><summary>See feature images</summary>
 
@@ -307,6 +340,8 @@ Contains social media links and copyright, displayed across all pages.
 
 ### Login
 - Users can log in to create, update, or delete tasks, view a list of tasks, send feedback messages, and see a list of favorite books.
+User Sotries: 1
+
 
 <details><summary>See feature images</summary>
 
@@ -316,15 +351,36 @@ Contains social media links and copyright, displayed across all pages.
 
 ### Logout
 - Enables users to securely log out
+User stories:12
 
 <details><summary>See feature images</summary>
 
 ![Logout](docs/features/navbar-overview-logout.png)
 </details>
 
+### Hyperlink connection link between register and Login page
+- Enables users to navigate from login to register page and back
+User stories: 3
+
+<details><summary>See feature images</summary>
+
+![Logout](docs/features/login-register.png)
+</details>
+
+### Manual Page
+- Enables users to read manual on how to use the application.
+User stories: 9
+
+<details><summary>See feature images</summary>
+
+![ContactForm](docs/features/manual.png)
+</details>
+
+
 
 ### Contact Form
 - Enables users to contact the admin/site owner to share feedback.
+User stories: 10, 
 
 <details><summary>See feature images</summary>
 
@@ -337,6 +393,7 @@ Contains social media links and copyright, displayed across all pages.
 - Users may see the book title, book cover, book description, star rating, and the number of reviews.
 - Users can click on 'Buy on Amazon' to purchase the book from Amazon.
 - Users can utilize pagination to view the complete list of books.
+User Stories: 11, 24
 
 <details><summary>See feature images</summary>
 
@@ -348,6 +405,7 @@ Contains social media links and copyright, displayed across all pages.
 - Allows the user to see all their tasks for Daily, Weekly, Monthly, Yearly goals.
 - Users can see the severity of the task, deadline of the task, and completion status.
 - Allows users the option to create a task, update/view the task, and delete the task.
+User Stories: 4, 5,  7, 13
 
 <details><summary>See feature images</summary>
 
@@ -357,6 +415,8 @@ Contains social media links and copyright, displayed across all pages.
 
 ### View/Edit Task page
 - Allows the user to edit/view tasks.
+User stories: 5, 6
+
 <details><summary>See feature images</summary>
 
 ![Edit/View Task](docs/features/update-view.png)
@@ -364,6 +424,8 @@ Contains social media links and copyright, displayed across all pages.
 
 ### Delete Task page
 - Allows the user to delete a task.
+User stories: 7, 8
+
 <details><summary>See feature images</summary>
 
 ![Delete Task](docs/features/delete-task.png)
@@ -373,6 +435,7 @@ Contains social media links and copyright, displayed across all pages.
 - A logo and link are used for each social media platform displayed.
 - All links open in a new tab to ensure the user is not directed away from the business.
 - Displayed on all pages.
+User Stories: 22
   
 <details><summary>See feature images</summary>
 
@@ -383,7 +446,9 @@ Contains social media links and copyright, displayed across all pages.
 ### Pagination
 - Pagination is used on the bookings list and the blog page.
 - This ensures that the page is kept tidy, with only two items displayed per page.
-  
+User Stories: 22 
+
+
 <details><summary>See feature images</summary>
 
 ![Pagination](docs/features/pagination.png)
@@ -391,8 +456,62 @@ Contains social media links and copyright, displayed across all pages.
 
 
 
+### Admin console for backend access.
+- User can access admin console for backend tasks
+
+User Stories: 14
+
+<details><summary>See feature images</summary>
+
+![Admin console](docs/features/administration-panel.png)
+</details>
+
+### Admin console: User Settings.
+- Creating, editing deleting users.
+- Modifying user settings: name, staff, superuser, status etc
+- Filtering users
+
+User Stories: 15, 16, 17
+
+<details><summary>See feature images</summary>
+
+![Admin User Settings](docs/features/admin-users.png)
+</details>
+
+### Admin console: Books Settings.
+- Add, edit, delete books presented on book page. 
+User Stories: 18 
+
+<details><summary>See feature images</summary>
+
+![Admin User Settings](docs/features/admin-product-books.png)
+</details>
+
+
+### Admin console: Messages.
+- can view messages user's sent to admin through contact form
+- can view update delete user's tasks
+- Can filter user's tasks
+User Stories: 19
+
+details><summary>See feature images</summary>
+
+![Admin Messages](docs/features/admin-contact-form.png)
+</details>
+
+### Admin console: Tasks Settings.
+- can view update delete user's tasks
+- Can filter user's tasks
+
+User Stories: 20, 21
+
+
+![Admin Tasks](docs/features/admin-tasks.png)
+
 ### 404  page
 - A page is displayed when the user enters an incorrect URL.
+User Stories: 25 
+
 <details><summary>See feature images</summary>
 
 ![Delete Task](docs/features/404.png)
