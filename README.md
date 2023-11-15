@@ -102,6 +102,9 @@
 9. As a user, I would like to read the manual to understand how to use the application. (Should Have) (Epic-3: Contact Form)
 10. As a user, I would like to be able to send an email to the admin to contact him or share feedback. (Could Have) (Epic-3: Contact Form)
 11. As a user, I would like to see the list of books the admin proposes for self-development and visit the Amazon website where I can buy them. (Should Have) (Epic4-Product List)
+12. As a user, I would like to log out from my account. (Must Have) (Epic-1: Authentication)
+13. As a user, I would like to see the list of all tasks.
+
 
 
 
@@ -494,7 +497,7 @@ User Stories: 18
 - Can filter user's tasks
 User Stories: 19
 
-details><summary>See feature images</summary>
+<details><summary>See feature images</summary>
 
 ![Admin Messages](docs/features/admin-contact-form.png)
 </details>
@@ -505,8 +508,10 @@ details><summary>See feature images</summary>
 
 User Stories: 20, 21
 
+<details><summary>See feature images</summary>
 
 ![Admin Tasks](docs/features/admin-tasks.png)
+</details>
 
 ### 404  page
 - A page is displayed when the user enters an incorrect URL.
@@ -1024,10 +1029,35 @@ is a false positive.
 
 </details>
 
+12. As a user, I would like to log out from my account. (Must Have) (Epic-1: Authentication)
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Navigate to the navbar, click on "User," in the dropdown menu, click "Log Out."| User Log Out from the account  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/log-out.png">
+
+</details>
+
+
+13. As a user, I would like to see the list of all tasks. (Must Have) (Epic-2: List-Create-Add-Delete-Tasks)
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Login to the account. Click on the logo or homepage. | User sees the list of his tasks.  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/list-task.png">
+
+</details>
+
+
+
 
 ## Admin/Site owner user stories.
 
-13. As an Admin, I can create user, delete user . (Must Have) (Epic5: Bakl-End-Administration)
+14. As an Admin, I can create user, delete user . (Must Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1039,7 +1069,7 @@ is a false positive.
 
 </details>
 
-14. As an Admin, I want to modify user's settings: Firs Name, Perissions. (Should Have) (Epic5: Bakl-End-Administration)
+15. As an Admin, I want to modify user's settings: Firs Name, Perissions. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1051,7 +1081,7 @@ is a false positive.
 
 </details>
 
-15. As an Admin, I want to filter user by staff , superuser or active status. (Should Have) (Epic5: Bakl-End-Administration)
+16. As an Admin, I want to filter user by staff , superuser or active status. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1064,7 +1094,7 @@ is a false positive.
 </details>
 
 
-16. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.  (Should Have) (Epic5: Bakl-End-Administration)
+17. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.  (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1084,7 +1114,7 @@ Delete a book.
 
 
 
-17. As an Admin , I can view messages that have been sent by users through the contact form. (Should Have) (Epic5: Bakl-End-Administration)
+18. As an Admin , I can view messages that have been sent by users through the contact form. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1097,7 +1127,7 @@ Delete a book.
 
 </details>
 
-18. As an Admin , I can view, update, delete user's tasks. (Could Have) (Epic5: Bakl-End-Administration)
+19. As an Admin , I can view, update, delete user's tasks. (Could Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1108,7 +1138,7 @@ Delete a book.
 
 </details>
 
-19. As an Admin , I can filter tasks by: importance, frequency, user.  (Should Have) (Epic5: Bakl-End-Administration)
+20. As an Admin , I can filter tasks by: importance, frequency, user.  (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1119,7 +1149,7 @@ Delete a book.
 
 </details>
 
-20. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons. 
+21. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons. 
 (Should Have) (Epic6: Othe)
 
 **Step** | **Expected Result** | **Actual Result**
@@ -1339,9 +1369,11 @@ Backgroun image was taken from https://getwallpapers.com/
 4. Login, Register, Feedback pages are inspired from: https://bootsnipp.com/snippets/vl4R7
 5. Automatic testing: https://www.youtube.com/watch?v=0MrgsYswT1c&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=2
 6. Product list : https://mdbootstrap.com/docs/standard/extended/product-cards/
-7. Django Contact Form : https://www.youtube.com/watch?v=lSgRWA4PMt4
-8. "Main page todo app, I found it on the internet. I could be wrong, but I think I took it from here. It was this on another very similar todo template:
+7. Django Contact Form: connecting form to backend : https://www.youtube.com/watch?v=lSgRWA4PMt4
+8. Django FOrm Template. The django template was found on internet. 
+9. "Main page todo app, I found it on the internet. I could be wrong, but I think I took it from here or it was another very similar todo template:
 https://bootdey.com/snippets/view/Task-Details
+10. The form on create/update page were modified according to https://www.youtube.com/watch?v=CVEKe39VFu8
 
 
 
