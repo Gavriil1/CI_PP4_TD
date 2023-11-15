@@ -110,15 +110,19 @@
 
 ### Admin / Authorised User
 
-12. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access. (Must Have) (Epic5: Back-End-Administration)
-13. As an Admin, I can create users, delete users. (Must Have) (Epic5: Bakl-End-Administration)
-14. As an Admin, I want to modify user's settings: First Name, Permissions. (Should Have) (Epic5: Bakl-End-Administration)
-15. As an Admin, I want to filter users by staff, superuser, or active status. (Should Have) (Epic5: Bakl-End-Administration)
-16. As an Admin, I am able to manually include, remove, or update books in the list of favorite books. (Should Have) (Epic5: Bakl-End-Administration)
-17. As an Admin, I can view messages that have been sent by users through the contact form. (Should Have) (Epic5: Bakl-End-Administration)
-18. As an Admin, I can view, update, delete users' tasks. (Could Have) (Epic5: Bakl-End-Administration)
-19. As an Admin, I can filter tasks by: importance, frequency, user. (Should Have) (Epic5: Bakl-End-Administration)
-20. As an Admin, I would like a user to find all company's social links and navigate to them by clicking footer's icons. (Should Have) (Epic6: Other)
+14. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access. (Must Have) (Epic5: Back-End-Administration)
+15. As an Admin, I can create users, delete users. (Must Have) (Epic5: Bakl-End-Administration)
+16. As an Admin, I want to modify user's settings: First Name, Permissions. (Should Have) (Epic5: Bakl-End-Administration)
+17. As an Admin, I want to filter users by staff, superuser, or active status. (Should Have) (Epic5: Bak-End-Administration)
+18. As an Admin, I am able to manually include, remove, or update books in the list of favorite books. (Should Have) (Epic5: Bak-End-Administration)
+19. As an Admin, I can view messages that have been sent by users through the contact form. (Should Have) (Epic5: Bak-End-Administration)
+20. As an Admin, I can view, update, delete users' tasks. (Could Have) (Epic5: Bak-End-Administration)
+21. As an Admin, I can filter tasks by: importance, frequency, user. (Should Have) (Epic5: Bal-End-Administration)
+22. As an Admin, I would like a user to find all company's social links and navigate to them by clicking footer's icons. (Should Have) (Epic6: Other)
+23. As an Admin, I would like user to see hamburger menue on smaller screen sizes (Should Have) (Epic6: Other)
+24. As an Admin, I would like a user to see pagination on product page of books (Should Have) (Epic4-Product List)
+25. I would like a user to see 404 when he enters wrong URL. (Should Have) (Epic6: Other)
+
 
 
 ### Kanban, Epics & User Stories
@@ -1016,19 +1020,6 @@ is a false positive.
 
 </details>
 
-## Testing Admin user stories:
-
-12. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access. (Must Have) (Epic5: Back-End-Administration)
-
-**Step** | **Expected Result** | **Actual Result**
------------- | ------------ | ------------ |
-| navigate to https://ci-pp4-td-014f88cd1918.herokuapp.com/admin/ Complete username and Password and click next to login | User redirected to admin console.  | Works as expected |
-
-<details><summary></summary>
-<img src="docs/userstories/books.png">
-
-</details>
-
 12. As a user, I would like to log out from my account. (Must Have) (Epic-1: Authentication)
 
 **Step** | **Expected Result** | **Actual Result**
@@ -1054,10 +1045,22 @@ is a false positive.
 
 
 
-
 ## Admin/Site owner user stories.
 
-14. As an Admin, I can create user, delete user . (Must Have) (Epic5: Bakl-End-Administration)
+14. In my role as an Admin or Authorized User, I have the capability to log in to the admin console for backend access. (Must Have) (Epic5: Back-End-Administration)
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| navigate to https://ci-pp4-td-014f88cd1918.herokuapp.com/admin/ Complete username and Password and click next to login | User redirected to admin console.  | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/books.png">
+
+</details>
+
+
+
+15. As an Admin, I can create users, delete users . (Must Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1069,7 +1072,7 @@ is a false positive.
 
 </details>
 
-15. As an Admin, I want to modify user's settings: Firs Name, Perissions. (Should Have) (Epic5: Bakl-End-Administration)
+16. As an Admin, I want to modify user's settings: Firs Name, Perissions. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1081,7 +1084,7 @@ is a false positive.
 
 </details>
 
-16. As an Admin, I want to filter user by staff , superuser or active status. (Should Have) (Epic5: Bakl-End-Administration)
+17. As an Admin, I want to filter user by staff , superuser or active status. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1094,7 +1097,7 @@ is a false positive.
 </details>
 
 
-17. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.  (Should Have) (Epic5: Bakl-End-Administration)
+18. As an Admin  I am able to manually include, remove, or update books in the list of favorite books.  (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1114,7 +1117,7 @@ Delete a book.
 
 
 
-18. As an Admin , I can view messages that have been sent by users through the contact form. (Should Have) (Epic5: Bakl-End-Administration)
+19. As an Admin , I can view messages that have been sent by users through the contact form. (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1127,7 +1130,7 @@ Delete a book.
 
 </details>
 
-19. As an Admin , I can view, update, delete user's tasks. (Could Have) (Epic5: Bakl-End-Administration)
+20. As an Admin , I can view, update, delete user's tasks. (Could Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1138,7 +1141,7 @@ Delete a book.
 
 </details>
 
-20. As an Admin , I can filter tasks by: importance, frequency, user.  (Should Have) (Epic5: Bakl-End-Administration)
+21. As an Admin , I can filter tasks by: importance, frequency, user.  (Should Have) (Epic5: Bakl-End-Administration)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1149,8 +1152,8 @@ Delete a book.
 
 </details>
 
-21. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons. 
-(Should Have) (Epic6: Othe)
+22. As an Admin , I would like a user to find all company's social links, and navigate to them be clicking footer's icons. 
+(Should Have) (Epic6: Other)
 
 **Step** | **Expected Result** | **Actual Result**
 ------------ | ------------ | ------------ |
@@ -1158,6 +1161,39 @@ Delete a book.
 
 <details><summary></summary>
 <img src="docs/userstories/social-media-admin.png">
+
+</details>
+
+23. As an Admin, I would like user to see hamburger menue on smaller screen sizes. (Should Have) (Epic6: Other)
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Login to the account. Right-click on the page, select "Inspect," change the screen resolution for a smaller device..  | Hamburger menu shows up. | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/hamburger-menu.png">
+
+</details>
+
+24. As an Admin, I would like a user to see pagination on product page of books. (Should Have) (Epic4-Product List)
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+| Navigate to the 'Books' page, scroll down, and select the pagination page."  | I see two items on a new pagination page | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/pagination.png">
+
+</details>
+
+25. I would like a user to see 404 when he enters wrong URL. (Should Have) (Epic6: Other)
+
+**Step** | **Expected Result** | **Actual Result**
+------------ | ------------ | ------------ |
+|  Enter incorrect URL of website | User see 404 error | Works as expected |
+
+<details><summary></summary>
+<img src="docs/userstories/404.png">
 
 </details>
 
@@ -1337,6 +1373,7 @@ VALUE: postgresurlexample123.com
 <details><summary>Automatic Deploy</summary>
 <img src="docs/heroku-deployment/manual-deploy.png">
 </details>
+
 12.  The site should be successfully built, and Heroku will furnish a URL for the constructed site
 <hr>
 
