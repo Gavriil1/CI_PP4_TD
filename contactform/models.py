@@ -5,7 +5,7 @@ from django.utils import timezone
 # Internal:
 from django.contrib.auth.models import User
 
-
+# model describe database of contact form
 class Contact(models.Model):
     name = models.CharField(max_length=45)
     email = models.EmailField(max_length=45)

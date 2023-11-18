@@ -15,6 +15,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
+from django.http import Http404
 # Internal:
 from .models import Task
 from .forms import PostForm
@@ -62,7 +63,7 @@ class TaskCreate(LoginRequiredMixin, CreateView):
         messages.success(self.request, "Task was created successfully")
         return super(TaskCreate, self).form_valid(form)
 
-from django.http import Http404
+
 # This class is used to update tasks and display message after task deletion
 class TaskUpdate(LoginRequiredMixin, UpdateView):
     model = Task

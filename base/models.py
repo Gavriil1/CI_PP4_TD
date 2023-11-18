@@ -5,7 +5,7 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 # Internal:
 
-
+# Task mode which describe database of the tasks.
 class Task(models.Model):
     FREQUENCY_CHOICES = [
         ('Daily', 'Daily'),

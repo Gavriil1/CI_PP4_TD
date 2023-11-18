@@ -1311,6 +1311,8 @@ Backgroun image was taken from https://getwallpapers.com/
 9. "Main page todo app, I found it on the internet. I could be wrong, but I think I took it from here or it was another very similar todo template:
 https://bootdey.com/snippets/view/Task-Details
 10. The form on create/update page were modified according to https://www.youtube.com/watch?v=CVEKe39VFu8
+11. Navmbar: https://getbootstrap.com/docs/4.6/components/navbar/
+12. Contact form design, was found on google. The form was taken from website similar to this one: https://colorlib.com/wp/bootstrap-contact-form/
 
 
 
