@@ -3,7 +3,10 @@
 {% block content %}
 
 
+
 <body class="body-homepage">
+  <!-- Navbar
+       Navbar was taken from  https://getbootstrap.com/docs/4.6/components/navbar/ -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{% url 'tasks' %}">ABCDE-TODO</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,41 +45,32 @@
 	<h1 class="text-white text-center"><span style="background-color: rgba(0,0,0,0.5);">Contact Us </span></h1>
 
 <div class="main_container">
-
+  <!--Feedback Form
+      css of feedback form was taken from https://bootsnipp.com/snippets/vl4R7
+      contact form was found on google, from sites like this https://colorlib.com/wp/bootstrap-contact-form/
+     -->
 	<div class="d-flex justify-content-center h-100">
 		<div class="card" style="height: 470px;width: 1000px">
 			<div class="card-header">
 				<h2 class="text-white text-center">Feedback Form</h2>
-				<!-- <p class="text-white text-center">Please help us to make our up better. Please share your feedback Please share with us your feedback.</p> -->
 			</div>
 			<div class="card-body" style="height: 570px;">
 				<form id="contact-form" name="contact-form" method="POST" class="was-validated">
           {% csrf_token %}
-          <!--Grid row-->
           <div class="row">
-
-              <!--Grid column-->
               <div class="col-md-6">
                   <div class="md-form mb-0">
                       <input type="text" id="name" name="name" class="form-control" maxlength="200" required>
                       <label for="name" class="text-white">Your name</label>
                   </div>
               </div>
-              <!--Grid column-->
-
-              <!--Grid column-->
               <div class="col-md-6">
                   <div class="md-form mb-0">
                       <input type="email" id="email" name="email" class="form-control" required>
                       <label for="email" class="text-white">Your email</label>
                   </div>
               </div>
-              <!--Grid column-->
-
           </div>
-          <!--Grid row-->
-
-          <!--Grid row-->
           <div class="row">
               <div class="col-md-12">
                   <div class="md-form mb-0">
@@ -85,12 +79,7 @@
                   </div>
               </div>
           </div>
-          <!--Grid row-->
-
-          <!--Grid row-->
           <div class="row">
-
-              <!--Grid column-->
               <div class="col-md-12">
 
                   <div class="md-form">
@@ -100,7 +89,6 @@
 
               </div>
           </div>
-          <!--Grid row-->
           <div class="form-group">
 						<input type="submit" value="Send Feedback" class="btn btn-lg btn-block float-right login_btn">
 					</div>

@@ -3,8 +3,11 @@
 {% block description %}ABCDE todo list application. Organize your tasks. Delete task page.{% endblock %}
 {% block content %}
 
+<!-- Delete Form
+    The page was created with help of the tutorial https://www.youtube.com/watch?v=llbtoQTt4qw 
+    The form was modified by using the following template: https://bootsnipp.com/snippets/vl4R7
+-->
 <body class="body-homepage">
-
     <div class="header-bar">
         <a href="{% url 'tasks' %}">&#8592; Back</a>
     </div>
@@ -22,7 +25,6 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text span_delete"><i class="fas fas fa-heading"></i></span>
 						</div>
-						<!-- <input type="text" class="form-control" placeholder="username">  -->\
 					<div class="form-control">
 					{{ task.title | slice:"0:60"}}
                       </div>
@@ -32,7 +34,6 @@
 						<div class="input-group-prepend">
 							<span class="input-group-text span_delete"><i class="fas fa-file-alt"></i></span>
 						</div>
-						<!-- <input type="password" class="form-control" placeholder="password"> -->
 					<div class="form-control">
 						{{ task.description | slice:"0:60" }}
 					</div>

@@ -3,9 +3,11 @@
 {% block content %}
 
 
-<!-- <body class="body-homepage" > -->
+
 
 <body class="main_body">
+  <!-- Navbar
+       Navbar was taken from  https://getbootstrap.com/docs/4.6/components/navbar/  -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="{% url 'tasks' %}">ABCDE-TODO</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +40,8 @@
 
     </div>
   </nav>
-
+  <!--Product list
+      Product list was taken from https://mdbootstrap.com/docs/standard/extended/product-cards/ -->
   <h1 class="text-dark text-center mx-auto" style="background-color: rgba(252, 253, 255, 0.8); ">List of our favorite books</h1>
   <div class="container mt-5 mb-5">
     <div class="d-flex justify-content-center row">
@@ -53,7 +56,6 @@
                 {% for _ in "x"|rjust:product.stars %}
                   <i class="fa fa-star"></i>
                 {% endfor %}
-                <!-- </i> -->
               </div>
               <span>{{ product.numberreviews }}</span>
             </div>
@@ -80,7 +82,6 @@
 
   {% for i in nums %}
     <li class="page-item {% if i == current_page %} active{% endif %}">
-      <!-- <a class="page-link" href="?page={{ forloop.counter }}" page=forloop.counter>{{ forloop.counter }}</a> -->
       <a class="page-link" href="?page={{ forloop.counter }}">{{ forloop.counter }}</a>
     </li>
   {% endfor %}

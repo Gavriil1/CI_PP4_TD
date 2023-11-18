@@ -5,7 +5,8 @@
 
 
 <body class="body-homepage" >
-
+<!--   Navbar
+       Navbar was taken from  https://getbootstrap.com/docs/4.6/components/navbar/ -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="{% url 'tasks' %}">ABCDE-TODO</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,7 +39,8 @@
     
         </div>
       </nav>
-      
+<!-- To do list bootstrap template
+      The template was found on interent on webpage similar to this one https://bootdey.com/snippets/view/Task-Details-->
 {% for msg in messages  %}
 <div class="alert alert-success alert-dismissible fade show text-center" role="alert">
     <strong>{{ msg }}</strong> 
@@ -99,15 +101,12 @@
                                     {% endfor %}
                         </tbody>
                     </table>
-                                <!-- </table> -->
                                     {% else %}
 
                                 <h1 class="text-white"><span style="background-color: rgba(0,0,0,0.5);">Daily Goals</span></h1>
                                 <p><span style="background-color: rgba(0,0,0,0.5);">There are no dayly tasks. To create task please click "Add New"</span></p>
 
                                 {% endif %}            
-                        <!-- </tbody>
-                    </table> -->
                 </div>
                 
                 <div class="panel-body table-responsive">
@@ -151,8 +150,6 @@
                                 <h1 class="text-white"><span style="background-color: rgba(0,0,0,0.5);">Weekly Goals</span></h1>
                                 <p><span style="background-color: rgba(0,0,0,0.5);">There are no dayly tasks. To create task please click "Add New"</span></p>
                             {% endif %}            
-                        <!-- </tbody>
-                    </table> -->
                 </div>
 
                 <div class="panel-body table-responsive">
@@ -196,8 +193,6 @@
                                 <h1 class="text-white"><span style="background-color: rgba(0,0,0,0.5);">Monthly Goals</span></h1>
                                 <p><span style="background-color: rgba(0,0,0,0.5);">There are no dayly tasks. To create task please click "Add New"</span></p>
                             {% endif %}            
-                        <!-- </tbody>
-                    </table> -->
                 </div>
 
                 <div class="panel-body table-responsive">
@@ -242,7 +237,6 @@
                         <p><span style="background-color: rgba(0,0,0,0.5);">There are no Yearly tasks. To create task please click "Add new"</span></p>
                   
                         {% endif %} 
-                    <!-- </table> -->
                 </div>
 
 
@@ -251,15 +245,11 @@
     </div>
 </div>
 <script src="https://kit.fontawesome.com/c7dbda0798.js" crossorigin="anonymous"></script>	  
-
+<!-- js script for pop up alerts which show up after completed action: Task add, task delete, form sent etc -->
 <script>
-    // Automatically close the alert messages after 3 seconds
     setTimeout(function() {
       $(".alert").alert('close');
     }, 2500);
   </script>
-
-<!-- Remove the container if you want to extend the Footer to full width. -->
-<!-- <div class="container my-5"></div> -->
 
 {%endblock%}

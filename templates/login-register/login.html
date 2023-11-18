@@ -4,7 +4,7 @@
 
 {% block content %}
 
-
+<!-- login page. Contains Login Form-->
 <body class="main_body">
 
   <br><br>
@@ -24,7 +24,6 @@
 						<label for="{{ form.username.id_for_label }}" class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
 						</label>
-						<!-- <input type="text" class="form-control" placeholder="username">  -->
             			<div class="form-control">
                         {{ form.username }}
                       </div>
@@ -33,7 +32,6 @@
 						<label for="{{ form.password.id_for_label }}" class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</label>
-						<!-- <input type="password" class="form-control" placeholder="password"> -->
             <div class="form-control">
                         {{ form.password }}
             </div>

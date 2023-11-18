@@ -287,7 +287,7 @@ transition: all 0.3s ease 0s;
 }
 
 /* manual page */
-.body-manual {    /* background-image: url('https://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');  */
+.body-manual {   
   background-image: url('https://res.cloudinary.com/dtdqranu0/image/upload/v1698497050/static/images/background1.b6a16b1040a3.webp');
   background-size: cover; 
   background-repeat: no-repeat; 
