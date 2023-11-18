@@ -35,7 +35,6 @@
   - [Validation](#validation)
   - [Testing](#testing)
     - [Manual testing](#manual-testing)
-    - [Automated testing](#automated-testing)
     - [Tests on various devices](#performing-tests-on-various-devices)
     - [Browser compatibility](#browser-compatability)
   - [Bugs](#bugs)
@@ -103,7 +102,7 @@
 10. As a user, I would like to be able to send an email to the admin to contact him or share feedback. (Could Have) (Epic-3: Contact Form)
 11. As a user, I would like to see the list of books the admin proposes for self-development and visit the Amazon website where I can buy them. (Should Have) (Epic4-Product List)
 12. As a user, I would like to log out from my account. (Must Have) (Epic-1: Authentication)
-13. As a user, I would like to see the list of all tasks.
+13. As a user, I would like to see the list of all tasks.(Must) (Epic-2:List-Create-Add-Delete-Tasks)
 
 
 
@@ -647,22 +646,6 @@ The W3C Jigsaw CSS Validation Service
 <img src="docs/validation/python/base/base.views.png">
 </details>
 
-<details><summary>python/base/test_forms.py</summary>
-<img src="docs/validation/python/base/test_forms_validation_base.png">
-</details>
-
-<details><summary>python/base/test_models.py</summary>
-<img src="docs/validation/python/base/test_models_validation_base.png">
-</details>
-
-<details><summary>python/base/test_views.py</summary>
-<img src="docs/validation/python/base/test_views_validation_base.png">
-</details>
-
-<details><summary>python/base/test_urls.py</summary>
-<img src="docs/validation/python/base/test_url_validation_base.png">
-</details>
-
 
 
 <hr><summary>Books</summary><hr>
@@ -687,17 +670,6 @@ The W3C Jigsaw CSS Validation Service
 <img src="docs/validation/python/books/books.views.png">
 </details>
 
-<details><summary>python/books/test_models.py</summary>
-<img src="docs/validation/python/books/test_models_book.png">
-</details>
-
-<details><summary>python/books/test_views.py</summary>
-<img src="docs/validation/python/books/test_views_books.png">
-</details>
-
-<details><summary>python/books/test_urls.py</summary>
-<img src="docs/validation/python/books/test_url_book.png">
-</details>
 
 
 
@@ -722,19 +694,6 @@ The W3C Jigsaw CSS Validation Service
 <details><summary>contactform/views.py</summary>
 <img src="docs/validation/python/contactform/contactform.views.png">
 </details>
-
-<details><summary>python/contactform/test_models.py</summary>
-<img src="docs/validation/python/contactform/test_models_contactform.png">
-</details>
-
-<details><summary>python/contactform/test_views.py</summary>
-<img src="docs/validation/python/contactform/test_views_contactform.png">
-</details>
-
-<details><summary>python/contactform/test_urls.py</summary>
-<img src="docs/validation/python/contactform/test_urls_contactform.png">
-</details>
-
 
 
 
@@ -884,7 +843,7 @@ is a false positive.
 ## Testing
 
 1. Manual testing
-2. Automated testing
+
 ### Users
 
 
@@ -1195,65 +1154,6 @@ Delete a book.
 <details><summary></summary>
 <img src="docs/userstories/404.png">
 
-</details>
-
-### Automated testing
-
-- Testing was done using the built in Django module, unittest.
-- Coverage was also usesd to generate a report
-
-<br>
-
-<details><summary>base, test_models.py</summary>
-<img src="docs/automatic_testing/base/base_test_models.png">
-</details>
-
-<details><summary>base, test_views.py</summary>
-<img src="docs/automatic_testing/base/base_test_views.png">
-</details>
-
-<details><summary>base, test_urls.py</summary>
-<img src="docs/automatic_testing/base/base_test_url.png">
-</details>
-
-<details><summary>base, test_form.py</summary>
-<img src="docs/automatic_testing/base/base_test_form.png">
-</details>
-
-<br>
-
-<details><summary>books, test_models.py</summary>
-<img src="docs/automatic_testing/books/books_test_models.png">
-</details>
-
-<details><summary>books, test_views.py</summary>
-<img src="docs/automatic_testing/books/books_test_views.png">
-</details>
-
-<details><summary>books, test_urls.py</summary>
-<img src="docs/automatic_testing/books/books_test_urls.png">
-</details>
-
-<br>
-
-<details><summary>contactform, test_models.py</summary>
-<img src="docs/automatic_testing/contactform/test_models_contactform.png">
-</details>
-
-<details><summary>contactform, test_views.py</summary>
-<img src="docs/automatic_testing/contactform/test_views_contactform.png">
-</details>
-
-<details><summary>contactform, test_urls.py</summary>
-<img src="docs/automatic_testing/contactform/test_url_contactform.png">
-</details>
-
-
-
-<br>
-
-<details><summary>Coverage Report For All Applications</summary>
-<img src="https://raw.githubusercontent.com/ArronBeale/CI_PP4_the_diplomat/main/docs/testing/coverage-bookings.PNG">
 </details>
 
 
