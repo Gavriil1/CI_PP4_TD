@@ -1300,21 +1300,17 @@ Backgroun image was taken from https://getwallpapers.com/
 
 ### Code
 
-1. First version of the App was built from Django Tutorial of Dennis Ivy: https://www.youtube.com/watch?v=llbtoQTt4qw
-2. Code which is locatd on Bootstrap 4.6 page https://getbootstrap.com/docs/4.6/getting-started/introduction/  was used to deploy NavBar and Footer
-3. Pagination was taken from this video: https://www.youtube.com/watch?v=wY_BNsxCEi4&t=61s
+1. First version of the App was built from Django Tutorial of Dennis Ivy: https://www.youtube.com/watch?v=llbtoQTt4q
+2. Footer was taken from this page https://getbootstrap.com/docs/4.6/getting-started/introduction/  
+3. Navbar was taken from here https://getbootstrap.com/docs/4.6/components/navbar/. 
 4. Login, Register, Feedback pages are inspired from: https://bootsnipp.com/snippets/vl4R7
-5. Automatic testing: https://www.youtube.com/watch?v=0MrgsYswT1c&list=PLbpAWbHbi5rMF2j5n6imm0enrSD9eQUaM&index=2
-6. Product list : https://mdbootstrap.com/docs/standard/extended/product-cards/
-7. Django Contact Form: connecting form to backend : https://www.youtube.com/watch?v=lSgRWA4PMt4
-8. Django FOrm Template. The django template was found on internet. 
-9. "Main page todo app, I found it on the internet. I could be wrong, but I think I took it from here or it was another very similar todo template:
-https://bootdey.com/snippets/view/Task-Details
+5. Product list : https://mdbootstrap.com/docs/standard/extended/product-cards/
+6. Pagination was taken from this video: https://www.youtube.com/watch?v=wY_BNsxCEi4&t=61s
+7. Contact form design, was found on google. The form was taken from website similar to this one: https://colorlib.com/wp/bootstrap-contact-form/
+8. Django Contact Form: connecting form to backend : https://www.youtube.com/watch?v=lSgRWA4PMt4
+9. "Main page todo app, I found it on the internet. It was taken from the page like https://bootdey.com/snippets/view/Task-Details
 10. The form on create/update page were modified according to https://www.youtube.com/watch?v=CVEKe39VFu8
-11. Navmbar: https://getbootstrap.com/docs/4.6/components/navbar/
-12. Contact form design, was found on google. The form was taken from website similar to this one: https://colorlib.com/wp/bootstrap-contact-form/
-
-
+11. Delete page was created from this form: https://bootsnipp.com/snippets/vl4R7
 
 ## Acknowledgements
 
