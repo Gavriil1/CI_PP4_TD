@@ -92,10 +92,8 @@
 1. As a user, I would like to log in to my account. (Must Have) (Epic-1: Authentication)
 2. As a user, I would like to create a new account. (Must Have) (Epic-1: Authentication)
 3. As a user, I would like to be able to move from the Register page to the Log In page. (Must Have) (Epic-1: Authentication)
-4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
-(Must Have) (Epic-2: List-Create-Add-Delete-Tasks)
-5. As a user, I would like to update a task. While updating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.'
-(Should Have) (Epic-2: List-Create-Add-Delete-Tasks)
+4. As a user, I would like to create a new task. While creating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.' (Must Have) (Epic-2: List-Create-Add-Delete-Tasks)
+5. As a user, I would like to update a task. While updating the task, I may modify the following fields: 'title,' 'description,' 'importance,' 'frequency,' 'deadline.' (Should Have) (Epic-2: List-Create-Add-Delete-Tasks)
 6. As a user, while on the "Create/Update Task" page, I need to go back without modifying or creating a task. (Could Have) (Epic-2: List-Create-Add-Delete-Tasks)
 7. As a user, I would like to delete a task. (Could Have) (Epic-2: List-Create-Add-Delete-Tasks)
 8. As a user, while on the "Delete" page, I would like to return to the homepage without deleting the task. (Could Have) (Epic-2:List-Create-Add-Delete-Tasks)
@@ -557,8 +555,7 @@ User Stories: 25
 - Validation:
   - [WC3 Validator](https://validator.w3.org/)
   - [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
-  - [JShint](https://jshint.com/)
-  - [Pycodestyle(PEP8)](https://pypi.org/project/pycodestyle/)
+  - [Pycodestyle(PEP8)](https://pep8ci.herokuapp.com/)
   - [Lighthouse](https://developers.google.com/web/tools/lighthouse/)
   - [Wave Validator](https://wave.webaim.org/)
 
