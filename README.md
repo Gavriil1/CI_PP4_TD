@@ -56,6 +56,7 @@
 - Create/Update/Delete tasks.
 - Be able to see all tasks in one place.
 - Have access to the manual of the application.
+- Send a feedback message to the admin
 - Read the list of self-development books.
 
 ### Site Owner Goals
